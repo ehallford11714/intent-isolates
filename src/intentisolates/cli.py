@@ -69,7 +69,7 @@ def main(argv: list[str] | None = None) -> int:
         "--mode",
         type=str,
         default="creative_burst",
-        choices=["linear", "motif_jump", "creative_burst", "random"],
+        choices=["linear", "motif_jump", "creative_burst", "creative_burst_v2", "random"],
     )
     p_sb.add_argument("--seed", type=int, default=42, help="RNG / seed span index")
     p_sb.add_argument("--seed-span", type=str, default=None, dest="seed_span")
@@ -79,6 +79,29 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="Also print a short markdown path summary",
     )
+
+    p_cr = sub.add_parser(
+        "creativity",
+        help="Score a creative-burst path with CreativityMeter",
+    )
+    p_cr.add_argument("--text", type=str, default=None, help="Input text")
+    p_cr.add_argument(
+        "--file",
+        type=str,
+        default=None,
+        dest="text_file",
+        help="Read text from file",
+    )
+    p_cr.add_argument("--hops", type=int, default=5)
+    p_cr.add_argument(
+        "--mode",
+        type=str,
+        default="creative_burst_v2",
+        choices=["linear", "motif_jump", "creative_burst", "creative_burst_v2", "random"],
+    )
+    p_cr.add_argument("--seed", type=int, default=17)
+    p_cr.add_argument("-o", "--output", type=str, default=None)
+    p_cr.add_argument("--markdown", action="store_true")
 
     p_ca = sub.add_parser(
         "causal",
@@ -116,6 +139,9 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.cmd == "span-burst":
         return _cmd_span_burst(args)
+
+    if args.cmd == "creativity":
+        return _cmd_creativity(args)
 
     text, features, graph = _parse_inputs(args)
     if text is None and features is None and graph is None:
@@ -270,7 +296,10 @@ def _cmd_span_burst(args: argparse.Namespace) -> int:
         return 2
 
     spans = identify_span_isolates(str(text))
-    hopper = CreativeBurstHopper(spans, seed=args.seed)
+    if args.mode == "creative_burst_v2":
+        hopper = CreativeBurstHopper.for_v2(spans, seed=args.seed)
+    else:
+        hopper = CreativeBurstHopper(spans, seed=args.seed)
     # --seed is RNG seed; --seed-span picks starting span id (else auto goal/constraint)
     path_seed: str | int | None = args.seed_span if args.seed_span else None
     path = hopper.burst_path(seed=path_seed, n_hops=args.hops, mode=args.mode)
@@ -294,6 +323,53 @@ def _cmd_span_burst(args: argparse.Namespace) -> int:
             typ = sp.typology.value if hasattr(sp.typology, "value") else sp.typology
             flag = " 🔒" if sp.protect else ""
             print(f"{i}. `{sid}` **{typ}**{flag}: {sp.surface[:120]}")
+    return rc
+
+
+def _cmd_creativity(args: argparse.Namespace) -> int:
+    from intentisolates.creativity import CreativityMeter
+    from intentisolates.span_burst import CreativeBurstHopper, identify_span_isolates
+
+    text = args.text
+    if args.text_file:
+        text = Path(args.text_file).read_text(encoding="utf-8")
+    if not text or not str(text).strip():
+        print("Provide --text or --file", file=sys.stderr)
+        return 2
+
+    spans = identify_span_isolates(str(text))
+    if args.mode == "creative_burst_v2":
+        hopper = CreativeBurstHopper.for_v2(spans, seed=args.seed)
+    else:
+        hopper = CreativeBurstHopper(spans, seed=args.seed)
+    path = hopper.burst_path(n_hops=args.hops, mode=args.mode)
+    report = CreativityMeter().score_burst(path, spans, motif_neighbors=hopper._motif_neighbors)
+    payload = {
+        "mode": args.mode,
+        "n_hops": args.hops,
+        "path": path.to_dict(),
+        "meter": report.to_dict(),
+        "n_spans": len(spans),
+    }
+    rc = _emit(payload, args.output)
+    if args.markdown or not args.output:
+        print("")
+        print(f"## Creativity meter ({args.mode})")
+        print("")
+        print(f"- C (creativity): `{report.creativity_score:.3f}`")
+        print(f"- R (reasoning): `{report.reasoning_trace_score:.3f}`")
+        print(f"- CxR product: `{report.tradeoff_product:.3f}` / harmonic: `{report.tradeoff_harmonic:.3f}`")
+        print(
+            f"- diversity={report.diversity:.3f} novelty={report.novelty:.3f} "
+            f"flexibility={report.flexibility:.3f} elaboration={report.elaboration:.3f} "
+            f"fluency={report.fluency:.3f}"
+        )
+        print(
+            f"- constraint_fidelity={report.constraint_fidelity:.3f} "
+            f"layer_mono={report.layer_monotonicity:.3f} entropy={report.typology_entropy:.3f}"
+        )
+        print("")
+        print(path.summary)
     return rc
 
 

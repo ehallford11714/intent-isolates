@@ -126,7 +126,7 @@ def _role_for_layer(L: int) -> TrajectoryRole:
 def _ascii(steps: Sequence[TrajectoryStep], by_id: dict[str, Isolate]) -> str:
     lines = ["Reasoning trajectory (ASCII)", ""]
     for i, step in enumerate(steps):
-        branch = "└─" if i == len(steps) - 1 else "├─"
+        branch = "+-" if i == len(steps) - 1 else "|-"
         name = step.layer_name or f"L{step.layer}"
         role = step.role.value if hasattr(step.role, "value") else str(step.role)
         lines.append(f"{branch} [{name}] ({role})")
@@ -138,7 +138,7 @@ def _ascii(steps: Sequence[TrajectoryStep], by_id: dict[str, Isolate]) -> str:
         for mid in step.motif_ids[:3]:
             lines.append(f"   * motif {mid}")
         if i < len(steps) - 1:
-            lines.append("│")
+            lines.append("|")
     return "\n".join(lines)
 
 

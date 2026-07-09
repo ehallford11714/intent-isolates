@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "intentisolates"
+version = "0.3.0"
+description = "Identify intent isolates, classify typology, form layer motifs, map reasoning trajectories, and bridge layer motifs to AutoCausal/IV causation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Ephraim Hallford", email = "ehallford11714@users.noreply.github.com" }]
+maintainers = [{ name = "Ephraim Hallford", email = "ehallford11714@users.noreply.github.com" }]
+keywords = [
+  "intent",
+  "isolates",
+  "typology",
+  "motifs",
+  "reasoning-trajectory",
+  "interpretability",
+  "causal",
+  "layers",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = []
+
+[project.optional-dependencies]
+hf = ["numpy>=1.24", "torch>=2.0", "transformers>=4.40"]
+llmintent = ["llmintent>=1.0"]
+latentintent = []
+causal = ["numpy>=1.24", "pandas>=2.0"]
+causaliv = ["intentisolates[causal]", "scipy>=1.10"]
+autocausal = ["intentisolates[causal]"]
+dev = ["pytest>=8.0", "build>=1.0", "twine>=5.0"]
+all = ["intentisolates[hf,llmintent,causal,dev]"]
+
+[project.scripts]
+intentisolates = "intentisolates.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/ehallford11714/intent-isolates"
+Documentation = "https://github.com/ehallford11714/intent-isolates#readme"
+Repository = "https://github.com/ehallford11714/intent-isolates"
+Issues = "https://github.com/ehallford11714/intent-isolates/issues"
+Changelog = "https://github.com/ehallford11714/intent-isolates/releases"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["tests*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

@@ -29,10 +29,10 @@ from intentisolates.types import (
 
 CAVEATS = [
     "Indication (association) is not causation. High layer->Y correlation does not imply the layer causes Y.",
-    "IV / 2SLS requires: relevance (Z⊥̸X), exclusion (Z affects Y only through X), and no Z–confounder of Y.",
-    "Abstract L0–L4 layers are a reasoning scaffold unless bound to model residual indices.",
-    "Bootstrap rows from a single text are synthetic — exploratory only, not population inference.",
-    "Weak instruments (low first-stage F) bias β_IV toward OLS; treat weak edges cautiously.",
+    "IV / 2SLS requires: relevance (Z correlates with X), exclusion (Z affects Y only through X), and no Z-confounder of Y.",
+    "Abstract L0-L4 layers are a reasoning scaffold unless bound to model residual indices.",
+    "Bootstrap rows from a single text are synthetic - exploratory only, not population inference.",
+    "Weak instruments (low first-stage F) bias beta_IV toward OLS; treat weak edges cautiously.",
 ]
 
 

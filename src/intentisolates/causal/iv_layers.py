@@ -169,6 +169,9 @@ def estimate_layer_iv(
             )
             if est is None:
                 continue
+            # Drop numerically unstable Wald ratios (near-zero first stage, huge beta)
+            if est.first_stage_f < 0.05 and abs(est.beta_iv) > 5.0:
+                continue
             method_used.add(est.method)
             edges.append(est)
 

@@ -257,24 +257,48 @@ def _bootstrap_rows(
     # so IV (Z=early, X=mid) has a recoverable signal under the generative model.
     layer_of = {c: int(meta.get(c, {}).get("layer", 2)) for c in feature_cols}
 
+    early_cols = [c for c in feature_cols if layer_of[c] <= 1]
+    mid_cols = [c for c in feature_cols if layer_of[c] == 2]
+    late_cols = [c for c in feature_cols if layer_of[c] >= 3]
+
     rows: list[dict[str, float]] = []
     for _ in range(n):
         row: dict[str, float] = {}
-        for c in feature_cols:
+        # Draw early (Z) first, then mid/late (X) with a relevance path from early
+        # so IV first-stage is not vacuously weak under the synthetic DGP.
+        for c in early_cols:
             noise = (rnd() - 0.5) * 0.25
             row[c] = max(0.0, min(1.5, base[c] + noise))
+        early_mean = (sum(row[c] for c in early_cols) / len(early_cols)) if early_cols else 0.0
 
-        # Structured outcome: blend of late features + mid + early leakage + noise
-        early = [row[c] for c in feature_cols if layer_of[c] <= 1]
-        mid = [row[c] for c in feature_cols if layer_of[c] == 2]
-        late = [row[c] for c in feature_cols if layer_of[c] >= 3]
+        for c in mid_cols:
+            noise = (rnd() - 0.5) * 0.2
+            row[c] = max(0.0, min(1.5, 0.55 * base[c] + 0.35 * early_mean + noise))
+        mid_mean = (sum(row[c] for c in mid_cols) / len(mid_cols)) if mid_cols else early_mean
+
+        for c in late_cols:
+            noise = (rnd() - 0.5) * 0.2
+            # Late X depends on mid (+ weak early) — exclusion imperfect on purpose
+            row[c] = max(
+                0.0,
+                min(1.5, 0.45 * base[c] + 0.40 * mid_mean + 0.10 * early_mean + noise),
+            )
+
+        # Any remaining columns (shouldn't happen) get independent noise
+        for c in feature_cols:
+            if c not in row:
+                row[c] = max(0.0, min(1.5, base[c] + (rnd() - 0.5) * 0.25))
+
+        late = [row[c] for c in late_cols]
+        mid = [row[c] for c in mid_cols]
+        early = [row[c] for c in early_cols]
         y = y_base
         if late:
             y = 0.35 * y + 0.45 * (sum(late) / len(late))
         if mid:
             y = 0.7 * y + 0.25 * (sum(mid) / len(mid))
         if early:
-            # small direct path (confounding) so indication ≠ pure causation
+            # small direct path (confounding) so indication is not pure causation
             y = 0.9 * y + 0.08 * (sum(early) / len(early))
         y = max(0.0, min(1.5, y + (rnd() - 0.5) * 0.12))
         row[outcome_column] = y

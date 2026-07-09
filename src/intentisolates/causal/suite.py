@@ -28,7 +28,7 @@ from intentisolates.types import (
 )
 
 CAVEATS = [
-    "Indication (association) ≠ causation. High layer→Y correlation does not imply the layer causes Y.",
+    "Indication (association) is not causation. High layer->Y correlation does not imply the layer causes Y.",
     "IV / 2SLS requires: relevance (Z⊥̸X), exclusion (Z affects Y only through X), and no Z–confounder of Y.",
     "Abstract L0–L4 layers are a reasoning scaffold unless bound to model residual indices.",
     "Bootstrap rows from a single text are synthetic — exploratory only, not population inference.",
@@ -154,10 +154,10 @@ class LayerCausalResult:
             for n in self.iv_method_notes:
                 lines.append(f"- _{n}_")
             lines.append("")
-        lines.append("| X (endogenous) | Y | Z (instrument) | β_IV | F₁ | method |")
-        lines.append("|----------------|---|----------------|------|----|--------|")
+        lines.append("| X (endogenous) | Y | Z (instrument) | beta_IV | F1 | method |")
+        lines.append("|----------------|---|----------------|---------|----|--------|")
         for e in self.causation_edges[:12]:
-            weak = " ⚠weak" if e.weak_instrument else ""
+            weak = " (weak)" if e.weak_instrument else ""
             lines.append(
                 f"| `{e.source}`@L{e.layer_x} | `{e.target}` | "
                 f"`{e.instrument}`@L{e.layer_z} | {e.beta_iv:+.4f}{weak} | "
@@ -166,14 +166,14 @@ class LayerCausalResult:
         if not self.causation_edges:
             lines.append("| — | — | — | — | — | _none_ |")
         lines.append("")
-        lines.append("Layer causation summary (max |β_IV| by endogenous layer):")
+        lines.append("Layer causation summary (max |beta_IV| by endogenous layer):")
         for L, v in sorted(self.causation_by_layer.items()):
             name = ABSTRACT_LAYERS.get(L, f"L{L}")
             lines.append(f"- **{name}**: {v:.4f}")
         lines.append("")
         lines.append(
             "> Compare indication vs causation: a layer may **indicate** Y "
-            "(high |r|) without **causing** Y (near-zero / weak β_IV), or the reverse "
+            "(high |r|) without **causing** Y (near-zero / weak beta_IV), or the reverse "
             "when confounding masks association but IV recovers an effect."
         )
         lines.append("")

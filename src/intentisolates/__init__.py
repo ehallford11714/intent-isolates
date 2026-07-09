@@ -72,6 +72,7 @@ __all__ = [
     "identify_span_isolates",
     "layer_path_monotonicity",
     "multi_path_burst",
+    "orchestration_meta",
     "report_to_json",
     "report_to_markdown",
     "soft_latentintent_layers",
@@ -87,4 +88,8 @@ def __getattr__(name: str):
         from intentisolates.causal import LayerCausalResult, LayerCausalSuite
 
         return LayerCausalSuite if name == "LayerCausalSuite" else LayerCausalResult
+    if name == "orchestration_meta":
+        from intentisolates.orchestration import orchestration_meta
+
+        return orchestration_meta
     raise AttributeError(f"module 'intentisolates' has no attribute {name!r}")

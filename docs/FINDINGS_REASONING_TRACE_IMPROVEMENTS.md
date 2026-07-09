@@ -1,7 +1,9 @@
 # Findings: Improving Reasoning Traces via Creative Burst + Meter
 
-**Run:** see `experiments/results/lit_burst_latest.md`  
-**Theory / lit:** [THEORY_CREATIVE_BURST_REASONING.md](THEORY_CREATIVE_BURST_REASONING.md), [LIT_REVIEW_CREATIVITY_REASONING.md](LIT_REVIEW_CREATIVITY_REASONING.md)
+**Run:** `experiments/results/lit_burst_latest.md` (fresh `20260709T234812Z`)  
+**Compiled:** [COMPREHENSIVE_EXPERIMENTAL_FINDINGS_REPORT.md](COMPREHENSIVE_EXPERIMENTAL_FINDINGS_REPORT.md) · [COMPILED_EXPERIMENTATION_20260709.md](../experiments/results/COMPILED_EXPERIMENTATION_20260709.md) · [CHARTS.md](../experiments/results/CHARTS.md)  
+**Theory / lit:** [THEORY_CREATIVE_BURST_REASONING.md](THEORY_CREATIVE_BURST_REASONING.md), [LIT_REVIEW_CREATIVITY_REASONING.md](LIT_REVIEW_CREATIVITY_REASONING.md)  
+**Higher cognition + causal/Kineteq:** [THEORY_HIGHER_COGNITION_GROUNDING.md](THEORY_HIGHER_COGNITION_GROUNDING.md), [THEORY_CAUSAL_KINETEQ_BRIDGE.md](THEORY_CAUSAL_KINETEQ_BRIDGE.md), [NEXT_EXPERIMENTS_HIGHER_COGNITION.md](NEXT_EXPERIMENTS_HIGHER_COGNITION.md), [INSIGHTS_THEORY_CORPUS_SWEEP.md](INSIGHTS_THEORY_CORPUS_SWEEP.md)
 
 ---
 
@@ -25,15 +27,15 @@ Latest summary (CreativityMeter composites):
 | condition | C | R | H | entropy | anchor_R | layer_mono |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | linear | 0.688 | 0.645 | 0.657 | 2.147 | 0.625 | 0.683 |
-| random | 0.744 | 0.701 | 0.713 | 2.279 | 0.764 | 0.583 |
+| random | 0.702 | 0.705 | 0.687 | 2.119 | 0.743 | 0.633 |
 | motif_jump | 0.590 | 0.956 | 0.725 | 1.855 | 0.950 | 0.967 |
 | creative_burst_v1 | 0.778 | 0.721 | 0.745 | 2.363 | 0.812 | 0.550 |
-| divergent_guilford | 0.787 | 0.666 | 0.711 | **2.474** | 0.738 | 0.533 |
-| convergent_constrained | 0.655 | **0.896** | 0.750 | 1.977 | **0.983** | 0.733 |
-| novelty_boden | 0.756 | 0.732 | 0.739 | 2.363 | 0.829 | 0.550 |
-| layer_cot | 0.716 | 0.812 | 0.752 | 2.203 | 0.917 | 0.617 |
-| creative_burst_v2 | 0.726 | 0.795 | 0.754 | 2.241 | 0.900 | 0.600 |
-| **multipath_tot** | 0.720 | 0.823 | **0.766** | 2.213 | 0.917 | 0.650 |
+| divergent_guilford | 0.786 | 0.654 | 0.705 | **2.474** | 0.738 | 0.500 |
+| convergent_constrained | 0.644 | **0.907** | 0.747 | 1.939 | **1.000** | 0.733 |
+| novelty_boden | 0.745 | 0.751 | 0.743 | 2.335 | 0.850 | 0.567 |
+| layer_cot | 0.667 | 0.895 | 0.755 | 2.022 | 1.000 | 0.700 |
+| creative_burst_v2 | 0.706 | 0.820 | 0.751 | 2.165 | 0.929 | 0.617 |
+| **multipath_tot** | 0.713 | 0.841 | **0.768** | 2.213 | 0.917 | 0.700 |
 
 **Confirmed:** divergent entropy > convergent; convergent anchors > divergent; v2 R > v1 R; multipath H ≥ v2 H; v2 H ≥ random.
 
@@ -77,10 +79,13 @@ Select paths by **`tradeoff_harmonic`** (H), not C alone.
 
 ## 5. Next P1 experiments
 
-1. Two-phase diverge→converge within one path (first half novelty, second half anchors).  
-2. Protect-hot-set burst after PromptDict `protect_compact` (end-to-end with compaction metrics).  
-3. Outcome-linked eval: does higher H improve downstream task checklists / LLM judge scores?  
-4. GoT merge hops into shared goal spans (P2).
+Superseded/expanded queue: [NEXT_EXPERIMENTS_HIGHER_COGNITION.md](NEXT_EXPERIMENTS_HIGHER_COGNITION.md) (E1–E10). Short list:
+
+1. Two-phase diverge→converge (`two_phase_set_shift_burst.py`) — dual-process.  
+2. Protect-hot-set burst after PromptDict `protect_compact` (`goal_neglect_compact_burst.py`) — WM.  
+3. Burst-proposed instruments → IV quality (`burst_instruments_vs_random_iv.py`) — causal bridge.  
+4. Multipath select-by-H then causal validate (`multipath_H_then_iv_validate.py`) — GWT + IV.  
+5. Outcome-linked eval / GoT merge (still P2 research).
 
 ---
 

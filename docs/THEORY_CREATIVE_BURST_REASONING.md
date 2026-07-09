@@ -2,7 +2,8 @@
 
 **Status:** formalization + testable claims  
 **Package:** `intentisolates` ≥ 0.4.1  
-**Companion:** [LIT_REVIEW_CREATIVITY_REASONING.md](LIT_REVIEW_CREATIVITY_REASONING.md), [CREATIVE_BURST_IMPROVEMENTS.md](CREATIVE_BURST_IMPROVEMENTS.md), [FINDINGS_REASONING_TRACE_IMPROVEMENTS.md](FINDINGS_REASONING_TRACE_IMPROVEMENTS.md)
+**Companion:** [LIT_REVIEW_CREATIVITY_REASONING.md](LIT_REVIEW_CREATIVITY_REASONING.md), [CREATIVE_BURST_IMPROVEMENTS.md](CREATIVE_BURST_IMPROVEMENTS.md), [FINDINGS_REASONING_TRACE_IMPROVEMENTS.md](FINDINGS_REASONING_TRACE_IMPROVEMENTS.md)  
+**Higher cognition:** [THEORY_HIGHER_COGNITION_GROUNDING.md](THEORY_HIGHER_COGNITION_GROUNDING.md) · **Causal / Kineteq bridge:** [THEORY_CAUSAL_KINETEQ_BRIDGE.md](THEORY_CAUSAL_KINETEQ_BRIDGE.md) · **Next experiments:** [NEXT_EXPERIMENTS_HIGHER_COGNITION.md](NEXT_EXPERIMENTS_HIGHER_COGNITION.md)
 
 ---
 
@@ -41,22 +42,23 @@ with periodic forced protect visits every `anchor_schedule` hops.
 
 ## 3. Propositions (testable)
 
-| ID | Claim | Prediction |
-| --- | --- | --- |
-| **P1** | Constrained divergent hops improve \(R\) without collapsing \(C\) vs random | \(H(\pi_{v2}) > H(\pi_{rand})\); \(C\) within ~0.05 of random |
-| **P2** | Anchor-scheduled burst dominates random on \(R\) / `anchor_R` | `anchor_R(v2) > anchor_R(random)` |
-| **P3** | Layer-monotonic bias improves trajectory quality | `layer_mono(layer_cot) ≥ layer_mono(divergent)` |
-| **P4** | Divergent (high novelty) raises entropy / \(C\) vs convergent | \(C(\mathrm{div}) > C(\mathrm{conv})\); entropy likewise |
-| **P5** | Multi-path select-by-\(H\) (ToT-style) weakly dominates single-seed v2 on \(H\) | \(H(\mathrm{multipath}) \ge H(v2)\) |
+| ID | Claim | Prediction | Status |
+| --- | --- | --- | --- |
+| **P1** | Constrained divergent hops improve \(R\) without collapsing \(C\) vs random | \(H(\pi_{v2}) > H(\pi_{rand})\); \(C\) within ~0.05 of random | **Supported** (sweep+lit; strong/moderate) |
+| **P2** | Anchor-scheduled burst dominates random on \(R\) / `anchor_R` | `anchor_R(v2) > anchor_R(random)` | **Supported** (strong; Δ≈0.16) |
+| **P3** | Layer-monotonic bias improves trajectory quality | `layer_mono(layer_cot) ≥ layer_mono(divergent)` | **Supported** (strong; 8/8 fixtures) |
+| **P4** | Divergent (high novelty) raises entropy / \(C\) vs convergent | \(C(\mathrm{div}) > C(\mathrm{conv})\); entropy likewise | **Supported** (strong) |
+| **P5** | Multi-path select-by-\(H\) (ToT-style) weakly dominates single-seed v2 on \(H\) | \(H(\mathrm{multipath}) \ge H(v2)\) | **Supported** (moderate; k5/k7) |
+| **P6–P12** | WM / conflict / insight / causal | See higher-cognition + [CLAIM_EVIDENCE_TABLE.md](../experiments/results/CLAIM_EVIDENCE_TABLE.md) | P6 **rejected** (WM sim); P7 supported; P8 mixed; causal weak |
 
-Falsifiers: if truncate-like random matches v2 on \(R\) at equal path length; if multipath never beats single path across seeds; if layer bias lowers mono.
+Falsifiers: if truncate-like random matches v2 on \(R\) at equal path length; if multipath never beats single path across seeds; if layer bias lowers mono. Cognition-grounded P6–P12 and causal bridge B1–B5: [THEORY_HIGHER_COGNITION_GROUNDING.md](THEORY_HIGHER_COGNITION_GROUNDING.md) §11, [THEORY_CAUSAL_KINETEQ_BRIDGE.md](THEORY_CAUSAL_KINETEQ_BRIDGE.md) §7.
 
 ---
 
 ## 4. Compaction & causation (brief)
 
-- **Compaction:** protect \(p(s)=1\) spans during PromptDict compact; burst on the hot set (`filter_spans_for_burst`). Burst must not erase anchors that compaction preserved.
-- **IV / layers:** abstract layers are scaffolds for trajectories, not residual-stream indices; layer-IV suite indicates associations — do not claim hop policies *cause* better LLM answers without an outcome experiment.
+- **Compaction:** protect \(p(s)=1\) spans during PromptDict compact; burst on the hot set (`filter_spans_for_burst`). Burst must not erase anchors that compaction preserved. See [ISOLATES_COMPACTION_REASONING.md](../../docs/ISOLATES_COMPACTION_REASONING.md).
+- **IV / layers:** abstract layers are scaffolds for trajectories, not residual-stream indices; layer-IV suite separates **indication** vs **causation** — do not claim hop policies *cause* better LLM answers without an outcome experiment. Full crosswalk (meter \(R\) ↔ weak-IV epistemic control; burst ↔ instrument explore; Bridge/Kineteq broadcast): [THEORY_CAUSAL_KINETEQ_BRIDGE.md](THEORY_CAUSAL_KINETEQ_BRIDGE.md), [LAYER_CAUSAL_IV.md](LAYER_CAUSAL_IV.md).
 
 ---
 

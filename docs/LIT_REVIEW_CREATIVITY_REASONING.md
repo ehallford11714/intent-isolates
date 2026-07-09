@@ -1,7 +1,7 @@
 # Lit Review: Creativity, Reasoning Traces, and Hop Policies
 
 **Status:** working review for IntentIsolates creative-burst + CreativityMeter  
-**Theory:** [THEORY_CREATIVE_BURST_REASONING.md](THEORY_CREATIVE_BURST_REASONING.md)  
+**Theory:** [THEORY_CREATIVE_BURST_REASONING.md](THEORY_CREATIVE_BURST_REASONING.md) · [THEORY_HIGHER_COGNITION_GROUNDING.md](THEORY_HIGHER_COGNITION_GROUNDING.md) · [THEORY_CAUSAL_KINETEQ_BRIDGE.md](THEORY_CAUSAL_KINETEQ_BRIDGE.md)  
 **Experiments:** `experiments/lit_review_burst_experiments.py`
 
 ---

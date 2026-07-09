@@ -4,14 +4,25 @@
 
 Package: `intentisolates` · Version: **0.3.0**
 
+> **Part of the [LLMIntent](https://github.com/ehallford11714/llmintent) suite.** Prefer `pip install llmintent` for one install that includes isolates + motifs + IV layer-causal (vendored) alongside the model/analyzer stack. This repo remains the thin extractable library; LLMIntent re-exports it when both are installed. See [LLMIntent docs/SUITE.md](https://github.com/ehallford11714/llmintent/blob/main/docs/SUITE.md).
+
 > Epistemic caveat: motifs and trajectories are **structural hypotheses**, not proven cognitive mechanisms. Abstract layers L0–L4 are a reasoning scaffold unless bound to a real model residual stream. **Indication ≠ causation** — see [LAYER_CAUSAL_IV.md](docs/LAYER_CAUSAL_IV.md).
 
 ## Install
 
 ```bash
+# Suite (recommended) — isolates + motifs + IV included
+pip install llmintent
+
+# Standalone extractable lib
 pip install intentisolates
 # or from source
 pip install -e ".[dev]"
+```
+
+```python
+# Via suite
+from llmintent.isolates import identify_isolates  # offline; no second package required
 ```
 
 Optional soft backends:
@@ -96,7 +107,7 @@ python -m intentisolates backends
 
 ## Soft integrations
 
-- `llmintent.isolates` — optional re-export when both packages are installed
+- **LLMIntent suite** — `llmintent.isolates` / `llmintent.motifs` / `llmintent.iv_motifs` re-export this package when installed; otherwise LLMIntent vendors the same offline APIs
 - LatentIntentInspect / HF — soft imports only; rule backend never requires torch
 - AutoCausalLib — `python -m autocausal isolates-causal` soft-imports this package
 - CausalIVSuite — preferred IV backend when `causaliv` is installed

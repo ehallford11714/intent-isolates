@@ -2,7 +2,7 @@
 
 **Identify isolates**, classify their **typology**, form **layer motifs**, and map **reasoning trajectories**.
 
-Package: `intentisolates` · Version: **0.3.0**
+Package: `intentisolates` · Version: **0.4.0**
 
 > **Part of the [LLMIntent](https://github.com/ehallford11714/llmintent) suite.** Prefer `pip install llmintent` for one install that includes isolates + motifs + IV layer-causal (vendored) alongside the model/analyzer stack. This repo remains the thin extractable library; LLMIntent re-exports it when both are installed. See [LLMIntent docs/SUITE.md](https://github.com/ehallford11714/llmintent/blob/main/docs/SUITE.md).
 
@@ -82,18 +82,32 @@ python -m intentisolates motifs --text "..."
 python -m intentisolates trajectory --text "..." -o out.json
 python -m intentisolates report --text "..." --motifs --trajectory -o out.json
 python -m intentisolates causal --text "..." --outcome-hint decision
+python -m intentisolates span-burst --text "..." --hops 5
 python -m intentisolates backends
 ```
+
+### Span isolates / creative burst
+
+```python
+from intentisolates import identify_span_isolates, CreativeBurstHopper
+
+spans = identify_span_isolates(text)
+path = CreativeBurstHopper(spans).burst_path(n_hops=5, mode="creative_burst")
+```
+
+See [SPAN_ISOLATES_CREATIVE_BURST.md](docs/SPAN_ISOLATES_CREATIVE_BURST.md).
 
 ## Concepts
 
 | Concept | Meaning |
 |---------|---------|
 | **Isolate** | Separable unit of intent/meaning/activation |
+| **SpanIsolate** | Isolate bound to a text span; hoppable for creative burst |
 | **Typology** | `lexical`, `affective`, `instrumental`, `goal`, `constraint`, `action`, `outcome`, `confounder`, `noise`, `latent_feature`, `orphan_node` |
 | **Layer** | Abstract L0–L4 (or model residual index when hooked) |
 | **Motif** | Recurring composition of isolates (co-occurrence, sequence, typed path, chain, triangle, layer bridge) |
 | **Trajectory** | Ordered path of motifs/isolates across layers |
+| **Creative burst** | Span→span hop modes: linear / motif_jump / creative_burst |
 | **Indication** | Layer/motif association with outcome Y (not causal) |
 | **Causation (IV)** | Lower-layer Z instruments mid/late X → Y via 2SLS / Wald |
 
@@ -102,6 +116,7 @@ python -m intentisolates backends
 - [ARCHITECTURE.md](docs/ARCHITECTURE.md)
 - [TYPOLOGY.md](docs/TYPOLOGY.md)
 - [MOTIFS_TRAJECTORIES.md](docs/MOTIFS_TRAJECTORIES.md)
+- [SPAN_ISOLATES_CREATIVE_BURST.md](docs/SPAN_ISOLATES_CREATIVE_BURST.md)
 - [LAYER_CAUSAL_IV.md](docs/LAYER_CAUSAL_IV.md)
 - [SOTA_ISOLATES.md](docs/SOTA_ISOLATES.md)
 

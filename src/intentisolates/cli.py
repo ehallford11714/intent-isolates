@@ -52,6 +52,34 @@ def main(argv: list[str] | None = None) -> int:
 
     p_be = sub.add_parser("backends", help="List available backends")
 
+    p_sb = sub.add_parser(
+        "span-burst",
+        help="Identify span isolates and hop a creative-burst path",
+    )
+    p_sb.add_argument("--text", type=str, default=None, help="Input text")
+    p_sb.add_argument(
+        "--file",
+        type=str,
+        default=None,
+        dest="text_file",
+        help="Read text from file",
+    )
+    p_sb.add_argument("--hops", type=int, default=5, help="Number of hops (default 5)")
+    p_sb.add_argument(
+        "--mode",
+        type=str,
+        default="creative_burst",
+        choices=["linear", "motif_jump", "creative_burst", "random"],
+    )
+    p_sb.add_argument("--seed", type=int, default=42, help="RNG / seed span index")
+    p_sb.add_argument("--seed-span", type=str, default=None, dest="seed_span")
+    p_sb.add_argument("-o", "--output", type=str, default=None, help="Write JSON to path")
+    p_sb.add_argument(
+        "--markdown",
+        action="store_true",
+        help="Also print a short markdown path summary",
+    )
+
     p_ca = sub.add_parser(
         "causal",
         help="Layer motifs → indication vs IV causation report (AutoCausal/causaliv bridge)",
@@ -85,6 +113,9 @@ def main(argv: list[str] | None = None) -> int:
     if args.cmd == "backends":
         print(json.dumps(describe_backend(), indent=2))
         return 0
+
+    if args.cmd == "span-burst":
+        return _cmd_span_burst(args)
 
     text, features, graph = _parse_inputs(args)
     if text is None and features is None and graph is None:
@@ -228,13 +259,55 @@ def _parse_inputs(args: argparse.Namespace):
     return text, features, graph
 
 
+def _cmd_span_burst(args: argparse.Namespace) -> int:
+    from intentisolates.span_burst import CreativeBurstHopper, identify_span_isolates
+
+    text = args.text
+    if args.text_file:
+        text = Path(args.text_file).read_text(encoding="utf-8")
+    if not text or not str(text).strip():
+        print("Provide --text or --file", file=sys.stderr)
+        return 2
+
+    spans = identify_span_isolates(str(text))
+    hopper = CreativeBurstHopper(spans, seed=args.seed)
+    # --seed is RNG seed; --seed-span picks starting span id (else auto goal/constraint)
+    path_seed: str | int | None = args.seed_span if args.seed_span else None
+    path = hopper.burst_path(seed=path_seed, n_hops=args.hops, mode=args.mode)
+    payload = {
+        "spans": [s.to_dict() for s in spans],
+        "path": path.to_dict(),
+        "mode": args.mode,
+        "n_spans": len(spans),
+    }
+    rc = _emit(payload, args.output)
+    if args.markdown:
+        print("")
+        print(f"## Span-burst ({args.mode}, {args.hops} hops)")
+        print("")
+        print(path.summary)
+        print("")
+        for i, sid in enumerate(path.span_ids):
+            sp = hopper.by_id.get(sid)
+            if sp is None:
+                continue
+            typ = sp.typology.value if hasattr(sp.typology, "value") else sp.typology
+            flag = " 🔒" if sp.protect else ""
+            print(f"{i}. `{sid}` **{typ}**{flag}: {sp.surface[:120]}")
+    return rc
+
+
 def _emit(payload, output: str | None) -> int:
-    text = json.dumps(payload, indent=2, ensure_ascii=False)
+    text = json.dumps(payload, indent=2, ensure_ascii=True)
     if output:
         Path(output).write_text(text, encoding="utf-8")
         print(f"Wrote {output}")
     else:
-        print(text)
+        # Windows consoles may be cp1252; avoid UnicodeEncodeError on arrows etc.
+        try:
+            print(text)
+        except UnicodeEncodeError:
+            sys.stdout.buffer.write((text + "\n").encode("utf-8", errors="replace"))
     return 0
 
 

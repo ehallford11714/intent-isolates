@@ -31,7 +31,8 @@ Companion artifacts: [COMPILED_EXPERIMENTATION_20260709.md](../experiments/resul
 | [CREATIVE_BURST_IMPROVEMENTS.md](CREATIVE_BURST_IMPROVEMENTS.md) | v2 knobs / multipath |
 | [FINDINGS_REASONING_TRACE_IMPROVEMENTS.md](FINDINGS_REASONING_TRACE_IMPROVEMENTS.md) | Prior lit findings |
 | [../../docs/ISOLATES_COMPACTION_REASONING.md](../../docs/ISOLATES_COMPACTION_REASONING.md) | Protect / compress / truncate |
-| [NEXT_EXPERIMENTS_HIGHER_COGNITION.md](NEXT_EXPERIMENTS_HIGHER_COGNITION.md) | E1–E10 queue |
+| [NEXT_EXPERIMENTS_REASONING_TRACE.md](NEXT_EXPERIMENTS_REASONING_TRACE.md) | RT1–RT11 queue (reasoning-trace R/H/IV) |
+| [NEXT_EXPERIMENTS_HIGHER_COGNITION.md](NEXT_EXPERIMENTS_HIGHER_COGNITION.md) | E1–E10 cognition + bridge queue |
 
 ---
 
@@ -175,12 +176,19 @@ Full rows: [CLAIM_EVIDENCE_TABLE.md](../experiments/results/CLAIM_EVIDENCE_TABLE
 - Compliance / high-R: convergent or `precision_high` knobs; ideation: divergent.
 - Reasoning compaction: `protect_compact` / isolate-then-compact before burst.
 
-**Next (from NEXT_EXPERIMENTS, prioritized by falsifiers)**
+### What’s next
 
-1. Redesign E1 goal-neglect with real PromptDict protect set → burst (fix P6).
-2. Longer-horizon incubation / two-phase (hop≥10).
-3. Real (non-mock) IV first-stage on burst-proposed Z (B1).
-4. Outcome-linked eval (checklist / judge) for high-H paths.
+Primary queue: **[NEXT_EXPERIMENTS_REASONING_TRACE.md](NEXT_EXPERIMENTS_REASONING_TRACE.md)** (RT1–RT11). Companion cognition/bridge list: [NEXT_EXPERIMENTS_HIGHER_COGNITION.md](NEXT_EXPERIMENTS_HIGHER_COGNITION.md).
+
+| Rank | Exp | Why (evidence) |
+| --- | --- | --- |
+| 1 | **RT1** multipath value-fn | G1: select-by-H R=0.836 ≫ select-by-C 0.734; select-by-R R=0.852 but H↓ — map Pareto / IV-diag |
+| 2 | **RT2** protect_compact→burst | PromptDict mid_R=1.0 vs truncate 0.2; P6 truncate-sim rejected as artifact |
+| 3 | **RT3** burst Z → real IV F | B1 mock F tied at 4.20; B4 structural prior ready |
+| 4 | **RT4** adaptive conflict | schedule_2 H=0.763 ≥ v2 but C≈0.688; recover C |
+| 5 | **RT5** mono-gating | motif mono≈0.98 / C≈0.57 vs layer_cot mono 0.70 — fidelity without C death |
+
+Also prioritize longer-horizon incubation redo (**RT6**) before revisiting I1/I2 knobs.
 
 ---
 

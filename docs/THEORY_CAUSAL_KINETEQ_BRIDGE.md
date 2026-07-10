@@ -192,7 +192,7 @@ Cognitive reading: explore = hypothesis sampling; protect = WM goals; meter = mo
 | **B4** | Multipath select-by-\(H\) then IV validate beats random-path-then-IV on edge quality |
 | **B5** | Meter-gated Bridge/Kineteq route (dry-run) chooses a more coherent next tool than ungated |
 
-**Empirical (theory_corpus_sweep 2026-07-09):** B1/B2 mock-IV checks recorded as *supported* at **weak** strength only (identical F / zero name-overlap) — treat as **inconclusive for identification**. B4 (multipath_H R ≥ random R) **supported (strong)** as a structural prior, not a substitute for weak-IV tests. B3/B5 still untested. Queue: [NEXT_EXPERIMENTS_HIGHER_COGNITION.md](NEXT_EXPERIMENTS_HIGHER_COGNITION.md) · evidence: [CLAIM_EVIDENCE_TABLE.md](../experiments/results/CLAIM_EVIDENCE_TABLE.md).
+**Empirical (theory_corpus_sweep 2026-07-09):** B1/B2 mock-IV checks recorded as *supported* at **weak** strength only (identical F / zero name-overlap) — treat as **inconclusive for identification**. B4 (multipath_H R ≥ random R) **supported (strong)** as a structural prior, not a substitute for weak-IV tests. B3/B5 still untested. Queue: [NEXT_EXPERIMENTS_REASONING_TRACE.md](NEXT_EXPERIMENTS_REASONING_TRACE.md) **RT3/RT10** · [NEXT_EXPERIMENTS_HIGHER_COGNITION.md](NEXT_EXPERIMENTS_HIGHER_COGNITION.md) · evidence: [CLAIM_EVIDENCE_TABLE.md](../experiments/results/CLAIM_EVIDENCE_TABLE.md).
 
 ---
 

@@ -19,3 +19,7 @@
 ## Production takeaway
 
 Keep `for_v2` defaults; prefer multipath select-by-H; do not ship incubation/two-phase or aggressive side_hop until redesigned.
+
+## What’s next
+
+See [NEXT_EXPERIMENTS_REASONING_TRACE.md](NEXT_EXPERIMENTS_REASONING_TRACE.md): **RT1** value-fn, **RT2** protect→burst, **RT3** real IV F, **RT4** adaptive conflict, **RT5** mono-gating.

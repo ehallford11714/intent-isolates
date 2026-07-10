@@ -79,13 +79,16 @@ Select paths by **`tradeoff_harmonic`** (H), not C alone.
 
 ## 5. Next P1 experiments
 
-Superseded/expanded queue: [NEXT_EXPERIMENTS_HIGHER_COGNITION.md](NEXT_EXPERIMENTS_HIGHER_COGNITION.md) (E1–E10). Short list:
+**Primary queue (evidence-tied):** [NEXT_EXPERIMENTS_REASONING_TRACE.md](NEXT_EXPERIMENTS_REASONING_TRACE.md) — RT1–RT11.  
+Companion cognition+bridge: [NEXT_EXPERIMENTS_HIGHER_COGNITION.md](NEXT_EXPERIMENTS_HIGHER_COGNITION.md) (E1–E10).
 
-1. Two-phase diverge→converge (`two_phase_set_shift_burst.py`) — dual-process.  
-2. Protect-hot-set burst after PromptDict `protect_compact` (`goal_neglect_compact_burst.py`) — WM.  
-3. Burst-proposed instruments → IV quality (`burst_instruments_vs_random_iv.py`) — causal bridge.  
-4. Multipath select-by-H then causal validate (`multipath_H_then_iv_validate.py`) — GWT + IV.  
-5. Outcome-linked eval / GoT merge (still P2 research).
+### What’s next (top of queue)
+
+1. **RT1** — Multipath value-fn bakeoff (H vs R vs IV-diag); G1 ΔR=+0.102 warns against select-by-C.  
+2. **RT2** — Real `protect_compact` → burst (fix P6 truncate artifact; mid_R=1.0 settled).  
+3. **RT3** — Burst-proposed Z → weak-IV F (replace B1 mock tie).  
+4. **RT4** — Adaptive conflict schedule (P7 H↑ with C cost).  
+5. **RT5** — Soft mono-gating (motif mono vs C tradeoff).
 
 ---
 

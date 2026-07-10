@@ -2,7 +2,7 @@
 
 **Status:** computational analogs (not claims that span hops *are* human cognition)  
 **Package:** `intentisolates` ≥ 0.4.1  
-**Companions:** [THEORY_CREATIVE_BURST_REASONING.md](THEORY_CREATIVE_BURST_REASONING.md) · [THEORY_CAUSAL_KINETEQ_BRIDGE.md](THEORY_CAUSAL_KINETEQ_BRIDGE.md) · [LIT_REVIEW_CREATIVITY_REASONING.md](LIT_REVIEW_CREATIVITY_REASONING.md) · [NEXT_EXPERIMENTS_HIGHER_COGNITION.md](NEXT_EXPERIMENTS_HIGHER_COGNITION.md) · [FINDINGS_REASONING_TRACE_IMPROVEMENTS.md](FINDINGS_REASONING_TRACE_IMPROVEMENTS.md)
+**Companions:** [THEORY_CREATIVE_BURST_REASONING.md](THEORY_CREATIVE_BURST_REASONING.md) · [THEORY_CAUSAL_KINETEQ_BRIDGE.md](THEORY_CAUSAL_KINETEQ_BRIDGE.md) · [LIT_REVIEW_CREATIVITY_REASONING.md](LIT_REVIEW_CREATIVITY_REASONING.md) · [NEXT_EXPERIMENTS_REASONING_TRACE.md](NEXT_EXPERIMENTS_REASONING_TRACE.md) · [NEXT_EXPERIMENTS_HIGHER_COGNITION.md](NEXT_EXPERIMENTS_HIGHER_COGNITION.md) · [FINDINGS_REASONING_TRACE_IMPROVEMENTS.md](FINDINGS_REASONING_TRACE_IMPROVEMENTS.md)
 
 **Epistemic stance:** Formal objects \((\mathcal{I},\mathcal{S},\mathcal{M},T,\pi,C,R,H)\) are **engineering constructs** with *selective* structural resemblance to constructs in theories of higher cognition. Mappings are for hypothesis generation and experiment design, not identity claims.
 
@@ -21,7 +21,7 @@
 | \(C(P), R(P)\) | CreativityMeter divergent vs reasoning-fidelity composites |
 | \(H(P)\) | Harmonic tradeoff \(2CR/(C+R)\) |
 
-Offline evidence (lit burst, 2026-07-09): `multipath_tot` best \(H\); `creative_burst_v2` lifts \(R\) vs v1 without collapsing \(C\) vs random; divergent raises entropy; convergent raises `anchor_R`. See `experiments/results/lit_burst_latest.md`.
+Offline evidence (2026-07-09 lit + theory_corpus_sweep): `multipath_tot` / `multipath_k*_H` best \(H\) (lit **0.768**, sweep k7 **0.774**); `creative_burst_v2` lifts \(R\) vs v1 without collapsing \(C\) vs random; divergent raises entropy; convergent / precision_high raise `anchor_R`; motif_jump max R/mono min C; incubation/two-phase **rejected** at hop=5; PromptDict `protect_compact` mid_R=1.0 vs truncate 0.2. See `experiments/results/lit_burst_latest.md`, `theory_corpus_sweep_latest.md`, CLAIM_EVIDENCE_TABLE.
 
 ---
 
@@ -57,7 +57,7 @@ Offline evidence (lit burst, 2026-07-09): `multipath_tot` best \(H\); `creative_
 **(b) Predictions:** Under compaction (load), unprotected goals → goal neglect → ↓\(R\); protect-hot-set should preserve `constraint_fidelity` / `anchor_R`. Dual-task analog: compact then burst → \(R\) drop unless protect.  
 **(c) Closeness:** **tight** for protect≈goal maintenance; **loose** for phonological loop / sketchpad.
 
-**Partially supported:** compaction bridge documented; end-to-end protect+burst experiment still P1.
+**Partially supported:** compaction bridge — PromptDict `protect_compact` mid_constraint_R=**1.000** vs `lossy_truncate` **0.200** (settled for load). End-to-end protect→burst still open: offline WM truncate sim **rejected** P6 (pool-shrink artifact). Next: [NEXT_EXPERIMENTS_REASONING_TRACE.md](NEXT_EXPERIMENTS_REASONING_TRACE.md) **RT2**.
 
 ---
 
@@ -75,7 +75,7 @@ Offline evidence (lit burst, 2026-07-09): `multipath_tot` best \(H\); `creative_
 **(b) Predictions:** Multipath + evaluate ≥ single-seed on \(H\); broadcasting a low-\(R\) path should fail causal/validation gates more often.  
 **(c) Closeness:** **tight** for ToT-as-coalitions; **loose** for consciousness claims.
 
-**Supported:** `multipath_tot` ≥ v2 on \(H\) (lit). Orchestration broadcast → CausalBridge/Kineteq: see bridge doc (mostly untested).
+**Supported:** `multipath_tot` / k-sweep select-by-\(H\) ≥ v2 on \(H\) (lit+sweep); select-by-\(C\) harms \(R\) (G1 ΔR≈+0.10 for H vs C). Orchestration broadcast → CausalBridge/Kineteq: see bridge doc (mostly untested; **RT10**).
 
 ---
 
@@ -93,7 +93,7 @@ Offline evidence (lit burst, 2026-07-09): `multipath_tot` best \(H\); `creative_
 **(b) Predictions:** High-precision anchors stabilize \(R\); exploratory hops raise \(C\) and prediction-error-like entropy; value from meter ≈ soft EFE proxy (not formal FEP).  
 **(c) Closeness:** **loose–moderate** — useful metaphor; no free-energy math in meter.
 
-**Untested** as formal PP; behavioral diverge/converge pattern already seen.
+**Behavioral PP supported:** `precision_high` R=0.891 ≥ `precision_low` 0.740 (PP1); low precision ↑C (PP2). Formal FEP math still absent.
 
 ---
 
@@ -110,7 +110,7 @@ Offline evidence (lit burst, 2026-07-09): `multipath_tot` best \(H\); `creative_
 **(b) Predictions:** Adaptive schedule (conflict-triggered anchors) > fixed schedule on \(H\) under noisy fixtures; over-forcing anchors ↓\(C\).  
 **(c) Closeness:** **tight** for schedule-as-control; **loose** for ACC identity.
 
-**Partially supported:** fixed `anchor_schedule=3` helped v2 `anchor_R`; adaptive conflict schedule **untested**.
+**Supported (fixed):** `conflict_schedule_2` H=0.763 ≥ v2 0.754 (P7, 5/8) with C cost (~0.04). Adaptive conflict schedule **open** → **RT4**.
 
 ---
 
@@ -128,7 +128,7 @@ Offline evidence (lit burst, 2026-07-09): `multipath_tot` best \(H\); `creative_
 **(b) Predictions:** Motif-guided paths ↑\(R\), ↓\(C\) (lit: motif_jump); hybrid motif+novelty recovers \(H\).  
 **(c) Closeness:** **tight** for motif≈relational skeleton.
 
-**Supported:** `motif_jump` highest \(R\) / mono, lowest \(C\).
+**Supported (within-fixture):** `motif_jump` highest \(R\) / mono, lowest \(C\) (L1). Cross-fixture transfer **open** → **RT7** (P9).
 
 ---
 
@@ -201,18 +201,52 @@ CreativityMeter as metacognitive evaluator; select-by-\(H\) = confidence/control
 | **P2** | Anchor schedule raises `anchor_R` vs unconstrained burst | Conflict control / WM goals | **Supported** (strong) |
 | **P3** | Forward layer bias improves trajectory quality vs pure divergent | Soar/ACT-R + CoT | **Supported** (mono 8/8; H still < motif specialist) |
 | **P4** | Divergent ↑\(C\)/entropy vs convergent | Dual-process / Guilford | **Supported** (strong) |
-| **P5** | Multipath select-by-\(H\) ≽ single v2 on \(H\) | GWT / ToT | **Supported** (moderate; k↑ helps) |
-| **P6** | Protect-hot-set after compact preserves \(R\) under load | WM load / goal neglect | **Rejected** offline truncate-sim (artifact); redesign w/ PromptDict |
-| **P7** | Tighter `anchor_schedule` (conflict-like) ≽ default v2 on \(H\) | Botvinick | **Supported** (moderate; schedule=2) |
+| **P5** | Multipath select-by-\(H\) ≽ single v2 on \(H\) | GWT / ToT | **Supported** (moderate; k↑ helps; lit H=0.768) |
+| **P6** | Protect-hot-set after compact preserves \(R\) under load | WM load / goal neglect | **Rejected** offline truncate-sim (artifact); redesign w/ PromptDict → **RT2** |
+| **P7** | Tighter `anchor_schedule` (conflict-like) ≽ default v2 on \(H\) | Botvinick | **Supported** (moderate; schedule=2); adaptive → **RT4** |
 | **P8** | Side-hops raise \(C\) without large \(R\) loss | Insight / Ohlsson | **Mixed** (C↑ supported; R drop >0.08 rejected) |
-| **P9** | Motif structure-mapping transfers across fixtures | Gentner / Holyoak | **Untested** (within-fixture motif_jump supported as L1) |
-| **P10** | High-\(R\) paths align better with IV causation | LayerCausal | **Weak / inconclusive** (mock overlap) |
-| **P11** | Burst-proposed instruments beat random Z | Explore Z | **Weak** (mock_iv F tied) |
-| **P12** | Orchestration broadcast of high-\(H\) path | GWT + Fabric | **Untested** |
+| **P9** | Motif structure-mapping transfers across fixtures | Gentner / Holyoak | **Untested** → **RT7** (within-fixture L1 supported) |
+| **P10** | High-\(R\) paths align better with IV causation | LayerCausal | **Weak / inconclusive** (mock overlap) → **RT3** |
+| **P11** | Burst-proposed instruments beat random Z | Explore Z | **Weak** (mock_iv F tied) → **RT3** |
+| **P12** | Orchestration broadcast of high-\(H\) path | GWT + Fabric | **Untested** → **RT10** |
+| **P13** | Multipath value-fn: H-optimal vs R-optimal vs C-harmful; IV-diag for causal-prep | GWT / metacontrol | **Partial** (G1+H/R columns); IV-diag → **RT1** |
+| **P14** | Soft mono-gating → motif-like mono without motif \(C\) death | Soar / CoT | **Open** → **RT5** |
+| **P15** | Protect-compact → burst preserves mid-constraints iff protect filter | WM + compaction | Compact mid_R **supported**; coupling → **RT2** |
+| **P16** | Motif–burst hybrid schedule Pareto between motif & v2 | Structure-mapping + dual-process | **Open** → **RT8** |
+| **P17** | Longer-horizon intermittent diverge/converge can beat hop=5 incubations | Dual-process / incubation | hop=5 **rejected** (I1/I2); longer → **RT6** |
 
 Empirical inventory: [CLAIM_EVIDENCE_TABLE.md](../experiments/results/CLAIM_EVIDENCE_TABLE.md) · [COMPREHENSIVE_EXPERIMENTAL_FINDINGS_REPORT.md](COMPREHENSIVE_EXPERIMENTAL_FINDINGS_REPORT.md).
 
-Falsifiers unchanged for P1–P5; for P10–P12 see [NEXT_EXPERIMENTS_HIGHER_COGNITION.md](NEXT_EXPERIMENTS_HIGHER_COGNITION.md) and [THEORY_CAUSAL_KINETEQ_BRIDGE.md](THEORY_CAUSAL_KINETEQ_BRIDGE.md).
+Falsifiers unchanged for P1–P5; for P10–P17 see [NEXT_EXPERIMENTS_REASONING_TRACE.md](NEXT_EXPERIMENTS_REASONING_TRACE.md) and [THEORY_CAUSAL_KINETEQ_BRIDGE.md](THEORY_CAUSAL_KINETEQ_BRIDGE.md).
+
+---
+
+## 11b. Empirical status (2026-07-09)
+
+| Supported (integrate) | Rejected / do-not-ship | Weak / open |
+| --- | --- | --- |
+| P1–P5, P7, PP1/PP2, G1–G3, L1/L2, PL1, S1–S3, B4 (structural) | P6 (artifact), I1, I2, P8b (R tax) | B1/B2 mock IV; P9–P12, P13–P17 |
+
+**Production stance:** keep `for_v2` + multipath select-by-\(H\); treat motif_jump as fidelity specialist; do not ship hop=5 incubation/two-phase or truncate-as-WM-control.
+
+---
+
+## 11c. Open questions → next experiments
+
+| Question | Evidence gap | Doc |
+| --- | --- | --- |
+| Value function beyond \(H\) for IV-prep | mp_k5_R vs H; G1 | RT1 |
+| Real protect→burst goal neglect | P6 artifact vs PromptDict mid_R=1.0 | RT2 |
+| Non-mock burst Z first-stage F | B1 tie | RT3 |
+| Adaptive conflict recovers C | P7 C cost | RT4 |
+| Mono gates without motif C death | motif mono vs C | RT5 |
+| Incubation at hops≥10 | I1/I2 | RT6 |
+| Cross-fixture motif transfer | P9 | RT7 |
+| Motif schedule hybrid | L1 tradeoff | RT8 |
+| Meter + mid_constraint / IV dims | mid_R invisible to hop meter | RT9 |
+| Bridge route stub | B5 | RT10 |
+
+Full protocols: [NEXT_EXPERIMENTS_REASONING_TRACE.md](NEXT_EXPERIMENTS_REASONING_TRACE.md).
 
 ---
 

@@ -23,13 +23,15 @@ Script: `python experiments/p0_followup_experiments.py` · charts: `p0_e1_*.png`
 | RT | Status | Epoch evidence | Satellite |
 | --- | --- | --- | --- |
 | **RT1** | **Supported (closed by E1)** | e2–e3 kept `select_by=H`, k=7; G1 replicate | `rt1_multipath_bakeoff_latest` + **p0 E1** |
-| **RT2** | **Supported mid_R; mixed vs trunc H** | e4–e5 `protect_on`; **p0 E2** settles mid_R | `rt2_protect_burst_latest` + **p0 E2** |
-| **RT3** | **Open / structural only** | e8–e9 hybrid polish; kept H-elite | `rt3_iv_probe_latest` — Z counts; mock_iv only |
-| **RT4** | **Supported in-loop** | e6 locked schedule=2, pull≈0.80; H=0.779, mono=0.800 | conflict grid inside trainer |
+| **RT2** | **Mixed** (mid_R/R win; H not) | e4–e5 `protect_on`; **p0 E2** + coverage-gated redesign | `rt2_coverage_gated_latest` mid_R 0.938≫0.50; R win; trunc H |
+| **RT3** | **Supported** (causaliv upgrade) | e8–e9 hybrid polish; kept H-elite | `rt3_iv_upgrade_latest` — burst Z wins **3/4** on F/weak |
+| **RT4** | **Supported** (adaptive) | e6 locked schedule=2, pull≈0.80; H=0.779, mono=0.800 | `rt4_adaptive_conflict_latest` — `adaptive_loosen_0.55` **7/8** |
 | **RT5** | **Partial** | e7 layer variants did not beat post-RT4 elite | mono already 0.80 after RT2/RT4 |
 | **RT6** | **Archived (E3)** | structured alt-2 fails hops 5 & 8 | **p0 E3** |
 
 Loop headline: epoch_0 H=**0.753** → epoch_9 H=**0.779**, R **0.828→0.897**, mono **0.600→0.800**.
+
+**Post-loop redesign:** [PROPOSED_NEXT_AFTER_RT234.md](PROPOSED_NEXT_AFTER_RT234.md) (RT2b / RT4b / RT9 / RT3b …).
 
 ---
 

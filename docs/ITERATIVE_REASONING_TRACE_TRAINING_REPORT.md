@@ -17,9 +17,9 @@ Elite policy at epoch 9: **multipath k=7, select_by=H, protect_compact=on, ancho
 | Hypothesis | Verdict from this cycle |
 | --- | --- |
 | **RT1** (H vs R vs C vs iv_diag) | **Supported** — G1 replicate; `iv_diag` competitive with H; select-by-C collapses R |
-| **RT2** (protect→burst) | **Mixed / partial** — protect wins inside the epoch loop on H+R; standalone A-vs-B anchor gap not ≥0.10 (B shrinks mid pool → inflated path metrics) |
-| **RT3** (burst Z / IV) | **Inconclusive for F** — causal suite present; mock IV only; structural Z counts logged; hybrid polish kept H-elite |
-| **RT4** (conflict schedule) | **Supported in-loop** — accepting schedule=2 + higher anchor_pull lifted H/R/mono; schedule grid kept that elite |
+| **RT2** (protect→burst) | **Mixed** — loop + coverage-gated redesign: mid_R/R favor protect; H still often truncate (unmatched pool) — see satellite `rt2_coverage_gated_latest` |
+| **RT3** (burst Z / IV) | **Supported (post-loop)** — `rt3_iv_upgrade_latest`: real `causaliv` F; burst/high-R Z beats random on **3/4** fixtures |
+| **RT4** (conflict schedule) | **Supported** — in-loop schedule=2; post-loop `adaptive_loosen_0.55` recovers C vs elite with H within 0.005 (**7/8**) |
 | **RT5** (layer_mono) | **Partially supported** — mono already high after RT2/RT4; further layer_cot-like variants did not beat elite on objective |
 
 ---
@@ -168,14 +168,14 @@ Charts:
 
 ### Partial / mixed
 
-- **RT2** protect helps the loop, but the **standalone A vs B success rule** (Δanchor_R≥0.10) did not hold — B’s mid-drop neglects constraints while path meters can still look strong. Prefer mid_R + matched coverage as gates (aligns with NEXT doc redesign).  
+- **RT2** (coverage-gated redesign `20260710T003116Z`): protect mid_R **0.938** vs truncate **0.500**, R **0.900** > truncate/raw; coverage alive. Truncate still wins H with larger pool/path_len — next is pool-matched RT2b ([PROPOSED_NEXT_AFTER_RT234.md](PROPOSED_NEXT_AFTER_RT234.md)).  
 - **RT5** soft mono: further bias not needed once RT2/RT4 already lifted mono to 0.80; no evidence against layer_cot itself (prior P3 still stands).
 
-### Open / weak
+### Post-loop satellites (RT2–RT4 redesign)
 
-- **RT3** first-stage F: only structural Z counts + `LayerCausalSuite(mock_iv=True)`; no non-degenerate F uplift claimed.  
-- Outcome / LLM-judge (RT11) not run.  
-- Fixtures×seeds modest (4×3); sweep used seeds=3 for runtime.
+- **RT3 upgrade:** causaliv first-stage F; burst wins 3/4 fixtures (`rt3_iv_upgrade_latest`).  
+- **RT4 adaptive:** `adaptive_loosen_0.55` supported vs elite fixed s2 (`rt4_adaptive_conflict_latest`).  
+- Outcome / LLM-judge (RT11) not run. Fixtures×seeds modest in the epoch loop (4×3); satellites used 8×5 where noted.
 
 ---
 
@@ -192,10 +192,11 @@ Charts:
 ## 8. Recommendations
 
 1. **Production default:** multipath **k=5..7**, `select_by="tradeoff_harmonic"` (H).  
-2. **When fidelity matters:** turn **protect filter** on before burst; prefer `anchor_schedule=2`, `anchor_pull≈0.80` over stock schedule=3 when R/mono matter more than max C.  
-3. **Do not** select multipath winners by C for reasoning traces.  
-4. **Optional:** try `iv_diag` when preparing IV / early-layer paths; expect near-H performance.  
-5. **Next experiments:** finish RT2 with PromptDict-matched token budgets + coverage gates; RT3 with non-mock first-stage F; RT5 mono-gating at hops≥8; RT6 long-horizon incubation only after that.
+2. **When fidelity matters:** turn **protect / protect_compact** on before burst; prefer `anchor_schedule=2`, `anchor_pull≈0.80` over stock schedule=3 when R/mono matter more than max C.  
+3. **Optional C recovery:** `adaptive_loosen_on_calm` (RT4) when C tax of fixed s2 hurts — keep H within ~0.005 of elite.  
+4. **Do not** select multipath winners by C for reasoning traces.  
+5. **IV prep:** prefer burst / high-R path Z over random (RT3 causaliv).  
+6. **Next:** [PROPOSED_NEXT_AFTER_RT234.md](PROPOSED_NEXT_AFTER_RT234.md) — RT2b pool-match, RT4b trainer bake-in, RT9 meter, RT3b stricter Z, RT5/RT8/RT6.
 
 Reproduce:
 
@@ -205,8 +206,9 @@ python experiments/span_burst_creative.py
 python experiments/lit_review_burst_experiments.py
 python experiments/theory_corpus_sweep.py --seeds 3 --hops 5
 python experiments/p0_multipath_selector_bakeoff.py
-python experiments/p0_protect_compact_burst.py
-python experiments/p0_rt3_burst_iv_probe.py
+python experiments/p0_rt2_protect_coverage_gated.py
+python experiments/p0_rt3_burst_iv_upgrade.py
+python experiments/p0_rt4_adaptive_conflict.py
 python experiments/iterative_reasoning_training.py --epochs 10 --fixtures 4 --seeds 3
 python experiments/plot_epochs.py
 ```
@@ -219,8 +221,12 @@ python experiments/plot_epochs.py
 | --- | --- |
 | `experiments/iterative_reasoning_training.py` | RT-guided 10-epoch trainer |
 | `experiments/p0_multipath_selector_bakeoff.py` | RT1 satellite |
-| `experiments/p0_protect_compact_burst.py` | RT2 satellite |
-| `experiments/p0_rt3_burst_iv_probe.py` | RT3 soft probe |
+| `experiments/p0_protect_compact_burst.py` | RT2 satellite (legacy) |
+| `experiments/p0_rt2_protect_coverage_gated.py` | RT2 coverage-gated redesign |
+| `experiments/p0_rt3_burst_iv_probe.py` | RT3 soft probe (legacy) |
+| `experiments/p0_rt3_burst_iv_upgrade.py` | RT3 causaliv F upgrade |
+| `experiments/p0_rt4_adaptive_conflict.py` | RT4 adaptive schedule |
+| `docs/PROPOSED_NEXT_AFTER_RT234.md` | Ranked next after RT2–4 |
 | `experiments/plot_epochs.py` | Epoch charts |
 | `experiments/results/iterative_epochs/epoch_00.json` … `epoch_09.json` | Per-epoch traces |
 | `experiments/results/iterative_epochs/EPOCH_TRAJECTORY.md` | Knob + meter table |

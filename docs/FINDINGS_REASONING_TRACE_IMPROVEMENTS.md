@@ -85,11 +85,13 @@ Companion cognition+bridge: [NEXT_EXPERIMENTS_HIGHER_COGNITION.md](NEXT_EXPERIME
 
 ### What’s next (top of queue)
 
-1. **RT2 refinement** — Token-budget PromptDict protect→burst + coverage gates (loop mixed).  
-2. **RT3** — Non-mock first-stage F for burst-proposed Z.  
-3. **RT4 adaptive** — Thrash-triggered schedule vs fixed schedule=2 elite from epoch 6.  
-4. **RT5** — Soft mono-gating at hops≥8 (epoch 7 saturated at mono=0.80).  
-5. **RT6** — Long-horizon incubation redo only after RT2/RT3 land.
+Post RT2/RT3/RT4 redesign runs — full ranked list: [PROPOSED_NEXT_AFTER_RT234.md](PROPOSED_NEXT_AFTER_RT234.md).
+
+1. **RT2b** — Pool-matched protect vs truncate (H still truncate under unmatched pool).  
+2. **RT4b** — Bake `adaptive_loosen` into iterative trainer.  
+3. **RT9** — Meter mid_constraint / iv_structure dims.  
+4. **RT3b** — Path-only Z without column boost.  
+5. **RT5 / RT8 / RT6** — mono@hops≥8, motif hybrid, long incubation.
 
 ---
 

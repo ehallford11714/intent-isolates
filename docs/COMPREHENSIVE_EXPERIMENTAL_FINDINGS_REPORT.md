@@ -199,15 +199,15 @@ Primary queue: **[NEXT_EXPERIMENTS_REASONING_TRACE.md](NEXT_EXPERIMENTS_REASONIN
 
 **RT-guided iterative cycle completed** (`20260710T001218Z`): see [ITERATIVE_REASONING_TRACE_TRAINING_REPORT.md](ITERATIVE_REASONING_TRACE_TRAINING_REPORT.md). Epoch_0→9: H 0.753→0.779, R 0.828→0.897, mono 0.600→0.800. Elite: multipath k=7 H + protect + schedule=2 / pull≈0.80.
 
-| Rank | Exp | Status after iterative cycle | Remaining work |
+| Rank | Exp | Status after iterative + redesign | Remaining work |
 | --- | --- | --- | --- |
 | 1 | **RT1** multipath value-fn | **Supported** (G1 + iv_diag≈H) | Optional larger fixture sweep |
-| 2 | **RT2** protect_compact→burst | **Mixed** (helps loop; A−B rule partial) | Token-budget-matched PromptDict coupling + coverage gates |
-| 3 | **RT3** burst Z → real IV F | **Open** (structural only) | Non-mock first-stage F |
-| 4 | **RT4** adaptive conflict | **Supported in-loop** | Adaptive thrash trigger vs fixed schedule=2 |
+| 2 | **RT2** protect_compact→burst | **Mixed** (mid_R/R win; H not) | Pool-matched RT2b — [PROPOSED_NEXT_AFTER_RT234.md](PROPOSED_NEXT_AFTER_RT234.md) |
+| 3 | **RT3** burst Z → real IV F | **Supported** (causaliv; 3/4 fixtures) | Stricter path-only Z (RT3b) |
+| 4 | **RT4** adaptive conflict | **Supported** (`adaptive_loosen` 7/8) | Bake into trainer (RT4b) |
 | 5 | **RT5** mono-gating | **Partial** (mono already high) | Soft gate at hops≥8 |
 
-Also prioritize longer-horizon incubation redo (**RT6**) before revisiting I1/I2 knobs.
+Also prioritize meter mid_R/iv dims (**RT9**), motif hybrid (**RT8**), then longer-horizon incubation (**RT6**).
 
 ---
 

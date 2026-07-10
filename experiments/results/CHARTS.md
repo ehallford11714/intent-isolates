@@ -46,3 +46,8 @@ Sources: `lit_burst_latest.json`, `span_burst_latest.json`, `theory_corpus_sweep
 
 `claim_evidence_verdicts.png`
 
+## Iterative epochs (20260710T001218Z)
+
+- ![epoch CRH](charts/epoch_crh_trajectory.png)
+- ![epoch H/mono/mid](charts/epoch_h_mono_mid.png)
+- Trajectory: [EPOCH_TRAJECTORY.md](iterative_epochs/EPOCH_TRAJECTORY.md)

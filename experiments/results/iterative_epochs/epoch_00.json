@@ -1,0 +1,377 @@
+{
+  "epoch": 0,
+  "stamp": "20260710T001218Z",
+  "guided_by": "baseline",
+  "phase": "floor_v2_single",
+  "phase_note": "Default creative_burst_v2 knobs, no multipath",
+  "policy": {
+    "novelty_weight": 1.1,
+    "anchor_pull": 0.7,
+    "layer_bias": 0.55,
+    "motif_weight": 0.45,
+    "anchor_schedule": 3,
+    "side_hop_prob": 0.18,
+    "multipath": false,
+    "k": 5,
+    "select_by": "H",
+    "protect_compact": false,
+    "soft_mono_gate": false
+  },
+  "metrics": {
+    "avg_C": 0.7024,
+    "avg_R": 0.8275,
+    "avg_H": 0.7532,
+    "avg_anchor_R": 0.95,
+    "avg_layer_mono": 0.6,
+    "avg_mid_constraint_R": 1.0,
+    "n": 12
+  },
+  "objective": 0.7532,
+  "r_floor": 0.78,
+  "reasoning_traces": [
+    {
+      "fixture": "product_metaphor",
+      "seed_offset": 0,
+      "C": 0.8465,
+      "R": 0.79,
+      "H": 0.8173,
+      "anchor_R": 1.0,
+      "layer_mono": 0.4,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_0",
+        "text_6",
+        "text_1",
+        "text_5",
+        "text_2",
+        "text_3"
+      ],
+      "typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "action",
+        "instrumental",
+        "affective"
+      ],
+      "candidates": []
+    },
+    {
+      "fixture": "product_metaphor",
+      "seed_offset": 1,
+      "C": 0.8465,
+      "R": 0.79,
+      "H": 0.8173,
+      "anchor_R": 1.0,
+      "layer_mono": 0.4,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_0",
+        "text_6",
+        "text_1",
+        "text_5",
+        "text_2",
+        "text_3"
+      ],
+      "typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "action",
+        "instrumental",
+        "affective"
+      ],
+      "candidates": []
+    },
+    {
+      "fixture": "product_metaphor",
+      "seed_offset": 2,
+      "C": 0.8465,
+      "R": 0.79,
+      "H": 0.8173,
+      "anchor_R": 1.0,
+      "layer_mono": 0.4,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_0",
+        "text_6",
+        "text_1",
+        "text_3",
+        "text_5",
+        "text_2"
+      ],
+      "typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "affective",
+        "action",
+        "instrumental"
+      ],
+      "candidates": []
+    },
+    {
+      "fixture": "story_twist",
+      "seed_offset": 0,
+      "C": 0.7133,
+      "R": 0.86,
+      "H": 0.7798,
+      "anchor_R": 1.0,
+      "layer_mono": 0.6,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_0",
+        "text_7",
+        "text_1",
+        "text_6",
+        "text_5",
+        "text_2"
+      ],
+      "typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "unknown"
+      ],
+      "candidates": []
+    },
+    {
+      "fixture": "story_twist",
+      "seed_offset": 1,
+      "C": 0.7344,
+      "R": 0.86,
+      "H": 0.7922,
+      "anchor_R": 1.0,
+      "layer_mono": 0.6,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_0",
+        "text_7",
+        "text_1",
+        "text_6",
+        "text_3",
+        "text_5"
+      ],
+      "typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "lexical",
+        "instrumental"
+      ],
+      "candidates": []
+    },
+    {
+      "fixture": "story_twist",
+      "seed_offset": 2,
+      "C": 0.7133,
+      "R": 0.86,
+      "H": 0.7798,
+      "anchor_R": 1.0,
+      "layer_mono": 0.6,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_0",
+        "text_7",
+        "text_1",
+        "text_6",
+        "text_5",
+        "text_2"
+      ],
+      "typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "unknown"
+      ],
+      "candidates": []
+    },
+    {
+      "fixture": "research_creative",
+      "seed_offset": 0,
+      "C": 0.6522,
+      "R": 0.73,
+      "H": 0.6889,
+      "anchor_R": 0.8,
+      "layer_mono": 0.6,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_0",
+        "text_7",
+        "text_6",
+        "text_2",
+        "text_4",
+        "text_1"
+      ],
+      "typology_path": [
+        "goal",
+        "constraint",
+        "action",
+        "goal",
+        "unknown",
+        "constraint"
+      ],
+      "candidates": []
+    },
+    {
+      "fixture": "research_creative",
+      "seed_offset": 1,
+      "C": 0.6522,
+      "R": 0.73,
+      "H": 0.6889,
+      "anchor_R": 0.8,
+      "layer_mono": 0.6,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_0",
+        "text_7",
+        "text_6",
+        "text_2",
+        "text_4",
+        "text_1"
+      ],
+      "typology_path": [
+        "goal",
+        "constraint",
+        "action",
+        "goal",
+        "unknown",
+        "constraint"
+      ],
+      "candidates": []
+    },
+    {
+      "fixture": "research_creative",
+      "seed_offset": 2,
+      "C": 0.6522,
+      "R": 0.73,
+      "H": 0.6889,
+      "anchor_R": 0.8,
+      "layer_mono": 0.6,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_0",
+        "text_7",
+        "text_6",
+        "text_2",
+        "text_4",
+        "text_1"
+      ],
+      "typology_path": [
+        "goal",
+        "constraint",
+        "action",
+        "goal",
+        "unknown",
+        "constraint"
+      ],
+      "candidates": []
+    },
+    {
+      "fixture": "brand_voice",
+      "seed_offset": 0,
+      "C": 0.5907,
+      "R": 0.93,
+      "H": 0.7225,
+      "anchor_R": 1.0,
+      "layer_mono": 0.8,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_0",
+        "text_8",
+        "text_1",
+        "text_6",
+        "text_2",
+        "text_3"
+      ],
+      "typology_path": [
+        "instrumental",
+        "outcome",
+        "constraint",
+        "goal",
+        "constraint",
+        "constraint"
+      ],
+      "candidates": []
+    },
+    {
+      "fixture": "brand_voice",
+      "seed_offset": 1,
+      "C": 0.5907,
+      "R": 0.93,
+      "H": 0.7225,
+      "anchor_R": 1.0,
+      "layer_mono": 0.8,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_0",
+        "text_8",
+        "text_1",
+        "text_6",
+        "text_2",
+        "text_3"
+      ],
+      "typology_path": [
+        "instrumental",
+        "outcome",
+        "constraint",
+        "goal",
+        "constraint",
+        "constraint"
+      ],
+      "candidates": []
+    },
+    {
+      "fixture": "brand_voice",
+      "seed_offset": 2,
+      "C": 0.5907,
+      "R": 0.93,
+      "H": 0.7225,
+      "anchor_R": 1.0,
+      "layer_mono": 0.8,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_0",
+        "text_8",
+        "text_1",
+        "text_6",
+        "text_2",
+        "text_3"
+      ],
+      "typology_path": [
+        "instrumental",
+        "outcome",
+        "constraint",
+        "goal",
+        "constraint",
+        "constraint"
+      ],
+      "candidates": []
+    }
+  ],
+  "update": {
+    "guided_by": "baseline",
+    "phase": "floor_v2_single",
+    "action": "Schedule multipath_H (k=5) for epoch 1 floor (baseline\u2192P5)",
+    "note": "Default creative_burst_v2 knobs, no multipath",
+    "candidates_tried": [],
+    "accepted": "schedule_multipath"
+  },
+  "config": {
+    "n_hops": 5,
+    "seed": 17,
+    "n_seeds": 3,
+    "n_fixtures": 4,
+    "fixture_ids": [
+      "product_metaphor",
+      "story_twist",
+      "research_creative",
+      "brand_voice"
+    ]
+  }
+}

@@ -1,0 +1,7442 @@
+{
+  "created_at": "2026-07-10T00:08:41.803667+00:00",
+  "backend": "intentisolates",
+  "n_hops": 5,
+  "seed": 17,
+  "n_seeds": 3,
+  "n_fixtures": 8,
+  "conditions": [
+    "linear",
+    "random",
+    "motif_jump",
+    "creative_burst_v1",
+    "divergent_guilford",
+    "convergent_constrained",
+    "layer_cot",
+    "creative_burst_v2",
+    "precision_high",
+    "precision_low",
+    "insight_sidehop",
+    "conflict_schedule_2",
+    "multipath_k3_H",
+    "multipath_k5_H",
+    "multipath_k5_C",
+    "multipath_k5_R",
+    "multipath_k7_H",
+    "incubation_alt",
+    "two_phase",
+    "wm_protect_hotset",
+    "wm_truncate_drop"
+  ],
+  "claims_enumerated": [
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5",
+    "P6",
+    "P7",
+    "P8",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "G1",
+    "G2",
+    "G3",
+    "PP1",
+    "PP2",
+    "I1",
+    "I2",
+    "PL1",
+    "B1",
+    "B2",
+    "B4",
+    "S1",
+    "S2",
+    "S3"
+  ],
+  "summary_table": [
+    {
+      "condition": "linear",
+      "mode": "linear",
+      "n": 8,
+      "avg_C": 0.63,
+      "avg_R": 0.6675,
+      "avg_H": 0.6377,
+      "avg_CxR": 0.4219,
+      "avg_entropy": 1.9312,
+      "avg_anchor_R": 0.6007,
+      "avg_layer_mono": 0.7917,
+      "avg_constraint_fidelity": 0.6007,
+      "avg_novelty": 0.7153,
+      "avg_flexibility": 0.2475,
+      "avg_goal_neglect": 0.0
+    },
+    {
+      "condition": "random",
+      "mode": "random",
+      "n": 8,
+      "avg_C": 0.7118,
+      "avg_R": 0.6963,
+      "avg_H": 0.6986,
+      "avg_CxR": 0.499,
+      "avg_entropy": 2.1751,
+      "avg_anchor_R": 0.7257,
+      "avg_layer_mono": 0.6417,
+      "avg_constraint_fidelity": 0.7257,
+      "avg_novelty": 0.8125,
+      "avg_flexibility": 0.4237,
+      "avg_goal_neglect": 0.0
+    },
+    {
+      "condition": "motif_jump",
+      "mode": "motif_jump",
+      "n": 8,
+      "avg_C": 0.5643,
+      "avg_R": 0.9005,
+      "avg_H": 0.6901,
+      "avg_CxR": 0.5108,
+      "avg_entropy": 1.7702,
+      "avg_anchor_R": 0.8604,
+      "avg_layer_mono": 0.975,
+      "avg_constraint_fidelity": 0.8604,
+      "avg_novelty": 0.6319,
+      "avg_flexibility": 0.0871,
+      "avg_goal_neglect": 0.0
+    },
+    {
+      "condition": "creative_burst_v1",
+      "mode": "creative_burst",
+      "n": 8,
+      "avg_C": 0.7712,
+      "avg_R": 0.7535,
+      "avg_H": 0.7584,
+      "avg_CxR": 0.5822,
+      "avg_entropy": 2.3627,
+      "avg_anchor_R": 0.8542,
+      "avg_layer_mono": 0.5667,
+      "avg_constraint_fidelity": 0.8542,
+      "avg_novelty": 0.8889,
+      "avg_flexibility": 0.5408,
+      "avg_goal_neglect": 0.0
+    },
+    {
+      "condition": "divergent_guilford",
+      "mode": "creative_burst_v2",
+      "n": 8,
+      "avg_C": 0.7644,
+      "avg_R": 0.7131,
+      "avg_H": 0.7295,
+      "avg_CxR": 0.5439,
+      "avg_entropy": 2.4183,
+      "avg_anchor_R": 0.7875,
+      "avg_layer_mono": 0.575,
+      "avg_constraint_fidelity": 0.7875,
+      "avg_novelty": 0.9166,
+      "avg_flexibility": 0.4504,
+      "avg_goal_neglect": 0.0
+    },
+    {
+      "condition": "convergent_constrained",
+      "mode": "creative_burst_v2",
+      "n": 8,
+      "avg_C": 0.6533,
+      "avg_R": 0.8963,
+      "avg_H": 0.7504,
+      "avg_CxR": 0.5828,
+      "avg_entropy": 1.9874,
+      "avg_anchor_R": 0.993,
+      "avg_layer_mono": 0.7167,
+      "avg_constraint_fidelity": 0.993,
+      "avg_novelty": 0.7222,
+      "avg_flexibility": 0.3175,
+      "avg_goal_neglect": 0.0
+    },
+    {
+      "condition": "layer_cot",
+      "mode": "creative_burst_v2",
+      "n": 8,
+      "avg_C": 0.7063,
+      "avg_R": 0.8148,
+      "avg_H": 0.7457,
+      "avg_CxR": 0.5697,
+      "avg_entropy": 2.2029,
+      "avg_anchor_R": 0.9125,
+      "avg_layer_mono": 0.6333,
+      "avg_constraint_fidelity": 0.9125,
+      "avg_novelty": 0.8194,
+      "avg_flexibility": 0.3725,
+      "avg_goal_neglect": 0.0
+    },
+    {
+      "condition": "creative_burst_v2",
+      "mode": "creative_burst_v2",
+      "n": 8,
+      "avg_C": 0.7283,
+      "avg_R": 0.7923,
+      "avg_H": 0.752,
+      "avg_CxR": 0.5744,
+      "avg_entropy": 2.2828,
+      "avg_anchor_R": 0.8958,
+      "avg_layer_mono": 0.6,
+      "avg_constraint_fidelity": 0.8958,
+      "avg_novelty": 0.8542,
+      "avg_flexibility": 0.4037,
+      "avg_goal_neglect": 0.0
+    },
+    {
+      "condition": "precision_high",
+      "mode": "creative_burst_v2",
+      "n": 8,
+      "avg_C": 0.6777,
+      "avg_R": 0.8817,
+      "avg_H": 0.7577,
+      "avg_CxR": 0.5927,
+      "avg_entropy": 2.0708,
+      "avg_anchor_R": 0.993,
+      "avg_layer_mono": 0.675,
+      "avg_constraint_fidelity": 0.993,
+      "avg_novelty": 0.7639,
+      "avg_flexibility": 0.3533,
+      "avg_goal_neglect": 0.0
+    },
+    {
+      "condition": "precision_low",
+      "mode": "creative_burst_v2",
+      "n": 8,
+      "avg_C": 0.7684,
+      "avg_R": 0.7069,
+      "avg_H": 0.7257,
+      "avg_CxR": 0.5412,
+      "avg_entropy": 2.4183,
+      "avg_anchor_R": 0.7958,
+      "avg_layer_mono": 0.5417,
+      "avg_constraint_fidelity": 0.7958,
+      "avg_novelty": 0.9166,
+      "avg_flexibility": 0.4716,
+      "avg_goal_neglect": 0.0
+    },
+    {
+      "condition": "insight_sidehop",
+      "mode": "creative_burst_v2",
+      "n": 8,
+      "avg_C": 0.7515,
+      "avg_R": 0.7605,
+      "avg_H": 0.7513,
+      "avg_CxR": 0.5712,
+      "avg_entropy": 2.3627,
+      "avg_anchor_R": 0.8604,
+      "avg_layer_mono": 0.575,
+      "avg_constraint_fidelity": 0.8604,
+      "avg_novelty": 0.8889,
+      "avg_flexibility": 0.4442,
+      "avg_goal_neglect": 0.0
+    },
+    {
+      "condition": "conflict_schedule_2",
+      "mode": "creative_burst_v2",
+      "n": 8,
+      "avg_C": 0.6916,
+      "avg_R": 0.8599,
+      "avg_H": 0.7588,
+      "avg_CxR": 0.5906,
+      "avg_entropy": 2.1421,
+      "avg_anchor_R": 0.9639,
+      "avg_layer_mono": 0.6667,
+      "avg_constraint_fidelity": 0.9639,
+      "avg_novelty": 0.7917,
+      "avg_flexibility": 0.3571,
+      "avg_goal_neglect": 0.0
+    },
+    {
+      "condition": "multipath_k3_H",
+      "mode": "creative_burst_v2",
+      "n": 8,
+      "avg_C": 0.709,
+      "avg_R": 0.8458,
+      "avg_H": 0.7649,
+      "avg_CxR": 0.5979,
+      "avg_entropy": 2.2081,
+      "avg_anchor_R": 0.9333,
+      "avg_layer_mono": 0.6833,
+      "avg_constraint_fidelity": 0.9333,
+      "avg_novelty": 0.8194,
+      "avg_flexibility": 0.3808,
+      "avg_goal_neglect": 0.0
+    },
+    {
+      "condition": "multipath_k5_H",
+      "mode": "creative_burst_v2",
+      "n": 8,
+      "avg_C": 0.7211,
+      "avg_R": 0.8375,
+      "avg_H": 0.7697,
+      "avg_CxR": 0.6028,
+      "avg_entropy": 2.2411,
+      "avg_anchor_R": 0.925,
+      "avg_layer_mono": 0.675,
+      "avg_constraint_fidelity": 0.925,
+      "avg_novelty": 0.8333,
+      "avg_flexibility": 0.4096,
+      "avg_goal_neglect": 0.0
+    },
+    {
+      "condition": "multipath_k5_C",
+      "mode": "creative_burst_v2",
+      "n": 8,
+      "avg_C": 0.7709,
+      "avg_R": 0.7373,
+      "avg_H": 0.7487,
+      "avg_CxR": 0.5684,
+      "avg_entropy": 2.3905,
+      "avg_anchor_R": 0.8292,
+      "avg_layer_mono": 0.5667,
+      "avg_constraint_fidelity": 0.8292,
+      "avg_novelty": 0.9028,
+      "avg_flexibility": 0.51,
+      "avg_goal_neglect": 0.0
+    },
+    {
+      "condition": "multipath_k5_R",
+      "mode": "creative_burst_v2",
+      "n": 8,
+      "avg_C": 0.6977,
+      "avg_R": 0.8517,
+      "avg_H": 0.7604,
+      "avg_CxR": 0.5923,
+      "avg_entropy": 2.1942,
+      "avg_anchor_R": 0.9333,
+      "avg_layer_mono": 0.7,
+      "avg_constraint_fidelity": 0.9333,
+      "avg_novelty": 0.8125,
+      "avg_flexibility": 0.3392,
+      "avg_goal_neglect": 0.0
+    },
+    {
+      "condition": "multipath_k7_H",
+      "mode": "creative_burst_v2",
+      "n": 8,
+      "avg_C": 0.7237,
+      "avg_R": 0.8408,
+      "avg_H": 0.7738,
+      "avg_CxR": 0.608,
+      "avg_entropy": 2.2742,
+      "avg_anchor_R": 0.9167,
+      "avg_layer_mono": 0.7,
+      "avg_constraint_fidelity": 0.9167,
+      "avg_novelty": 0.8472,
+      "avg_flexibility": 0.3929,
+      "avg_goal_neglect": 0.0
+    },
+    {
+      "condition": "incubation_alt",
+      "mode": "creative_burst_v2",
+      "n": 8,
+      "avg_C": 0.7033,
+      "avg_R": 0.6841,
+      "avg_H": 0.6917,
+      "avg_CxR": 0.4826,
+      "avg_entropy": 1.9232,
+      "avg_anchor_R": 0.7646,
+      "avg_layer_mono": 0.5347,
+      "avg_constraint_fidelity": 0.7646,
+      "avg_novelty": 0.9417,
+      "avg_flexibility": 0.4774,
+      "avg_goal_neglect": 0.0
+    },
+    {
+      "condition": "two_phase",
+      "mode": "creative_burst_v2",
+      "n": 8,
+      "avg_C": 0.6624,
+      "avg_R": 0.8065,
+      "avg_H": 0.7237,
+      "avg_CxR": 0.5353,
+      "avg_entropy": 1.8506,
+      "avg_anchor_R": 0.8833,
+      "avg_layer_mono": 0.6639,
+      "avg_constraint_fidelity": 0.8833,
+      "avg_novelty": 0.8327,
+      "avg_flexibility": 0.4091,
+      "avg_goal_neglect": 0.0
+    },
+    {
+      "condition": "wm_protect_hotset",
+      "mode": "creative_burst_v2",
+      "n": 8,
+      "avg_C": 0.7203,
+      "avg_R": 0.8049,
+      "avg_H": 0.7519,
+      "avg_CxR": 0.5765,
+      "avg_entropy": 2.2411,
+      "avg_anchor_R": 0.9062,
+      "avg_layer_mono": 0.6167,
+      "avg_constraint_fidelity": 0.9062,
+      "avg_novelty": 0.8333,
+      "avg_flexibility": 0.3825,
+      "avg_goal_neglect": 0.0
+    },
+    {
+      "condition": "wm_truncate_drop",
+      "mode": "creative_burst_v2",
+      "n": 8,
+      "avg_C": 0.7346,
+      "avg_R": 0.8522,
+      "avg_H": 0.7818,
+      "avg_CxR": 0.6222,
+      "avg_entropy": 1.8753,
+      "avg_anchor_R": 1.0,
+      "avg_layer_mono": 0.5778,
+      "avg_constraint_fidelity": 1.0,
+      "avg_novelty": 0.8333,
+      "avg_flexibility": 0.44,
+      "avg_goal_neglect": 0.25
+    }
+  ],
+  "ranked_by_H": [
+    "wm_truncate_drop",
+    "multipath_k7_H",
+    "multipath_k5_H",
+    "multipath_k3_H",
+    "multipath_k5_R",
+    "conflict_schedule_2",
+    "creative_burst_v1",
+    "precision_high",
+    "creative_burst_v2",
+    "wm_protect_hotset",
+    "insight_sidehop",
+    "convergent_constrained",
+    "multipath_k5_C",
+    "layer_cot",
+    "divergent_guilford",
+    "precision_low",
+    "two_phase",
+    "random",
+    "incubation_alt",
+    "motif_jump",
+    "linear"
+  ],
+  "claim_evidence": [
+    {
+      "id": "P1a",
+      "prediction": "H(v2)>H(random)",
+      "metrics": "mean_a=0.7520 mean_b=0.6986 \u0394=0.0534 wins=7/8",
+      "verdict": "supported",
+      "strength": "strong",
+      "delta": 0.0534,
+      "fixture_wins": 7,
+      "n_fixtures": 8
+    },
+    {
+      "id": "P1b",
+      "prediction": "C(v2) within 0.05 of C(random)",
+      "metrics": "C(v2)=0.7283, C(rand)=0.7118, |\u0394|=0.0165",
+      "verdict": "supported",
+      "strength": "moderate",
+      "delta": 0.0165
+    },
+    {
+      "id": "P2",
+      "prediction": "anchor_R(v2)>anchor_R(random)",
+      "metrics": "mean_a=0.8958 mean_b=0.7257 \u0394=0.1701 wins=7/8",
+      "verdict": "supported",
+      "strength": "strong",
+      "delta": 0.1701,
+      "fixture_wins": 7,
+      "n_fixtures": 8
+    },
+    {
+      "id": "P3",
+      "prediction": "mono(layer_cot)>=mono(divergent)",
+      "metrics": "mean_a=0.6333 mean_b=0.5750 \u0394=0.0583 wins=7/8",
+      "verdict": "supported",
+      "strength": "strong",
+      "delta": 0.0583,
+      "fixture_wins": 7,
+      "n_fixtures": 8
+    },
+    {
+      "id": "P4a",
+      "prediction": "C(div)>C(conv)",
+      "metrics": "mean_a=0.7644 mean_b=0.6533 \u0394=0.1111 wins=8/8",
+      "verdict": "supported",
+      "strength": "strong",
+      "delta": 0.1111,
+      "fixture_wins": 8,
+      "n_fixtures": 8
+    },
+    {
+      "id": "P4b",
+      "prediction": "entropy(div)>=entropy(conv)",
+      "metrics": "mean_a=2.4183 mean_b=1.9874 \u0394=0.4309 wins=8/8",
+      "verdict": "supported",
+      "strength": "strong",
+      "delta": 0.4309,
+      "fixture_wins": 8,
+      "n_fixtures": 8
+    },
+    {
+      "id": "P5",
+      "prediction": "H(multipath_H)>=H(v2)",
+      "metrics": "mean_a=0.7697 mean_b=0.7520 \u0394=0.0177 wins=8/8",
+      "verdict": "supported",
+      "strength": "moderate",
+      "delta": 0.0177,
+      "fixture_wins": 8,
+      "n_fixtures": 8
+    },
+    {
+      "id": "P6a",
+      "prediction": "protect_hotset R >= truncate R",
+      "metrics": "mean_a=0.8049 mean_b=0.8522 \u0394=-0.0473 wins=3/8",
+      "verdict": "rejected",
+      "strength": "moderate",
+      "delta": -0.0473,
+      "fixture_wins": 3,
+      "n_fixtures": 8
+    },
+    {
+      "id": "P6b",
+      "prediction": "protect_hotset anchor_R >= truncate",
+      "metrics": "mean_a=0.9062 mean_b=1.0000 \u0394=-0.0938 wins=4/8",
+      "verdict": "mixed",
+      "strength": "weak",
+      "delta": -0.0938,
+      "fixture_wins": 4,
+      "n_fixtures": 8
+    },
+    {
+      "id": "P7",
+      "prediction": "conflict_sched H >= v2 H",
+      "metrics": "mean_a=0.7588 mean_b=0.7520 \u0394=0.0068 wins=6/8",
+      "verdict": "supported",
+      "strength": "moderate",
+      "delta": 0.0068,
+      "fixture_wins": 6,
+      "n_fixtures": 8
+    },
+    {
+      "id": "P8a",
+      "prediction": "sidehop C >= convergent C",
+      "metrics": "mean_a=0.7515 mean_b=0.6533 \u0394=0.0982 wins=8/8",
+      "verdict": "supported",
+      "strength": "strong",
+      "delta": 0.0982,
+      "fixture_wins": 8,
+      "n_fixtures": 8
+    },
+    {
+      "id": "P8b",
+      "prediction": "sidehop R not much below convergent (delta>-0.08)",
+      "metrics": "R(side)=0.7605, R(conv)=0.8963, \u0394=-0.1358",
+      "verdict": "rejected",
+      "strength": "weak",
+      "delta": -0.1358
+    },
+    {
+      "id": "L1a",
+      "prediction": "motif R > v2 R",
+      "metrics": "mean_a=0.9005 mean_b=0.7923 \u0394=0.1082 wins=6/8",
+      "verdict": "supported",
+      "strength": "moderate",
+      "delta": 0.1082,
+      "fixture_wins": 6,
+      "n_fixtures": 8
+    },
+    {
+      "id": "L1b",
+      "prediction": "motif C < v2 C",
+      "metrics": "mean_a=0.5643 mean_b=0.7283 \u0394=-0.1640 wins=8/8",
+      "verdict": "supported",
+      "strength": "strong",
+      "delta": -0.164,
+      "fixture_wins": 8,
+      "n_fixtures": 8
+    },
+    {
+      "id": "L2",
+      "prediction": "v2 R > v1 R",
+      "metrics": "mean_a=0.7923 mean_b=0.7535 \u0394=0.0388 wins=5/8",
+      "verdict": "supported",
+      "strength": "moderate",
+      "delta": 0.0388,
+      "fixture_wins": 5,
+      "n_fixtures": 8
+    },
+    {
+      "id": "G1",
+      "prediction": "mp_H R >= mp_C R",
+      "metrics": "mean_a=0.8375 mean_b=0.7373 \u0394=0.1002 wins=8/8",
+      "verdict": "supported",
+      "strength": "strong",
+      "delta": 0.1002,
+      "fixture_wins": 8,
+      "n_fixtures": 8
+    },
+    {
+      "id": "G2",
+      "prediction": "k5 H >= k3 H",
+      "metrics": "mean_a=0.7697 mean_b=0.7649 \u0394=0.0048 wins=8/8",
+      "verdict": "supported",
+      "strength": "moderate",
+      "delta": 0.0048,
+      "fixture_wins": 8,
+      "n_fixtures": 8
+    },
+    {
+      "id": "G3",
+      "prediction": "k7 H >= k5 H",
+      "metrics": "mean_a=0.7739 mean_b=0.7697 \u0394=0.0042 wins=8/8",
+      "verdict": "supported",
+      "strength": "moderate",
+      "delta": 0.0042,
+      "fixture_wins": 8,
+      "n_fixtures": 8
+    },
+    {
+      "id": "PP1",
+      "prediction": "precision_high R >= precision_low R",
+      "metrics": "mean_a=0.8817 mean_b=0.7069 \u0394=0.1748 wins=7/8",
+      "verdict": "supported",
+      "strength": "strong",
+      "delta": 0.1748,
+      "fixture_wins": 7,
+      "n_fixtures": 8
+    },
+    {
+      "id": "PP2",
+      "prediction": "precision_low C >= precision_high C",
+      "metrics": "mean_a=0.7684 mean_b=0.6777 \u0394=0.0907 wins=8/8",
+      "verdict": "supported",
+      "strength": "strong",
+      "delta": 0.0907,
+      "fixture_wins": 8,
+      "n_fixtures": 8
+    },
+    {
+      "id": "I1",
+      "prediction": "incubation H >= divergent H",
+      "metrics": "mean_a=0.6917 mean_b=0.7295 \u0394=-0.0378 wins=1/8",
+      "verdict": "rejected",
+      "strength": "moderate",
+      "delta": -0.0378,
+      "fixture_wins": 1,
+      "n_fixtures": 8
+    },
+    {
+      "id": "I2",
+      "prediction": "two_phase H >= v2 H",
+      "metrics": "mean_a=0.7237 mean_b=0.7520 \u0394=-0.0283 wins=0/8",
+      "verdict": "rejected",
+      "strength": "weak",
+      "delta": -0.0283,
+      "fixture_wins": 0,
+      "n_fixtures": 8
+    },
+    {
+      "id": "PL1",
+      "prediction": "layer_cot H >= divergent H",
+      "metrics": "mean_a=0.7457 mean_b=0.7295 \u0394=0.0162 wins=5/8",
+      "verdict": "supported",
+      "strength": "moderate",
+      "delta": 0.0162,
+      "fixture_wins": 5,
+      "n_fixtures": 8
+    },
+    {
+      "id": "S1",
+      "prediction": "v2 H >= linear H",
+      "metrics": "mean_a=0.7520 mean_b=0.6377 \u0394=0.1143 wins=8/8",
+      "verdict": "supported",
+      "strength": "strong",
+      "delta": 0.1143,
+      "fixture_wins": 8,
+      "n_fixtures": 8
+    },
+    {
+      "id": "S2",
+      "prediction": "v1 entropy >= linear",
+      "metrics": "mean_a=2.3627 mean_b=1.9312 \u0394=0.4315 wins=7/8",
+      "verdict": "supported",
+      "strength": "strong",
+      "delta": 0.4315,
+      "fixture_wins": 7,
+      "n_fixtures": 8
+    },
+    {
+      "id": "S3",
+      "prediction": "motif mono >= divergent mono",
+      "metrics": "mean_a=0.9750 mean_b=0.5750 \u0394=0.4000 wins=8/8",
+      "verdict": "supported",
+      "strength": "strong",
+      "delta": 0.4,
+      "fixture_wins": 8,
+      "n_fixtures": 8
+    },
+    {
+      "id": "B4",
+      "prediction": "mp_H R >= random R",
+      "metrics": "mean_a=0.8375 mean_b=0.6963 \u0394=0.1412 wins=7/8",
+      "verdict": "supported",
+      "strength": "strong",
+      "delta": 0.1412,
+      "fixture_wins": 7,
+      "n_fixtures": 8
+    },
+    {
+      "id": "B1",
+      "prediction": "burst path mean first_stage_F >= random (mock IV)",
+      "metrics": "F(burst)=4.2025 F(random)=4.2025",
+      "verdict": "supported",
+      "strength": "weak",
+      "note": "mock_iv / synthetic rows \u2014 exploratory only"
+    },
+    {
+      "id": "B2",
+      "prediction": "high-R (convergent) causation_overlap >= divergent",
+      "metrics": "cau_ov(conv)=0.0000 cau_ov(div)=0.0000",
+      "verdict": "supported",
+      "strength": "weak",
+      "note": "soft name overlap proxy"
+    }
+  ],
+  "evidence_counts": {
+    "supported": 24,
+    "rejected": 4,
+    "mixed": 1,
+    "untested": 0
+  },
+  "rows": [
+    {
+      "fixture_id": "product_metaphor",
+      "fixture_kind": "creative",
+      "condition": "linear",
+      "mode": "linear",
+      "n_spans": 7,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.7405,
+      "R": 0.69,
+      "CxR": 0.5106,
+      "H": 0.7136,
+      "novelty": 0.8333,
+      "flexibility": 0.3667,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "constraint",
+        "instrumental",
+        "affective",
+        "instrumental",
+        "action"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "S1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "product_metaphor",
+      "fixture_kind": "creative",
+      "condition": "random",
+      "mode": "random",
+      "n_spans": 7,
+      "n_seeds": 3,
+      "typology_entropy": 2.3627,
+      "n_unique_typologies": 5.3333,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 0.8889,
+      "constraint_fidelity": 0.8889,
+      "C": 0.7712,
+      "R": 0.8344,
+      "CxR": 0.6451,
+      "H": 0.7965,
+      "novelty": 0.8889,
+      "flexibility": 0.4033,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "affective",
+        "instrumental",
+        "instrumental",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P1",
+          "P2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "product_metaphor",
+      "fixture_kind": "creative",
+      "condition": "motif_jump",
+      "mode": "motif_jump",
+      "n_spans": 7,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 1.0,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.689,
+      "R": 1.0,
+      "CxR": 0.689,
+      "H": 0.8159,
+      "novelty": 0.8333,
+      "flexibility": 0.11,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "constraint",
+        "instrumental",
+        "instrumental",
+        "outcome",
+        "action"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "L1",
+          "S3"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "product_metaphor",
+      "fixture_kind": "creative",
+      "condition": "creative_burst_v1",
+      "mode": "creative_burst",
+      "n_spans": 7,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.5333,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8465,
+      "R": 0.8367,
+      "CxR": 0.7082,
+      "H": 0.8412,
+      "novelty": 1.0,
+      "flexibility": 0.55,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "affective",
+        "constraint",
+        "outcome",
+        "instrumental",
+        "action"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "L2",
+          "S2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "product_metaphor",
+      "fixture_kind": "creative",
+      "condition": "divergent_guilford",
+      "mode": "creative_burst_v2",
+      "n_spans": 7,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8389,
+      "R": 0.86,
+      "CxR": 0.7215,
+      "H": 0.8493,
+      "novelty": 1.0,
+      "flexibility": 0.5133,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "action",
+        "affective",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P3",
+          "P4",
+          "L3",
+          "L4",
+          "I1",
+          "PL1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "product_metaphor",
+      "fixture_kind": "creative",
+      "condition": "convergent_constrained",
+      "mode": "creative_burst_v2",
+      "n_spans": 7,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.755,
+      "R": 0.86,
+      "CxR": 0.6493,
+      "H": 0.8041,
+      "novelty": 0.8333,
+      "flexibility": 0.44,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "action",
+        "instrumental",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P4",
+          "L4",
+          "P8",
+          "B2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "product_metaphor",
+      "fixture_kind": "creative",
+      "condition": "layer_cot",
+      "mode": "creative_burst_v2",
+      "n_spans": 7,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.4667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8392,
+      "R": 0.8133,
+      "CxR": 0.6821,
+      "H": 0.8255,
+      "novelty": 1.0,
+      "flexibility": 0.5133,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "action",
+        "instrumental",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P3",
+          "PL1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "product_metaphor",
+      "fixture_kind": "creative",
+      "condition": "creative_burst_v2",
+      "mode": "creative_burst_v2",
+      "n_spans": 7,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.4667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8392,
+      "R": 0.8133,
+      "CxR": 0.6821,
+      "H": 0.8255,
+      "novelty": 1.0,
+      "flexibility": 0.5133,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "action",
+        "instrumental",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P1",
+          "P2",
+          "L2",
+          "S1",
+          "P5",
+          "I2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "product_metaphor",
+      "fixture_kind": "creative",
+      "condition": "precision_high",
+      "mode": "creative_burst_v2",
+      "n_spans": 7,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.4667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8392,
+      "R": 0.8133,
+      "CxR": 0.6821,
+      "H": 0.8255,
+      "novelty": 1.0,
+      "flexibility": 0.5133,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "action",
+        "instrumental",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "PP1",
+          "PP2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "product_metaphor",
+      "fixture_kind": "creative",
+      "condition": "precision_low",
+      "mode": "creative_burst_v2",
+      "n_spans": 7,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.5333,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8465,
+      "R": 0.8367,
+      "CxR": 0.7082,
+      "H": 0.8412,
+      "novelty": 1.0,
+      "flexibility": 0.55,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "instrumental",
+        "action",
+        "affective",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "PP1",
+          "PP2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "product_metaphor",
+      "fixture_kind": "creative",
+      "condition": "insight_sidehop",
+      "mode": "creative_burst_v2",
+      "n_spans": 7,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.5333,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8392,
+      "R": 0.8367,
+      "CxR": 0.7019,
+      "H": 0.8375,
+      "novelty": 1.0,
+      "flexibility": 0.5133,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "action",
+        "affective",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P8"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "product_metaphor",
+      "fixture_kind": "creative",
+      "condition": "conflict_schedule_2",
+      "mode": "creative_burst_v2",
+      "n_spans": 7,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.4667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8392,
+      "R": 0.8133,
+      "CxR": 0.6821,
+      "H": 0.8255,
+      "novelty": 1.0,
+      "flexibility": 0.5133,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "action",
+        "instrumental",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P7"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "product_metaphor",
+      "fixture_kind": "creative",
+      "condition": "multipath_k3_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 7,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8318,
+      "R": 0.86,
+      "CxR": 0.7153,
+      "H": 0.8457,
+      "novelty": 1.0,
+      "flexibility": 0.4767,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "affective",
+        "action"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "product_metaphor",
+      "fixture_kind": "creative",
+      "condition": "multipath_k5_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 7,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8318,
+      "R": 0.86,
+      "CxR": 0.7153,
+      "H": 0.8457,
+      "novelty": 1.0,
+      "flexibility": 0.4767,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "affective",
+        "action"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P5",
+          "G1",
+          "G2",
+          "G3",
+          "B4"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "product_metaphor",
+      "fixture_kind": "creative",
+      "condition": "multipath_k5_C",
+      "mode": "creative_burst_v2",
+      "n_spans": 7,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.4667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8465,
+      "R": 0.8133,
+      "CxR": 0.6885,
+      "H": 0.8293,
+      "novelty": 1.0,
+      "flexibility": 0.55,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "action",
+        "instrumental",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "product_metaphor",
+      "fixture_kind": "creative",
+      "condition": "multipath_k5_R",
+      "mode": "creative_burst_v2",
+      "n_spans": 7,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8318,
+      "R": 0.86,
+      "CxR": 0.7153,
+      "H": 0.8457,
+      "novelty": 1.0,
+      "flexibility": 0.4767,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "affective",
+        "action"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "product_metaphor",
+      "fixture_kind": "creative",
+      "condition": "multipath_k7_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 7,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8318,
+      "R": 0.86,
+      "CxR": 0.7153,
+      "H": 0.8457,
+      "novelty": 1.0,
+      "flexibility": 0.4767,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "affective",
+        "action"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G3"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "product_metaphor",
+      "fixture_kind": "creative",
+      "condition": "incubation_alt",
+      "mode": "creative_burst_v2",
+      "n_spans": 7,
+      "n_seeds": 3,
+      "typology_entropy": 1.8617,
+      "n_unique_typologies": 3.6667,
+      "layer_monotonicity": 0.3889,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.7376,
+      "R": 0.7861,
+      "CxR": 0.5791,
+      "H": 0.7601,
+      "novelty": 1.0,
+      "flexibility": 0.55,
+      "path_len": 3.6667,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "I1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "product_metaphor",
+      "fixture_kind": "creative",
+      "condition": "two_phase",
+      "mode": "creative_burst_v2",
+      "n_spans": 7,
+      "n_seeds": 3,
+      "typology_entropy": 2.1073,
+      "n_unique_typologies": 4.3333,
+      "layer_monotonicity": 0.6111,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.7691,
+      "R": 0.8639,
+      "CxR": 0.6638,
+      "H": 0.813,
+      "novelty": 1.0,
+      "flexibility": 0.55,
+      "path_len": 4.3333,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "action"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "I2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "product_metaphor",
+      "fixture_kind": "creative",
+      "condition": "wm_protect_hotset",
+      "mode": "creative_burst_v2",
+      "n_spans": 7,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.4667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8392,
+      "R": 0.8133,
+      "CxR": 0.6821,
+      "H": 0.8255,
+      "novelty": 1.0,
+      "flexibility": 0.5133,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "action",
+        "instrumental",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P6"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "product_metaphor",
+      "fixture_kind": "creative",
+      "condition": "wm_truncate_drop",
+      "mode": "creative_burst_v2",
+      "n_spans": 7,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.7921,
+      "R": 0.86,
+      "CxR": 0.6812,
+      "H": 0.8246,
+      "novelty": 0.8333,
+      "flexibility": 0.5133,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "instrumental",
+        "action",
+        "affective",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P6"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "story_twist",
+      "fixture_kind": "creative",
+      "condition": "linear",
+      "mode": "linear",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.4739,
+      "n_unique_typologies": 5.6667,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 0.5,
+      "constraint_fidelity": 0.5,
+      "C": 0.7791,
+      "R": 0.5583,
+      "CxR": 0.4355,
+      "H": 0.6501,
+      "novelty": 0.9444,
+      "flexibility": 0.44,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "constraint",
+        "unknown",
+        "lexical",
+        "affective",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "S1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "story_twist",
+      "fixture_kind": "creative",
+      "condition": "random",
+      "mode": "random",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.3627,
+      "n_unique_typologies": 5.3333,
+      "layer_monotonicity": 0.5333,
+      "anchor_R": 0.8333,
+      "constraint_fidelity": 0.8333,
+      "C": 0.7698,
+      "R": 0.7283,
+      "CxR": 0.5572,
+      "H": 0.7425,
+      "novelty": 0.8889,
+      "flexibility": 0.5,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "lexical",
+        "unknown",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P1",
+          "P2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "story_twist",
+      "fixture_kind": "creative",
+      "condition": "motif_jump",
+      "mode": "motif_jump",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.8667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.6913,
+      "R": 0.9533,
+      "CxR": 0.659,
+      "H": 0.8012,
+      "novelty": 0.8333,
+      "flexibility": 0.22,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "outcome",
+        "unknown"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "L1",
+          "S3"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "story_twist",
+      "fixture_kind": "creative",
+      "condition": "creative_burst_v1",
+      "mode": "creative_burst",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.3627,
+      "n_unique_typologies": 5.3333,
+      "layer_monotonicity": 0.4667,
+      "anchor_R": 0.9167,
+      "constraint_fidelity": 0.9167,
+      "C": 0.7921,
+      "R": 0.7592,
+      "CxR": 0.5982,
+      "H": 0.7695,
+      "novelty": 0.8889,
+      "flexibility": 0.61,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "lexical",
+        "constraint",
+        "outcome",
+        "constraint",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "L2",
+          "S2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "story_twist",
+      "fixture_kind": "creative",
+      "condition": "divergent_guilford",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.4667,
+      "anchor_R": 0.75,
+      "constraint_fidelity": 0.75,
+      "C": 0.8031,
+      "R": 0.6508,
+      "CxR": 0.5221,
+      "H": 0.7181,
+      "novelty": 1.0,
+      "flexibility": 0.44,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "instrumental",
+        "unknown",
+        "lexical"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P3",
+          "P4",
+          "L3",
+          "L4",
+          "I1",
+          "PL1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "story_twist",
+      "fixture_kind": "creative",
+      "condition": "convergent_constrained",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.706,
+      "R": 0.8833,
+      "CxR": 0.6232,
+      "H": 0.7842,
+      "novelty": 0.8333,
+      "flexibility": 0.2933,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "unknown"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P4",
+          "L4",
+          "P8",
+          "B2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "story_twist",
+      "fixture_kind": "creative",
+      "condition": "layer_cot",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.3627,
+      "n_unique_typologies": 5.3333,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.9167,
+      "constraint_fidelity": 0.9167,
+      "C": 0.7353,
+      "R": 0.8058,
+      "CxR": 0.5902,
+      "H": 0.7653,
+      "novelty": 0.8889,
+      "flexibility": 0.33,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "unknown"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P3",
+          "PL1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "story_twist",
+      "fixture_kind": "creative",
+      "condition": "creative_burst_v2",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.3627,
+      "n_unique_typologies": 5.3333,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.9167,
+      "constraint_fidelity": 0.9167,
+      "C": 0.7353,
+      "R": 0.8058,
+      "CxR": 0.5902,
+      "H": 0.7653,
+      "novelty": 0.8889,
+      "flexibility": 0.33,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "unknown"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P1",
+          "P2",
+          "L2",
+          "S1",
+          "P5",
+          "I2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "story_twist",
+      "fixture_kind": "creative",
+      "condition": "precision_high",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.713,
+      "R": 0.8833,
+      "CxR": 0.6293,
+      "H": 0.7884,
+      "novelty": 0.8333,
+      "flexibility": 0.33,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "lexical",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "PP1",
+          "PP2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "story_twist",
+      "fixture_kind": "creative",
+      "condition": "precision_low",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.5333,
+      "anchor_R": 0.75,
+      "constraint_fidelity": 0.75,
+      "C": 0.8021,
+      "R": 0.6742,
+      "CxR": 0.5407,
+      "H": 0.7321,
+      "novelty": 1.0,
+      "flexibility": 0.4333,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "instrumental",
+        "unknown",
+        "lexical"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "PP1",
+          "PP2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "story_twist",
+      "fixture_kind": "creative",
+      "condition": "insight_sidehop",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.4739,
+      "n_unique_typologies": 5.6667,
+      "layer_monotonicity": 0.5333,
+      "anchor_R": 0.8333,
+      "constraint_fidelity": 0.8333,
+      "C": 0.7865,
+      "R": 0.7283,
+      "CxR": 0.5674,
+      "H": 0.7485,
+      "novelty": 0.9444,
+      "flexibility": 0.47,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "lexical"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P8"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "story_twist",
+      "fixture_kind": "creative",
+      "condition": "conflict_schedule_2",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.7057,
+      "R": 0.8833,
+      "CxR": 0.623,
+      "H": 0.7841,
+      "novelty": 0.8333,
+      "flexibility": 0.2933,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "instrumental",
+        "constraint",
+        "lexical"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P7"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "story_twist",
+      "fixture_kind": "creative",
+      "condition": "multipath_k3_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.6986,
+      "R": 0.9067,
+      "CxR": 0.6331,
+      "H": 0.7887,
+      "novelty": 0.8333,
+      "flexibility": 0.2567,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "unknown"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "story_twist",
+      "fixture_kind": "creative",
+      "condition": "multipath_k5_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.6986,
+      "R": 0.9067,
+      "CxR": 0.6331,
+      "H": 0.7887,
+      "novelty": 0.8333,
+      "flexibility": 0.2567,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "unknown"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P5",
+          "G1",
+          "G2",
+          "G3",
+          "B4"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "story_twist",
+      "fixture_kind": "creative",
+      "condition": "multipath_k5_C",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.75,
+      "constraint_fidelity": 0.75,
+      "C": 0.84,
+      "R": 0.6975,
+      "CxR": 0.5859,
+      "H": 0.7622,
+      "novelty": 1.0,
+      "flexibility": 0.62,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "lexical",
+        "outcome",
+        "goal",
+        "constraint",
+        "affective",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "story_twist",
+      "fixture_kind": "creative",
+      "condition": "multipath_k5_R",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.6986,
+      "R": 0.9067,
+      "CxR": 0.6331,
+      "H": 0.7887,
+      "novelty": 0.8333,
+      "flexibility": 0.2567,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "unknown"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "story_twist",
+      "fixture_kind": "creative",
+      "condition": "multipath_k7_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.6986,
+      "R": 0.9067,
+      "CxR": 0.6331,
+      "H": 0.7887,
+      "novelty": 0.8333,
+      "flexibility": 0.2567,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "unknown"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G3"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "story_twist",
+      "fixture_kind": "creative",
+      "condition": "incubation_alt",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 1.969,
+      "n_unique_typologies": 4.0,
+      "layer_monotonicity": 0.4444,
+      "anchor_R": 0.75,
+      "constraint_fidelity": 0.75,
+      "C": 0.7394,
+      "R": 0.6431,
+      "CxR": 0.4755,
+      "H": 0.6871,
+      "novelty": 1.0,
+      "flexibility": 0.55,
+      "path_len": 4.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "I1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "story_twist",
+      "fixture_kind": "creative",
+      "condition": "two_phase",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 1.6406,
+      "n_unique_typologies": 3.3333,
+      "layer_monotonicity": 0.6111,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.6354,
+      "R": 0.8639,
+      "CxR": 0.5477,
+      "H": 0.7303,
+      "novelty": 0.7667,
+      "flexibility": 0.4278,
+      "path_len": 4.3333,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "I2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "story_twist",
+      "fixture_kind": "creative",
+      "condition": "wm_protect_hotset",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.3627,
+      "n_unique_typologies": 5.3333,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.9167,
+      "constraint_fidelity": 0.9167,
+      "C": 0.7353,
+      "R": 0.8058,
+      "CxR": 0.5902,
+      "H": 0.7653,
+      "novelty": 0.8889,
+      "flexibility": 0.33,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "unknown"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P6"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "story_twist",
+      "fixture_kind": "creative",
+      "condition": "wm_truncate_drop",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.3219,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.4167,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8252,
+      "R": 0.7958,
+      "CxR": 0.6562,
+      "H": 0.8093,
+      "novelty": 1.0,
+      "flexibility": 0.4583,
+      "path_len": 5.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "instrumental",
+        "unknown",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P6"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "research_creative",
+      "fixture_kind": "planning",
+      "condition": "linear",
+      "mode": "linear",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 2.1405,
+      "n_unique_typologies": 4.6667,
+      "layer_monotonicity": 0.5333,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.6771,
+      "R": 0.62,
+      "CxR": 0.4158,
+      "H": 0.6405,
+      "novelty": 0.7778,
+      "flexibility": 0.33,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "constraint",
+        "goal",
+        "constraint",
+        "unknown",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "S1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "research_creative",
+      "fixture_kind": "planning",
+      "condition": "random",
+      "mode": "random",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 2.0986,
+      "n_unique_typologies": 4.6667,
+      "layer_monotonicity": 0.4667,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.7046,
+      "R": 0.5967,
+      "CxR": 0.416,
+      "H": 0.6382,
+      "novelty": 0.7778,
+      "flexibility": 0.5,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "action",
+        "constraint",
+        "noise",
+        "goal",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P1",
+          "P2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "research_creative",
+      "fixture_kind": "planning",
+      "condition": "motif_jump",
+      "mode": "motif_jump",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.4591,
+      "n_unique_typologies": 3.0,
+      "layer_monotonicity": 1.0,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.5042,
+      "R": 1.0,
+      "CxR": 0.5042,
+      "H": 0.6704,
+      "novelty": 0.5,
+      "flexibility": 0.11,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "goal",
+        "constraint",
+        "constraint",
+        "constraint",
+        "action"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "L1",
+          "S3"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "research_creative",
+      "fixture_kind": "planning",
+      "condition": "creative_burst_v1",
+      "mode": "creative_burst",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.6,
+      "constraint_fidelity": 0.6,
+      "C": 0.7427,
+      "R": 0.6,
+      "CxR": 0.4456,
+      "H": 0.6638,
+      "novelty": 0.8333,
+      "flexibility": 0.55,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "affective",
+        "goal",
+        "noise",
+        "constraint",
+        "action"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "L2",
+          "S2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "research_creative",
+      "fixture_kind": "planning",
+      "condition": "divergent_guilford",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 2.4739,
+      "n_unique_typologies": 5.6667,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.4667,
+      "constraint_fidelity": 0.4667,
+      "C": 0.7881,
+      "R": 0.5133,
+      "CxR": 0.3994,
+      "H": 0.6103,
+      "novelty": 0.9444,
+      "flexibility": 0.5367,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "constraint",
+        "action",
+        "affective",
+        "unknown",
+        "goal"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P3",
+          "P4",
+          "L3",
+          "L4",
+          "I1",
+          "PL1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "research_creative",
+      "fixture_kind": "planning",
+      "condition": "convergent_constrained",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.4591,
+      "n_unique_typologies": 3.0,
+      "layer_monotonicity": 0.8667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.5189,
+      "R": 0.9533,
+      "CxR": 0.4943,
+      "H": 0.6715,
+      "novelty": 0.5,
+      "flexibility": 0.1833,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "constraint",
+        "goal",
+        "action",
+        "constraint",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P4",
+          "L4",
+          "P8",
+          "B2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "research_creative",
+      "fixture_kind": "planning",
+      "condition": "layer_cot",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.7233,
+      "n_unique_typologies": 3.6667,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 0.8667,
+      "constraint_fidelity": 0.8667,
+      "C": 0.5967,
+      "R": 0.82,
+      "CxR": 0.4738,
+      "H": 0.6686,
+      "novelty": 0.6111,
+      "flexibility": 0.3233,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "action",
+        "constraint",
+        "goal",
+        "constraint",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P3",
+          "PL1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "research_creative",
+      "fixture_kind": "planning",
+      "condition": "creative_burst_v2",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 2.0294,
+      "n_unique_typologies": 4.3333,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.7333,
+      "constraint_fidelity": 0.7333,
+      "C": 0.6807,
+      "R": 0.6867,
+      "CxR": 0.4649,
+      "H": 0.6798,
+      "novelty": 0.7222,
+      "flexibility": 0.47,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "constraint",
+        "action",
+        "goal",
+        "unknown",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P1",
+          "P2",
+          "L2",
+          "S1",
+          "P5",
+          "I2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "research_creative",
+      "fixture_kind": "planning",
+      "condition": "precision_high",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.4591,
+      "n_unique_typologies": 3.0,
+      "layer_monotonicity": 0.8,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.5262,
+      "R": 0.93,
+      "CxR": 0.4894,
+      "H": 0.6721,
+      "novelty": 0.5,
+      "flexibility": 0.22,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "constraint",
+        "goal",
+        "action",
+        "constraint",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "PP1",
+          "PP2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "research_creative",
+      "fixture_kind": "planning",
+      "condition": "precision_low",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 2.4739,
+      "n_unique_typologies": 5.6667,
+      "layer_monotonicity": 0.4,
+      "anchor_R": 0.4667,
+      "constraint_fidelity": 0.4667,
+      "C": 0.8018,
+      "R": 0.4433,
+      "CxR": 0.351,
+      "H": 0.559,
+      "novelty": 0.9444,
+      "flexibility": 0.61,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "action",
+        "constraint",
+        "affective",
+        "unknown",
+        "goal"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "PP1",
+          "PP2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "research_creative",
+      "fixture_kind": "planning",
+      "condition": "insight_sidehop",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 2.1405,
+      "n_unique_typologies": 4.6667,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.7045,
+      "R": 0.6433,
+      "CxR": 0.451,
+      "H": 0.6689,
+      "novelty": 0.7778,
+      "flexibility": 0.47,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "action",
+        "constraint",
+        "goal",
+        "affective",
+        "unknown"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P8"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "research_creative",
+      "fixture_kind": "planning",
+      "condition": "conflict_schedule_2",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.6122,
+      "n_unique_typologies": 3.3333,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 0.9333,
+      "constraint_fidelity": 0.9333,
+      "C": 0.5679,
+      "R": 0.8633,
+      "CxR": 0.4848,
+      "H": 0.6775,
+      "novelty": 0.5556,
+      "flexibility": 0.2933,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "constraint",
+        "goal",
+        "action",
+        "constraint",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P7"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "research_creative",
+      "fixture_kind": "planning",
+      "condition": "multipath_k3_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.9183,
+      "n_unique_typologies": 4.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.8,
+      "constraint_fidelity": 0.8,
+      "C": 0.6528,
+      "R": 0.73,
+      "CxR": 0.4766,
+      "H": 0.6892,
+      "novelty": 0.6667,
+      "flexibility": 0.44,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "constraint",
+        "goal",
+        "action",
+        "goal",
+        "unknown",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "research_creative",
+      "fixture_kind": "planning",
+      "condition": "multipath_k5_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.9183,
+      "n_unique_typologies": 4.0,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 0.8,
+      "constraint_fidelity": 0.8,
+      "C": 0.6455,
+      "R": 0.7533,
+      "CxR": 0.4859,
+      "H": 0.6946,
+      "novelty": 0.6667,
+      "flexibility": 0.4033,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "constraint",
+        "goal",
+        "action",
+        "goal",
+        "unknown",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P5",
+          "G1",
+          "G2",
+          "G3",
+          "B4"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "research_creative",
+      "fixture_kind": "planning",
+      "condition": "multipath_k5_C",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 2.1405,
+      "n_unique_typologies": 4.6667,
+      "layer_monotonicity": 0.4667,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.7006,
+      "R": 0.5967,
+      "CxR": 0.4149,
+      "H": 0.6379,
+      "novelty": 0.7778,
+      "flexibility": 0.44,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "constraint",
+        "action",
+        "goal",
+        "unknown",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "research_creative",
+      "fixture_kind": "planning",
+      "condition": "multipath_k5_R",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.9183,
+      "n_unique_typologies": 4.0,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 0.8,
+      "constraint_fidelity": 0.8,
+      "C": 0.6449,
+      "R": 0.7533,
+      "CxR": 0.4855,
+      "H": 0.6943,
+      "novelty": 0.6667,
+      "flexibility": 0.4033,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "constraint",
+        "action",
+        "goal",
+        "unknown",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "research_creative",
+      "fixture_kind": "planning",
+      "condition": "multipath_k7_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.9183,
+      "n_unique_typologies": 4.0,
+      "layer_monotonicity": 0.8,
+      "anchor_R": 0.8,
+      "constraint_fidelity": 0.8,
+      "C": 0.6287,
+      "R": 0.8,
+      "CxR": 0.503,
+      "H": 0.7041,
+      "novelty": 0.6667,
+      "flexibility": 0.33,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "affective",
+        "goal",
+        "constraint",
+        "goal",
+        "noise",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G3"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "research_creative",
+      "fixture_kind": "planning",
+      "condition": "incubation_alt",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.9219,
+      "n_unique_typologies": 4.0,
+      "layer_monotonicity": 0.5833,
+      "anchor_R": 0.6,
+      "constraint_fidelity": 0.6,
+      "C": 0.664,
+      "R": 0.5942,
+      "CxR": 0.3946,
+      "H": 0.6264,
+      "novelty": 0.8,
+      "flexibility": 0.4125,
+      "path_len": 5.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "action",
+        "constraint",
+        "goal",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "I1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "research_creative",
+      "fixture_kind": "planning",
+      "condition": "two_phase",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.6406,
+      "n_unique_typologies": 3.3333,
+      "layer_monotonicity": 0.6945,
+      "anchor_R": 0.6,
+      "constraint_fidelity": 0.6,
+      "C": 0.6142,
+      "R": 0.633,
+      "CxR": 0.3893,
+      "H": 0.6233,
+      "novelty": 0.7667,
+      "flexibility": 0.382,
+      "path_len": 4.3333,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "action",
+        "constraint",
+        "goal"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "I2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "research_creative",
+      "fixture_kind": "planning",
+      "condition": "wm_protect_hotset",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 2.0294,
+      "n_unique_typologies": 4.3333,
+      "layer_monotonicity": 0.5333,
+      "anchor_R": 0.7333,
+      "constraint_fidelity": 0.7333,
+      "C": 0.689,
+      "R": 0.6633,
+      "CxR": 0.4538,
+      "H": 0.6695,
+      "novelty": 0.7222,
+      "flexibility": 0.44,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "constraint",
+        "action",
+        "goal",
+        "unknown",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P6"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "research_creative",
+      "fixture_kind": "planning",
+      "condition": "wm_truncate_drop",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 2.3219,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.4167,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8447,
+      "R": 0.7958,
+      "CxR": 0.6723,
+      "H": 0.819,
+      "novelty": 1.0,
+      "flexibility": 0.55,
+      "path_len": 5.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "action",
+        "unknown",
+        "affective",
+        "noise"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P6"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "brand_voice",
+      "fixture_kind": "constraint_heavy",
+      "condition": "linear",
+      "mode": "linear",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.7233,
+      "n_unique_typologies": 3.6667,
+      "layer_monotonicity": 0.8,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.5556,
+      "R": 0.7133,
+      "CxR": 0.3974,
+      "H": 0.6233,
+      "novelty": 0.6111,
+      "flexibility": 0.1833,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "constraint",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "lexical"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "S1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "brand_voice",
+      "fixture_kind": "constraint_heavy",
+      "condition": "random",
+      "mode": "random",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 2.1405,
+      "n_unique_typologies": 4.6667,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.6577,
+      "R": 0.69,
+      "CxR": 0.454,
+      "H": 0.6697,
+      "novelty": 0.7778,
+      "flexibility": 0.2867,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "goal",
+        "instrumental",
+        "outcome",
+        "constraint",
+        "lexical"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P1",
+          "P2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "brand_voice",
+      "fixture_kind": "constraint_heavy",
+      "condition": "motif_jump",
+      "mode": "motif_jump",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.4591,
+      "n_unique_typologies": 3.0,
+      "layer_monotonicity": 1.0,
+      "anchor_R": 0.8,
+      "constraint_fidelity": 0.8,
+      "C": 0.4736,
+      "R": 0.87,
+      "CxR": 0.4121,
+      "H": 0.6133,
+      "novelty": 0.5,
+      "flexibility": 0.0,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "goal",
+        "constraint",
+        "constraint",
+        "constraint",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "L1",
+          "S3"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "brand_voice",
+      "fixture_kind": "constraint_heavy",
+      "condition": "creative_burst_v1",
+      "mode": "creative_burst",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.7333,
+      "constraint_fidelity": 0.7333,
+      "C": 0.7314,
+      "R": 0.6867,
+      "CxR": 0.5021,
+      "H": 0.7068,
+      "novelty": 0.8333,
+      "flexibility": 0.53,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "lexical",
+        "goal",
+        "outcome",
+        "constraint",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "L2",
+          "S2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "brand_voice",
+      "fixture_kind": "constraint_heavy",
+      "condition": "divergent_guilford",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.698,
+      "R": 0.6667,
+      "CxR": 0.4657,
+      "H": 0.6811,
+      "novelty": 0.8333,
+      "flexibility": 0.3667,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "constraint",
+        "lexical",
+        "goal",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P3",
+          "P4",
+          "L3",
+          "L4",
+          "I1",
+          "PL1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "brand_voice",
+      "fixture_kind": "constraint_heavy",
+      "condition": "convergent_constrained",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.7925,
+      "n_unique_typologies": 4.0,
+      "layer_monotonicity": 0.8,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.5966,
+      "R": 0.93,
+      "CxR": 0.5548,
+      "H": 0.7268,
+      "novelty": 0.6667,
+      "flexibility": 0.25,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "constraint",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P4",
+          "L4",
+          "P8",
+          "B2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "brand_voice",
+      "fixture_kind": "constraint_heavy",
+      "condition": "layer_cot",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.9455,
+      "n_unique_typologies": 4.3333,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 0.9333,
+      "constraint_fidelity": 0.9333,
+      "C": 0.6301,
+      "R": 0.8633,
+      "CxR": 0.5399,
+      "H": 0.7227,
+      "novelty": 0.7222,
+      "flexibility": 0.2867,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "constraint",
+        "goal",
+        "constraint",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P3",
+          "PL1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "brand_voice",
+      "fixture_kind": "constraint_heavy",
+      "condition": "creative_burst_v2",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.9455,
+      "n_unique_typologies": 4.3333,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 0.9333,
+      "constraint_fidelity": 0.9333,
+      "C": 0.6301,
+      "R": 0.8633,
+      "CxR": 0.5399,
+      "H": 0.7227,
+      "novelty": 0.7222,
+      "flexibility": 0.2867,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "constraint",
+        "goal",
+        "constraint",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P1",
+          "P2",
+          "L2",
+          "S1",
+          "P5",
+          "I2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "brand_voice",
+      "fixture_kind": "constraint_heavy",
+      "condition": "precision_high",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.7925,
+      "n_unique_typologies": 4.0,
+      "layer_monotonicity": 0.8,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.5966,
+      "R": 0.93,
+      "CxR": 0.5548,
+      "H": 0.7268,
+      "novelty": 0.6667,
+      "flexibility": 0.25,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "constraint",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "PP1",
+          "PP2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "brand_voice",
+      "fixture_kind": "constraint_heavy",
+      "condition": "precision_low",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.7333,
+      "constraint_fidelity": 0.7333,
+      "C": 0.7097,
+      "R": 0.6867,
+      "CxR": 0.4865,
+      "H": 0.6958,
+      "novelty": 0.8333,
+      "flexibility": 0.4333,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "constraint",
+        "lexical",
+        "goal",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "PP1",
+          "PP2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "brand_voice",
+      "fixture_kind": "constraint_heavy",
+      "condition": "insight_sidehop",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.8,
+      "constraint_fidelity": 0.8,
+      "C": 0.7107,
+      "R": 0.73,
+      "CxR": 0.5188,
+      "H": 0.7201,
+      "novelty": 0.8333,
+      "flexibility": 0.4333,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "constraint",
+        "goal",
+        "lexical",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P8"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "brand_voice",
+      "fixture_kind": "constraint_heavy",
+      "condition": "conflict_schedule_2",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.7925,
+      "n_unique_typologies": 4.0,
+      "layer_monotonicity": 0.8,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.5966,
+      "R": 0.93,
+      "CxR": 0.5549,
+      "H": 0.7269,
+      "novelty": 0.6667,
+      "flexibility": 0.25,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "constraint",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P7"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "brand_voice",
+      "fixture_kind": "constraint_heavy",
+      "condition": "multipath_k3_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.7925,
+      "n_unique_typologies": 4.0,
+      "layer_monotonicity": 0.8,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.5966,
+      "R": 0.93,
+      "CxR": 0.5549,
+      "H": 0.7269,
+      "novelty": 0.6667,
+      "flexibility": 0.25,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "constraint",
+        "goal",
+        "constraint",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "brand_voice",
+      "fixture_kind": "constraint_heavy",
+      "condition": "multipath_k5_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.9455,
+      "n_unique_typologies": 4.3333,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 0.9333,
+      "constraint_fidelity": 0.9333,
+      "C": 0.6491,
+      "R": 0.8633,
+      "CxR": 0.555,
+      "H": 0.7338,
+      "novelty": 0.7222,
+      "flexibility": 0.3833,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "constraint",
+        "outcome",
+        "goal",
+        "constraint",
+        "lexical",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P5",
+          "G1",
+          "G2",
+          "G3",
+          "B4"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "brand_voice",
+      "fixture_kind": "constraint_heavy",
+      "condition": "multipath_k5_C",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.8,
+      "constraint_fidelity": 0.8,
+      "C": 0.71,
+      "R": 0.73,
+      "CxR": 0.5183,
+      "H": 0.7198,
+      "novelty": 0.8333,
+      "flexibility": 0.4333,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "constraint",
+        "outcome",
+        "goal",
+        "constraint",
+        "lexical",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "brand_voice",
+      "fixture_kind": "constraint_heavy",
+      "condition": "multipath_k5_R",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.7925,
+      "n_unique_typologies": 4.0,
+      "layer_monotonicity": 0.8,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.5906,
+      "R": 0.93,
+      "CxR": 0.5493,
+      "H": 0.7224,
+      "novelty": 0.6667,
+      "flexibility": 0.22,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "constraint",
+        "goal",
+        "constraint",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "brand_voice",
+      "fixture_kind": "constraint_heavy",
+      "condition": "multipath_k7_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 2.0986,
+      "n_unique_typologies": 4.6667,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 0.8667,
+      "constraint_fidelity": 0.8667,
+      "C": 0.6766,
+      "R": 0.82,
+      "CxR": 0.5506,
+      "H": 0.7358,
+      "novelty": 0.7778,
+      "flexibility": 0.39,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "constraint",
+        "outcome",
+        "goal",
+        "constraint",
+        "lexical",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G3"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "brand_voice",
+      "fixture_kind": "constraint_heavy",
+      "condition": "incubation_alt",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 2.1073,
+      "n_unique_typologies": 4.3333,
+      "layer_monotonicity": 0.6111,
+      "anchor_R": 0.6,
+      "constraint_fidelity": 0.6,
+      "C": 0.7065,
+      "R": 0.6039,
+      "CxR": 0.426,
+      "H": 0.6502,
+      "novelty": 1.0,
+      "flexibility": 0.382,
+      "path_len": 4.3333,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "constraint",
+        "goal"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "I1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "brand_voice",
+      "fixture_kind": "constraint_heavy",
+      "condition": "two_phase",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 2.0318,
+      "n_unique_typologies": 4.3333,
+      "layer_monotonicity": 0.7,
+      "anchor_R": 0.8,
+      "constraint_fidelity": 0.8,
+      "C": 0.6491,
+      "R": 0.765,
+      "CxR": 0.4959,
+      "H": 0.7013,
+      "novelty": 0.8111,
+      "flexibility": 0.2933,
+      "path_len": 5.3333,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "constraint",
+        "goal",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "I2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "brand_voice",
+      "fixture_kind": "constraint_heavy",
+      "condition": "wm_protect_hotset",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 1.9455,
+      "n_unique_typologies": 4.3333,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 0.9333,
+      "constraint_fidelity": 0.9333,
+      "C": 0.6301,
+      "R": 0.8633,
+      "CxR": 0.5399,
+      "H": 0.7227,
+      "novelty": 0.7222,
+      "flexibility": 0.2867,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "constraint",
+        "goal",
+        "constraint",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P6"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "brand_voice",
+      "fixture_kind": "constraint_heavy",
+      "condition": "wm_truncate_drop",
+      "mode": "creative_burst_v2",
+      "n_spans": 9,
+      "n_seeds": 3,
+      "typology_entropy": 0.8113,
+      "n_unique_typologies": 2.0,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.5518,
+      "R": 0.8833,
+      "CxR": 0.4874,
+      "H": 0.6793,
+      "novelty": 0.5,
+      "flexibility": 0.3667,
+      "path_len": 4.0,
+      "goal_neglect_rate": 1.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "instrumental",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P6"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "deploy_plan",
+      "fixture_kind": "planning",
+      "condition": "linear",
+      "mode": "linear",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.0986,
+      "n_unique_typologies": 4.6667,
+      "layer_monotonicity": 0.8,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.6718,
+      "R": 0.7133,
+      "CxR": 0.4792,
+      "H": 0.691,
+      "novelty": 0.7778,
+      "flexibility": 0.2933,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "goal",
+        "constraint",
+        "instrumental",
+        "affective",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "S1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "deploy_plan",
+      "fixture_kind": "planning",
+      "condition": "random",
+      "mode": "random",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2097,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.7778,
+      "constraint_fidelity": 0.7778,
+      "C": 0.7162,
+      "R": 0.7155,
+      "CxR": 0.5168,
+      "H": 0.7146,
+      "novelty": 0.8333,
+      "flexibility": 0.3967,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "action",
+        "instrumental",
+        "constraint",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P1",
+          "P2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "deploy_plan",
+      "fixture_kind": "planning",
+      "condition": "motif_jump",
+      "mode": "motif_jump",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 1.7925,
+      "n_unique_typologies": 4.0,
+      "layer_monotonicity": 1.0,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.5801,
+      "R": 0.7833,
+      "CxR": 0.4544,
+      "H": 0.6666,
+      "novelty": 0.6667,
+      "flexibility": 0.11,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "goal",
+        "constraint",
+        "instrumental",
+        "instrumental",
+        "action"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "L1",
+          "S3"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "deploy_plan",
+      "fixture_kind": "planning",
+      "condition": "creative_burst_v1",
+      "mode": "creative_burst",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8187,
+      "R": 0.86,
+      "CxR": 0.7041,
+      "H": 0.8389,
+      "novelty": 1.0,
+      "flexibility": 0.55,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "affective",
+        "goal",
+        "outcome",
+        "constraint",
+        "action"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "L2",
+          "S2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "deploy_plan",
+      "fixture_kind": "planning",
+      "condition": "divergent_guilford",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.4,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8187,
+      "R": 0.79,
+      "CxR": 0.6468,
+      "H": 0.8041,
+      "novelty": 1.0,
+      "flexibility": 0.55,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "action",
+        "constraint",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P3",
+          "P4",
+          "L3",
+          "L4",
+          "I1",
+          "PL1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "deploy_plan",
+      "fixture_kind": "planning",
+      "condition": "convergent_constrained",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.7274,
+      "R": 0.86,
+      "CxR": 0.6256,
+      "H": 0.7882,
+      "novelty": 0.8333,
+      "flexibility": 0.44,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "action",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P4",
+          "L4",
+          "P8",
+          "B2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "deploy_plan",
+      "fixture_kind": "planning",
+      "condition": "layer_cot",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.4667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8114,
+      "R": 0.8133,
+      "CxR": 0.6596,
+      "H": 0.8118,
+      "novelty": 1.0,
+      "flexibility": 0.5133,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "action",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P3",
+          "PL1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "deploy_plan",
+      "fixture_kind": "planning",
+      "condition": "creative_burst_v2",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.4667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8114,
+      "R": 0.8133,
+      "CxR": 0.6596,
+      "H": 0.8118,
+      "novelty": 1.0,
+      "flexibility": 0.5133,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "action",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P1",
+          "P2",
+          "L2",
+          "S1",
+          "P5",
+          "I2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "deploy_plan",
+      "fixture_kind": "planning",
+      "condition": "precision_high",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.4667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8114,
+      "R": 0.8133,
+      "CxR": 0.6596,
+      "H": 0.8118,
+      "novelty": 1.0,
+      "flexibility": 0.5133,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "affective",
+        "action"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "PP1",
+          "PP2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "deploy_plan",
+      "fixture_kind": "planning",
+      "condition": "precision_low",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.4,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8187,
+      "R": 0.79,
+      "CxR": 0.6468,
+      "H": 0.8041,
+      "novelty": 1.0,
+      "flexibility": 0.55,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "action",
+        "constraint",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "PP1",
+          "PP2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "deploy_plan",
+      "fixture_kind": "planning",
+      "condition": "insight_sidehop",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.4667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8114,
+      "R": 0.8133,
+      "CxR": 0.6596,
+      "H": 0.8118,
+      "novelty": 1.0,
+      "flexibility": 0.5133,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "action",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P8"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "deploy_plan",
+      "fixture_kind": "planning",
+      "condition": "conflict_schedule_2",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.4667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8114,
+      "R": 0.8133,
+      "CxR": 0.6596,
+      "H": 0.8118,
+      "novelty": 1.0,
+      "flexibility": 0.5133,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "affective",
+        "action"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P7"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "deploy_plan",
+      "fixture_kind": "planning",
+      "condition": "multipath_k3_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8114,
+      "R": 0.86,
+      "CxR": 0.6978,
+      "H": 0.835,
+      "novelty": 1.0,
+      "flexibility": 0.5133,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "action",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "deploy_plan",
+      "fixture_kind": "planning",
+      "condition": "multipath_k5_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8114,
+      "R": 0.86,
+      "CxR": 0.6978,
+      "H": 0.835,
+      "novelty": 1.0,
+      "flexibility": 0.5133,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "action",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P5",
+          "G1",
+          "G2",
+          "G3",
+          "B4"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "deploy_plan",
+      "fixture_kind": "planning",
+      "condition": "multipath_k5_C",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.5333,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8187,
+      "R": 0.8367,
+      "CxR": 0.685,
+      "H": 0.8273,
+      "novelty": 1.0,
+      "flexibility": 0.55,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "action",
+        "instrumental",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "deploy_plan",
+      "fixture_kind": "planning",
+      "condition": "multipath_k5_R",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.7967,
+      "R": 0.86,
+      "CxR": 0.6852,
+      "H": 0.8272,
+      "novelty": 1.0,
+      "flexibility": 0.44,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "action",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "deploy_plan",
+      "fixture_kind": "planning",
+      "condition": "multipath_k7_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8119,
+      "R": 0.86,
+      "CxR": 0.6982,
+      "H": 0.8353,
+      "novelty": 1.0,
+      "flexibility": 0.5133,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "goal",
+        "outcome",
+        "constraint",
+        "action",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G3"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "deploy_plan",
+      "fixture_kind": "planning",
+      "condition": "incubation_alt",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.3219,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.5,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.7517,
+      "R": 0.825,
+      "CxR": 0.6202,
+      "H": 0.7867,
+      "novelty": 1.0,
+      "flexibility": 0.4125,
+      "path_len": 5.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "I1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "deploy_plan",
+      "fixture_kind": "planning",
+      "condition": "two_phase",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.3219,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.7502,
+      "R": 0.8833,
+      "CxR": 0.6627,
+      "H": 0.8109,
+      "novelty": 1.0,
+      "flexibility": 0.4125,
+      "path_len": 5.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "action"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "I2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "deploy_plan",
+      "fixture_kind": "planning",
+      "condition": "wm_protect_hotset",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.4667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.8114,
+      "R": 0.8133,
+      "CxR": 0.6596,
+      "H": 0.8118,
+      "novelty": 1.0,
+      "flexibility": 0.5133,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "action",
+        "affective"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P6"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "deploy_plan",
+      "fixture_kind": "planning",
+      "condition": "wm_truncate_drop",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 1.7925,
+      "n_unique_typologies": 4.0,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.6804,
+      "R": 0.8833,
+      "CxR": 0.6006,
+      "H": 0.7682,
+      "novelty": 0.6667,
+      "flexibility": 0.4033,
+      "path_len": 6.0,
+      "goal_neglect_rate": 1.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "action",
+        "affective",
+        "instrumental",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P6"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "tool_log_repetitive",
+      "fixture_kind": "tool_log",
+      "condition": "linear",
+      "mode": "linear",
+      "n_spans": 10,
+      "n_seeds": 3,
+      "typology_entropy": 1.0511,
+      "n_unique_typologies": 2.6667,
+      "layer_monotonicity": 0.8667,
+      "anchor_R": 0.25,
+      "constraint_fidelity": 0.25,
+      "C": 0.4317,
+      "R": 0.4658,
+      "CxR": 0.2034,
+      "H": 0.4368,
+      "novelty": 0.4444,
+      "flexibility": 0.11,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "constraint",
+        "instrumental",
+        "instrumental",
+        "instrumental",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "S1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "tool_log_repetitive",
+      "fixture_kind": "tool_log",
+      "condition": "random",
+      "mode": "random",
+      "n_spans": 10,
+      "n_seeds": 3,
+      "typology_entropy": 1.7652,
+      "n_unique_typologies": 4.0,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 0.5,
+      "constraint_fidelity": 0.5,
+      "C": 0.5975,
+      "R": 0.5583,
+      "CxR": 0.3413,
+      "H": 0.5764,
+      "novelty": 0.6667,
+      "flexibility": 0.33,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "noise",
+        "instrumental",
+        "instrumental",
+        "outcome",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P1",
+          "P2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "tool_log_repetitive",
+      "fixture_kind": "tool_log",
+      "condition": "motif_jump",
+      "mode": "motif_jump",
+      "n_spans": 10,
+      "n_seeds": 3,
+      "typology_entropy": 1.4591,
+      "n_unique_typologies": 3.0,
+      "layer_monotonicity": 1.0,
+      "anchor_R": 0.75,
+      "constraint_fidelity": 0.75,
+      "C": 0.4598,
+      "R": 0.8375,
+      "CxR": 0.3851,
+      "H": 0.5937,
+      "novelty": 0.5,
+      "flexibility": 0.0,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "instrumental",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "L1",
+          "S3"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "tool_log_repetitive",
+      "fixture_kind": "tool_log",
+      "condition": "creative_burst_v1",
+      "mode": "creative_burst",
+      "n_spans": 10,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.7078,
+      "R": 0.86,
+      "CxR": 0.6087,
+      "H": 0.7765,
+      "novelty": 0.8333,
+      "flexibility": 0.44,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "noise",
+        "constraint",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "L2",
+          "S2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "tool_log_repetitive",
+      "fixture_kind": "tool_log",
+      "condition": "divergent_guilford",
+      "mode": "creative_burst_v2",
+      "n_spans": 10,
+      "n_seeds": 3,
+      "typology_entropy": 2.1405,
+      "n_unique_typologies": 4.6667,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 0.9167,
+      "constraint_fidelity": 0.9167,
+      "C": 0.6538,
+      "R": 0.8292,
+      "CxR": 0.5391,
+      "H": 0.7257,
+      "novelty": 0.7778,
+      "flexibility": 0.2933,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "instrumental",
+        "instrumental",
+        "noise"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P3",
+          "P4",
+          "L3",
+          "L4",
+          "I1",
+          "PL1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "tool_log_repetitive",
+      "fixture_kind": "tool_log",
+      "condition": "convergent_constrained",
+      "mode": "creative_burst_v2",
+      "n_spans": 10,
+      "n_seeds": 3,
+      "typology_entropy": 2.0294,
+      "n_unique_typologies": 4.3333,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.6235,
+      "R": 0.9067,
+      "CxR": 0.5638,
+      "H": 0.7368,
+      "novelty": 0.7222,
+      "flexibility": 0.2567,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P4",
+          "L4",
+          "P8",
+          "B2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "tool_log_repetitive",
+      "fixture_kind": "tool_log",
+      "condition": "layer_cot",
+      "mode": "creative_burst_v2",
+      "n_spans": 10,
+      "n_seeds": 3,
+      "typology_entropy": 1.9183,
+      "n_unique_typologies": 4.0,
+      "layer_monotonicity": 0.8,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.5929,
+      "R": 0.93,
+      "CxR": 0.5514,
+      "H": 0.7241,
+      "novelty": 0.6667,
+      "flexibility": 0.22,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P3",
+          "PL1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "tool_log_repetitive",
+      "fixture_kind": "tool_log",
+      "condition": "creative_burst_v2",
+      "mode": "creative_burst_v2",
+      "n_spans": 10,
+      "n_seeds": 3,
+      "typology_entropy": 2.1405,
+      "n_unique_typologies": 4.6667,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.654,
+      "R": 0.8833,
+      "CxR": 0.5763,
+      "H": 0.7496,
+      "novelty": 0.7778,
+      "flexibility": 0.2933,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P1",
+          "P2",
+          "L2",
+          "S1",
+          "P5",
+          "I2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "tool_log_repetitive",
+      "fixture_kind": "tool_log",
+      "condition": "precision_high",
+      "mode": "creative_burst_v2",
+      "n_spans": 10,
+      "n_seeds": 3,
+      "typology_entropy": 2.0294,
+      "n_unique_typologies": 4.3333,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.6235,
+      "R": 0.9067,
+      "CxR": 0.5638,
+      "H": 0.7368,
+      "novelty": 0.7222,
+      "flexibility": 0.2567,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "PP1",
+          "PP2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "tool_log_repetitive",
+      "fixture_kind": "tool_log",
+      "condition": "precision_low",
+      "mode": "creative_burst_v2",
+      "n_spans": 10,
+      "n_seeds": 3,
+      "typology_entropy": 2.1405,
+      "n_unique_typologies": 4.6667,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 0.9167,
+      "constraint_fidelity": 0.9167,
+      "C": 0.6538,
+      "R": 0.8292,
+      "CxR": 0.5391,
+      "H": 0.7257,
+      "novelty": 0.7778,
+      "flexibility": 0.2933,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "instrumental",
+        "instrumental",
+        "noise"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "PP1",
+          "PP2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "tool_log_repetitive",
+      "fixture_kind": "tool_log",
+      "condition": "insight_sidehop",
+      "mode": "creative_burst_v2",
+      "n_spans": 10,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.6846,
+      "R": 0.86,
+      "CxR": 0.5887,
+      "H": 0.7623,
+      "novelty": 0.8333,
+      "flexibility": 0.33,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "noise"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P8"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "tool_log_repetitive",
+      "fixture_kind": "tool_log",
+      "condition": "conflict_schedule_2",
+      "mode": "creative_burst_v2",
+      "n_spans": 10,
+      "n_seeds": 3,
+      "typology_entropy": 2.0294,
+      "n_unique_typologies": 4.3333,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.6235,
+      "R": 0.9067,
+      "CxR": 0.5638,
+      "H": 0.7368,
+      "novelty": 0.7222,
+      "flexibility": 0.2567,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "instrumental",
+        "constraint",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P7"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "tool_log_repetitive",
+      "fixture_kind": "tool_log",
+      "condition": "multipath_k3_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 10,
+      "n_seeds": 3,
+      "typology_entropy": 2.0294,
+      "n_unique_typologies": 4.3333,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.6308,
+      "R": 0.9067,
+      "CxR": 0.5702,
+      "H": 0.7413,
+      "novelty": 0.7222,
+      "flexibility": 0.2933,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "tool_log_repetitive",
+      "fixture_kind": "tool_log",
+      "condition": "multipath_k5_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 10,
+      "n_seeds": 3,
+      "typology_entropy": 2.1405,
+      "n_unique_typologies": 4.6667,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.6807,
+      "R": 0.8833,
+      "CxR": 0.5996,
+      "H": 0.7666,
+      "novelty": 0.7778,
+      "flexibility": 0.4267,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "noise",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P5",
+          "G1",
+          "G2",
+          "G3",
+          "B4"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "tool_log_repetitive",
+      "fixture_kind": "tool_log",
+      "condition": "multipath_k5_C",
+      "mode": "creative_burst_v2",
+      "n_spans": 10,
+      "n_seeds": 3,
+      "typology_entropy": 2.1405,
+      "n_unique_typologies": 4.6667,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.6807,
+      "R": 0.8833,
+      "CxR": 0.5996,
+      "H": 0.7666,
+      "novelty": 0.7778,
+      "flexibility": 0.4267,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "noise",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "tool_log_repetitive",
+      "fixture_kind": "tool_log",
+      "condition": "multipath_k5_R",
+      "mode": "creative_burst_v2",
+      "n_spans": 10,
+      "n_seeds": 3,
+      "typology_entropy": 1.9183,
+      "n_unique_typologies": 4.0,
+      "layer_monotonicity": 0.8,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.5929,
+      "R": 0.93,
+      "CxR": 0.5514,
+      "H": 0.7241,
+      "novelty": 0.6667,
+      "flexibility": 0.22,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "tool_log_repetitive",
+      "fixture_kind": "tool_log",
+      "condition": "multipath_k7_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 10,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.6979,
+      "R": 0.8833,
+      "CxR": 0.6157,
+      "H": 0.7787,
+      "novelty": 0.8333,
+      "flexibility": 0.3967,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "noise",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G3"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "tool_log_repetitive",
+      "fixture_kind": "tool_log",
+      "condition": "incubation_alt",
+      "mode": "creative_burst_v2",
+      "n_spans": 10,
+      "n_seeds": 3,
+      "typology_entropy": 1.585,
+      "n_unique_typologies": 3.0,
+      "layer_monotonicity": 0.5,
+      "anchor_R": 0.75,
+      "constraint_fidelity": 0.75,
+      "C": 0.6678,
+      "R": 0.6625,
+      "CxR": 0.4424,
+      "H": 0.6651,
+      "novelty": 1.0,
+      "flexibility": 0.55,
+      "path_len": 3.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "I1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "tool_log_repetitive",
+      "fixture_kind": "tool_log",
+      "condition": "two_phase",
+      "mode": "creative_burst_v2",
+      "n_spans": 10,
+      "n_seeds": 3,
+      "typology_entropy": 1.5,
+      "n_unique_typologies": 3.0,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.5799,
+      "R": 0.8833,
+      "CxR": 0.5122,
+      "H": 0.7001,
+      "novelty": 0.75,
+      "flexibility": 0.3667,
+      "path_len": 4.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "I2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "tool_log_repetitive",
+      "fixture_kind": "tool_log",
+      "condition": "wm_protect_hotset",
+      "mode": "creative_burst_v2",
+      "n_spans": 10,
+      "n_seeds": 3,
+      "typology_entropy": 1.9183,
+      "n_unique_typologies": 4.0,
+      "layer_monotonicity": 0.8,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.6029,
+      "R": 0.93,
+      "CxR": 0.5607,
+      "H": 0.7316,
+      "novelty": 0.6667,
+      "flexibility": 0.22,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P6"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "tool_log_repetitive",
+      "fixture_kind": "tool_log",
+      "condition": "wm_truncate_drop",
+      "mode": "creative_burst_v2",
+      "n_spans": 10,
+      "n_seeds": 3,
+      "typology_entropy": 1.9183,
+      "n_unique_typologies": 4.0,
+      "layer_monotonicity": 0.8,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.6029,
+      "R": 0.93,
+      "CxR": 0.5607,
+      "H": 0.7316,
+      "novelty": 0.6667,
+      "flexibility": 0.22,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P6"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "fixture_kind": "causal",
+      "condition": "linear",
+      "mode": "linear",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.0294,
+      "n_unique_typologies": 4.3333,
+      "layer_monotonicity": 0.9333,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.6368,
+      "R": 0.76,
+      "CxR": 0.4865,
+      "H": 0.6927,
+      "novelty": 0.7222,
+      "flexibility": 0.1833,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "lexical",
+        "lexical",
+        "noise",
+        "constraint",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "S1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "fixture_kind": "causal",
+      "condition": "random",
+      "mode": "random",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.3628,
+      "n_unique_typologies": 5.3333,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 0.75,
+      "constraint_fidelity": 0.75,
+      "C": 0.7776,
+      "R": 0.7208,
+      "CxR": 0.5579,
+      "H": 0.7439,
+      "novelty": 0.8889,
+      "flexibility": 0.53,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "instrumental",
+        "noise",
+        "lexical",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P1",
+          "P2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "fixture_kind": "causal",
+      "condition": "motif_jump",
+      "mode": "motif_jump",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.0294,
+      "n_unique_typologies": 4.3333,
+      "layer_monotonicity": 0.9333,
+      "anchor_R": 0.8333,
+      "constraint_fidelity": 0.8333,
+      "C": 0.6291,
+      "R": 0.8683,
+      "CxR": 0.5483,
+      "H": 0.7295,
+      "novelty": 0.7222,
+      "flexibility": 0.1467,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "outcome",
+        "lexical"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "L1",
+          "S3"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "fixture_kind": "causal",
+      "condition": "creative_burst_v1",
+      "mode": "creative_burst",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.3627,
+      "n_unique_typologies": 5.3333,
+      "layer_monotonicity": 0.5333,
+      "anchor_R": 0.9167,
+      "constraint_fidelity": 0.9167,
+      "C": 0.7798,
+      "R": 0.7825,
+      "CxR": 0.6077,
+      "H": 0.7777,
+      "novelty": 0.8889,
+      "flexibility": 0.5367,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "lexical",
+        "constraint",
+        "outcome",
+        "constraint",
+        "noise"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "L2",
+          "S2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "fixture_kind": "causal",
+      "condition": "divergent_guilford",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.4739,
+      "n_unique_typologies": 5.6667,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.8333,
+      "constraint_fidelity": 0.8333,
+      "C": 0.7887,
+      "R": 0.7517,
+      "CxR": 0.5901,
+      "H": 0.7656,
+      "novelty": 0.9444,
+      "flexibility": 0.4633,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "instrumental",
+        "lexical",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P3",
+          "P4",
+          "L3",
+          "L4",
+          "I1",
+          "PL1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "fixture_kind": "causal",
+      "condition": "convergent_constrained",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.7077,
+      "R": 0.9067,
+      "CxR": 0.6415,
+      "H": 0.7945,
+      "novelty": 0.8333,
+      "flexibility": 0.2933,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "lexical"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P4",
+          "L4",
+          "P8",
+          "B2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "fixture_kind": "causal",
+      "condition": "layer_cot",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 0.9167,
+      "constraint_fidelity": 0.9167,
+      "C": 0.7127,
+      "R": 0.8292,
+      "CxR": 0.5896,
+      "H": 0.7628,
+      "novelty": 0.8333,
+      "flexibility": 0.3233,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "lexical"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P3",
+          "PL1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "fixture_kind": "causal",
+      "condition": "creative_burst_v2",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.3627,
+      "n_unique_typologies": 5.3333,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 0.9167,
+      "constraint_fidelity": 0.9167,
+      "C": 0.7431,
+      "R": 0.8292,
+      "CxR": 0.6108,
+      "H": 0.7765,
+      "novelty": 0.8889,
+      "flexibility": 0.3533,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "lexical"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P1",
+          "P2",
+          "L2",
+          "S1",
+          "P5",
+          "I2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "fixture_kind": "causal",
+      "condition": "precision_high",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.721,
+      "R": 0.9067,
+      "CxR": 0.6534,
+      "H": 0.8027,
+      "novelty": 0.8333,
+      "flexibility": 0.36,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "lexical",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "PP1",
+          "PP2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "fixture_kind": "causal",
+      "condition": "precision_low",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.4739,
+      "n_unique_typologies": 5.6667,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.8333,
+      "constraint_fidelity": 0.8333,
+      "C": 0.7887,
+      "R": 0.7517,
+      "CxR": 0.5901,
+      "H": 0.7656,
+      "novelty": 0.9444,
+      "flexibility": 0.4633,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "instrumental",
+        "lexical",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "PP1",
+          "PP2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "fixture_kind": "causal",
+      "condition": "insight_sidehop",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.3627,
+      "n_unique_typologies": 5.3333,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 0.9167,
+      "constraint_fidelity": 0.9167,
+      "C": 0.7431,
+      "R": 0.8292,
+      "CxR": 0.6108,
+      "H": 0.7765,
+      "novelty": 0.8889,
+      "flexibility": 0.3533,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "lexical"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P8"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "fixture_kind": "causal",
+      "condition": "conflict_schedule_2",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.7063,
+      "R": 0.9067,
+      "CxR": 0.6402,
+      "H": 0.7936,
+      "novelty": 0.8333,
+      "flexibility": 0.2867,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "instrumental",
+        "constraint",
+        "lexical"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P7"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "fixture_kind": "causal",
+      "condition": "multipath_k3_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.8,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.706,
+      "R": 0.93,
+      "CxR": 0.6566,
+      "H": 0.8027,
+      "novelty": 0.8333,
+      "flexibility": 0.2867,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "lexical",
+        "outcome",
+        "goal",
+        "constraint",
+        "instrumental",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "fixture_kind": "causal",
+      "condition": "multipath_k5_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.8,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.706,
+      "R": 0.93,
+      "CxR": 0.6566,
+      "H": 0.8027,
+      "novelty": 0.8333,
+      "flexibility": 0.2867,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "lexical",
+        "outcome",
+        "goal",
+        "constraint",
+        "instrumental",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P5",
+          "G1",
+          "G2",
+          "G3",
+          "B4"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "fixture_kind": "causal",
+      "condition": "multipath_k5_C",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.585,
+      "n_unique_typologies": 6.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.75,
+      "constraint_fidelity": 0.75,
+      "C": 0.8255,
+      "R": 0.6975,
+      "CxR": 0.5758,
+      "H": 0.7561,
+      "novelty": 1.0,
+      "flexibility": 0.53,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "noise",
+        "outcome",
+        "goal",
+        "constraint",
+        "lexical",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "fixture_kind": "causal",
+      "condition": "multipath_k5_R",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.8,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.7003,
+      "R": 0.93,
+      "CxR": 0.6513,
+      "H": 0.799,
+      "novelty": 0.8333,
+      "flexibility": 0.2567,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "lexical",
+        "outcome",
+        "goal",
+        "constraint",
+        "instrumental",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "fixture_kind": "causal",
+      "condition": "multipath_k7_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.8,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.706,
+      "R": 0.93,
+      "CxR": 0.6566,
+      "H": 0.8027,
+      "novelty": 0.8333,
+      "flexibility": 0.2867,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "lexical",
+        "outcome",
+        "goal",
+        "constraint",
+        "instrumental",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G3"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "fixture_kind": "causal",
+      "condition": "incubation_alt",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 1.6973,
+      "n_unique_typologies": 3.3333,
+      "layer_monotonicity": 0.5,
+      "anchor_R": 0.75,
+      "constraint_fidelity": 0.75,
+      "C": 0.6954,
+      "R": 0.6625,
+      "CxR": 0.4607,
+      "H": 0.6785,
+      "novelty": 0.9333,
+      "flexibility": 0.55,
+      "path_len": 3.6667,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "I1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "fixture_kind": "causal",
+      "condition": "two_phase",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 1.6406,
+      "n_unique_typologies": 3.3333,
+      "layer_monotonicity": 0.6111,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.6371,
+      "R": 0.8639,
+      "CxR": 0.5491,
+      "H": 0.7314,
+      "novelty": 0.7667,
+      "flexibility": 0.4278,
+      "path_len": 4.3333,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "I2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "fixture_kind": "causal",
+      "condition": "wm_protect_hotset",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.7224,
+      "R": 0.9067,
+      "CxR": 0.6548,
+      "H": 0.8037,
+      "novelty": 0.8333,
+      "flexibility": 0.2867,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "constraint",
+        "instrumental",
+        "lexical"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P6"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "fixture_kind": "causal",
+      "condition": "wm_truncate_drop",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 1.585,
+      "n_unique_typologies": 3.0,
+      "layer_monotonicity": 0.5,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.769,
+      "R": 0.825,
+      "CxR": 0.6344,
+      "H": 0.7958,
+      "novelty": 1.0,
+      "flexibility": 0.4583,
+      "path_len": 3.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P6"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "constraint_stack",
+      "fixture_kind": "constraint_heavy",
+      "condition": "linear",
+      "mode": "linear",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 1.6814,
+      "n_unique_typologies": 3.6667,
+      "layer_monotonicity": 1.0,
+      "anchor_R": 0.7222,
+      "constraint_fidelity": 0.7222,
+      "C": 0.5477,
+      "R": 0.8194,
+      "CxR": 0.4466,
+      "H": 0.6535,
+      "novelty": 0.6111,
+      "flexibility": 0.0733,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "goal",
+        "constraint",
+        "constraint",
+        "constraint",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "S1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "constraint_stack",
+      "fixture_kind": "constraint_heavy",
+      "condition": "random",
+      "mode": "random",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.0986,
+      "n_unique_typologies": 4.6667,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 0.7222,
+      "constraint_fidelity": 0.7222,
+      "C": 0.6999,
+      "R": 0.7261,
+      "CxR": 0.5039,
+      "H": 0.7066,
+      "novelty": 0.7778,
+      "flexibility": 0.4433,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "action",
+        "constraint",
+        "constraint",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P1",
+          "P2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "constraint_stack",
+      "fixture_kind": "constraint_heavy",
+      "condition": "motif_jump",
+      "mode": "motif_jump",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 1.4591,
+      "n_unique_typologies": 3.0,
+      "layer_monotonicity": 1.0,
+      "anchor_R": 0.8333,
+      "constraint_fidelity": 0.8333,
+      "C": 0.4871,
+      "R": 0.8917,
+      "CxR": 0.4343,
+      "H": 0.63,
+      "novelty": 0.5,
+      "flexibility": 0.0,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "goal",
+        "constraint",
+        "constraint",
+        "constraint",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "L1",
+          "S3"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "constraint_stack",
+      "fixture_kind": "constraint_heavy",
+      "condition": "creative_burst_v1",
+      "mode": "creative_burst",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.7509,
+      "R": 0.6433,
+      "CxR": 0.483,
+      "H": 0.6929,
+      "novelty": 0.8333,
+      "flexibility": 0.56,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "goal",
+        "action",
+        "constraint",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "L2",
+          "S2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "constraint_stack",
+      "fixture_kind": "constraint_heavy",
+      "condition": "divergent_guilford",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.7258,
+      "R": 0.6433,
+      "CxR": 0.4669,
+      "H": 0.6821,
+      "novelty": 0.8333,
+      "flexibility": 0.44,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "action",
+        "instrumental",
+        "goal"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P3",
+          "P4",
+          "L3",
+          "L4",
+          "I1",
+          "PL1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "constraint_stack",
+      "fixture_kind": "constraint_heavy",
+      "condition": "convergent_constrained",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 1.6122,
+      "n_unique_typologies": 3.3333,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 0.9444,
+      "constraint_fidelity": 0.9444,
+      "C": 0.591,
+      "R": 0.8706,
+      "CxR": 0.5096,
+      "H": 0.6975,
+      "novelty": 0.5556,
+      "flexibility": 0.3833,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "goal",
+        "constraint",
+        "constraint",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P4",
+          "L4",
+          "P8",
+          "B2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "constraint_stack",
+      "fixture_kind": "constraint_heavy",
+      "condition": "layer_cot",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.7323,
+      "R": 0.6433,
+      "CxR": 0.4711,
+      "H": 0.6849,
+      "novelty": 0.8333,
+      "flexibility": 0.47,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "goal",
+        "action",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P3",
+          "PL1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "constraint_stack",
+      "fixture_kind": "constraint_heavy",
+      "condition": "creative_burst_v2",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.7323,
+      "R": 0.6433,
+      "CxR": 0.4711,
+      "H": 0.6849,
+      "novelty": 0.8333,
+      "flexibility": 0.47,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "goal",
+        "action",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P1",
+          "P2",
+          "L2",
+          "S1",
+          "P5",
+          "I2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "constraint_stack",
+      "fixture_kind": "constraint_heavy",
+      "condition": "precision_high",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 1.6122,
+      "n_unique_typologies": 3.3333,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 0.9444,
+      "constraint_fidelity": 0.9444,
+      "C": 0.591,
+      "R": 0.8706,
+      "CxR": 0.5096,
+      "H": 0.6975,
+      "novelty": 0.5556,
+      "flexibility": 0.3833,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "goal",
+        "constraint",
+        "constraint",
+        "constraint"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "PP1",
+          "PP2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "constraint_stack",
+      "fixture_kind": "constraint_heavy",
+      "condition": "precision_low",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.7258,
+      "R": 0.6433,
+      "CxR": 0.4669,
+      "H": 0.6821,
+      "novelty": 0.8333,
+      "flexibility": 0.44,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "action",
+        "instrumental",
+        "goal"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "PP1",
+          "PP2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "constraint_stack",
+      "fixture_kind": "constraint_heavy",
+      "condition": "insight_sidehop",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.7323,
+      "R": 0.6433,
+      "CxR": 0.4711,
+      "H": 0.6849,
+      "novelty": 0.8333,
+      "flexibility": 0.47,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "goal",
+        "action",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P8"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "constraint_stack",
+      "fixture_kind": "constraint_heavy",
+      "condition": "conflict_schedule_2",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.0294,
+      "n_unique_typologies": 4.3333,
+      "layer_monotonicity": 0.7333,
+      "anchor_R": 0.7778,
+      "constraint_fidelity": 0.7778,
+      "C": 0.6823,
+      "R": 0.7622,
+      "CxR": 0.5164,
+      "H": 0.7144,
+      "novelty": 0.7222,
+      "flexibility": 0.45,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "goal",
+        "constraint",
+        "constraint",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P7"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "constraint_stack",
+      "fixture_kind": "constraint_heavy",
+      "condition": "multipath_k3_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.7438,
+      "R": 0.6433,
+      "CxR": 0.4785,
+      "H": 0.6899,
+      "novelty": 0.8333,
+      "flexibility": 0.53,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "goal",
+        "action",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "constraint_stack",
+      "fixture_kind": "constraint_heavy",
+      "condition": "multipath_k5_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.7454,
+      "R": 0.6433,
+      "CxR": 0.4795,
+      "H": 0.6906,
+      "novelty": 0.8333,
+      "flexibility": 0.53,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "constraint",
+        "goal",
+        "outcome",
+        "goal",
+        "action",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P5",
+          "G1",
+          "G2",
+          "G3",
+          "B4"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "constraint_stack",
+      "fixture_kind": "constraint_heavy",
+      "condition": "multipath_k5_C",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.7454,
+      "R": 0.6433,
+      "CxR": 0.4795,
+      "H": 0.6906,
+      "novelty": 0.8333,
+      "flexibility": 0.53,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "constraint",
+        "goal",
+        "outcome",
+        "goal",
+        "action",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "constraint_stack",
+      "fixture_kind": "constraint_heavy",
+      "condition": "multipath_k5_R",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.7258,
+      "R": 0.6433,
+      "CxR": 0.4669,
+      "H": 0.6821,
+      "novelty": 0.8333,
+      "flexibility": 0.44,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "goal",
+        "action",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "constraint_stack",
+      "fixture_kind": "constraint_heavy",
+      "condition": "multipath_k7_H",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6667,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.7381,
+      "R": 0.6666,
+      "CxR": 0.4917,
+      "H": 0.6998,
+      "novelty": 0.8333,
+      "flexibility": 0.4933,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "constraint",
+        "goal",
+        "outcome",
+        "goal",
+        "action",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "G3"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "constraint_stack",
+      "fixture_kind": "constraint_heavy",
+      "condition": "incubation_alt",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 1.9219,
+      "n_unique_typologies": 4.0,
+      "layer_monotonicity": 0.75,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.664,
+      "R": 0.6958,
+      "CxR": 0.462,
+      "H": 0.6795,
+      "novelty": 0.8,
+      "flexibility": 0.4125,
+      "path_len": 5.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "goal",
+        "action"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "I1"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "constraint_stack",
+      "fixture_kind": "constraint_heavy",
+      "condition": "two_phase",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 1.9219,
+      "n_unique_typologies": 4.0,
+      "layer_monotonicity": 0.75,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.664,
+      "R": 0.6958,
+      "CxR": 0.462,
+      "H": 0.6795,
+      "novelty": 0.8,
+      "flexibility": 0.4125,
+      "path_len": 5.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "goal",
+        "action"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "I2"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "constraint_stack",
+      "fixture_kind": "constraint_heavy",
+      "condition": "wm_protect_hotset",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.2516,
+      "n_unique_typologies": 5.0,
+      "layer_monotonicity": 0.6,
+      "anchor_R": 0.6667,
+      "constraint_fidelity": 0.6667,
+      "C": 0.7323,
+      "R": 0.6433,
+      "CxR": 0.4711,
+      "H": 0.6849,
+      "novelty": 0.8333,
+      "flexibility": 0.47,
+      "path_len": 6.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "constraint",
+        "goal",
+        "action",
+        "instrumental"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P6"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    },
+    {
+      "fixture_id": "constraint_stack",
+      "fixture_kind": "constraint_heavy",
+      "condition": "wm_truncate_drop",
+      "mode": "creative_burst_v2",
+      "n_spans": 8,
+      "n_seeds": 3,
+      "typology_entropy": 2.0,
+      "n_unique_typologies": 4.0,
+      "layer_monotonicity": 0.5556,
+      "anchor_R": 1.0,
+      "constraint_fidelity": 1.0,
+      "C": 0.811,
+      "R": 0.8444,
+      "CxR": 0.6849,
+      "H": 0.8265,
+      "novelty": 1.0,
+      "flexibility": 0.55,
+      "path_len": 4.0,
+      "goal_neglect_rate": 0.0,
+      "example_typology_path": [
+        "goal",
+        "outcome",
+        "instrumental",
+        "action"
+      ],
+      "orchestration": {
+        "orchestration_stage": "burst_explore",
+        "goal_neglect_under_compact": false,
+        "kineteq_backend": "absent",
+        "theory_ids": [
+          "P6"
+        ],
+        "select_by": "tradeoff_harmonic"
+      }
+    }
+  ],
+  "causal_rows": [
+    {
+      "fixture_id": "causal_narrative",
+      "condition": "random",
+      "seed": 17,
+      "ok": true,
+      "n_indication": 23,
+      "n_causation": 4,
+      "indication_overlap": 0,
+      "causation_overlap": 0,
+      "mean_first_stage_f": 4.2025,
+      "burst_early_z_count": 2,
+      "burst_mid_x_count": 4
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "condition": "random",
+      "seed": 34,
+      "ok": true,
+      "n_indication": 23,
+      "n_causation": 4,
+      "indication_overlap": 0,
+      "causation_overlap": 0,
+      "mean_first_stage_f": 4.2025,
+      "burst_early_z_count": 2,
+      "burst_mid_x_count": 4
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "condition": "random",
+      "seed": 51,
+      "ok": true,
+      "n_indication": 23,
+      "n_causation": 4,
+      "indication_overlap": 0,
+      "causation_overlap": 0,
+      "mean_first_stage_f": 4.2025,
+      "burst_early_z_count": 2,
+      "burst_mid_x_count": 4
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "condition": "divergent_guilford",
+      "seed": 17,
+      "ok": true,
+      "n_indication": 23,
+      "n_causation": 4,
+      "indication_overlap": 0,
+      "causation_overlap": 0,
+      "mean_first_stage_f": 4.2025,
+      "burst_early_z_count": 1,
+      "burst_mid_x_count": 5
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "condition": "divergent_guilford",
+      "seed": 34,
+      "ok": true,
+      "n_indication": 23,
+      "n_causation": 4,
+      "indication_overlap": 0,
+      "causation_overlap": 0,
+      "mean_first_stage_f": 4.2025,
+      "burst_early_z_count": 2,
+      "burst_mid_x_count": 4
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "condition": "divergent_guilford",
+      "seed": 51,
+      "ok": true,
+      "n_indication": 23,
+      "n_causation": 4,
+      "indication_overlap": 0,
+      "causation_overlap": 0,
+      "mean_first_stage_f": 4.2025,
+      "burst_early_z_count": 2,
+      "burst_mid_x_count": 4
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "condition": "convergent_constrained",
+      "seed": 17,
+      "ok": true,
+      "n_indication": 23,
+      "n_causation": 4,
+      "indication_overlap": 0,
+      "causation_overlap": 0,
+      "mean_first_stage_f": 4.2025,
+      "burst_early_z_count": 1,
+      "burst_mid_x_count": 5
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "condition": "convergent_constrained",
+      "seed": 34,
+      "ok": true,
+      "n_indication": 23,
+      "n_causation": 4,
+      "indication_overlap": 0,
+      "causation_overlap": 0,
+      "mean_first_stage_f": 4.2025,
+      "burst_early_z_count": 1,
+      "burst_mid_x_count": 5
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "condition": "convergent_constrained",
+      "seed": 51,
+      "ok": true,
+      "n_indication": 23,
+      "n_causation": 4,
+      "indication_overlap": 0,
+      "causation_overlap": 0,
+      "mean_first_stage_f": 4.2025,
+      "burst_early_z_count": 1,
+      "burst_mid_x_count": 5
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "condition": "creative_burst_v2",
+      "seed": 17,
+      "ok": true,
+      "n_indication": 23,
+      "n_causation": 4,
+      "indication_overlap": 0,
+      "causation_overlap": 0,
+      "mean_first_stage_f": 4.2025,
+      "burst_early_z_count": 1,
+      "burst_mid_x_count": 5
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "condition": "creative_burst_v2",
+      "seed": 34,
+      "ok": true,
+      "n_indication": 23,
+      "n_causation": 4,
+      "indication_overlap": 0,
+      "causation_overlap": 0,
+      "mean_first_stage_f": 4.2025,
+      "burst_early_z_count": 1,
+      "burst_mid_x_count": 5
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "condition": "creative_burst_v2",
+      "seed": 51,
+      "ok": true,
+      "n_indication": 23,
+      "n_causation": 4,
+      "indication_overlap": 0,
+      "causation_overlap": 0,
+      "mean_first_stage_f": 4.2025,
+      "burst_early_z_count": 2,
+      "burst_mid_x_count": 4
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "condition": "multipath_k5_H",
+      "seed": 17,
+      "ok": true,
+      "n_indication": 23,
+      "n_causation": 4,
+      "indication_overlap": 0,
+      "causation_overlap": 0,
+      "mean_first_stage_f": 4.2025,
+      "burst_early_z_count": 1,
+      "burst_mid_x_count": 5
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "condition": "multipath_k5_H",
+      "seed": 34,
+      "ok": true,
+      "n_indication": 23,
+      "n_causation": 4,
+      "indication_overlap": 0,
+      "causation_overlap": 0,
+      "mean_first_stage_f": 4.2025,
+      "burst_early_z_count": 1,
+      "burst_mid_x_count": 5
+    },
+    {
+      "fixture_id": "causal_narrative",
+      "condition": "multipath_k5_H",
+      "seed": 51,
+      "ok": true,
+      "n_indication": 23,
+      "n_causation": 4,
+      "indication_overlap": 0,
+      "causation_overlap": 0,
+      "mean_first_stage_f": 4.2025,
+      "burst_early_z_count": 1,
+      "burst_mid_x_count": 5
+    }
+  ],
+  "verdict": [
+    "Claims: supported=24 rejected=4 mixed=1 untested=0",
+    "Best H: wm_truncate_drop=0.782, multipath_k7_H=0.774, multipath_k5_H=0.770, multipath_k3_H=0.765, multipath_k5_R=0.760"
+  ]
+}

@@ -1,12 +1,24 @@
 # Next Experiments: Reasoning-Trace Quality
 
-**Status:** prioritized queue grounded in 2026-07-09 offline results  
+**Status:** prioritized queue grounded in 2026-07-09 offline results · **RT1–RT5 progress** via 10-epoch RT-guided loop (`20260710T001218Z`)  
 **Package:** `intentisolates` ≥ 0.4.1  
-**Evidence:** [COMPILED_EXPERIMENTATION_20260709.md](../experiments/results/COMPILED_EXPERIMENTATION_20260709.md) · [CLAIM_EVIDENCE_TABLE.md](../experiments/results/CLAIM_EVIDENCE_TABLE.md) · [COMPREHENSIVE_EXPERIMENTAL_FINDINGS_REPORT.md](COMPREHENSIVE_EXPERIMENTAL_FINDINGS_REPORT.md)  
+**Evidence:** [COMPILED_EXPERIMENTATION_20260709.md](../experiments/results/COMPILED_EXPERIMENTATION_20260709.md) · [CLAIM_EVIDENCE_TABLE.md](../experiments/results/CLAIM_EVIDENCE_TABLE.md) · [COMPREHENSIVE_EXPERIMENTAL_FINDINGS_REPORT.md](COMPREHENSIVE_EXPERIMENTAL_FINDINGS_REPORT.md) · **[ITERATIVE_REASONING_TRACE_TRAINING_REPORT.md](ITERATIVE_REASONING_TRACE_TRAINING_REPORT.md)** · [EPOCH_TRAJECTORY.md](../experiments/results/iterative_epochs/EPOCH_TRAJECTORY.md)  
 **Theory:** [THEORY_CREATIVE_BURST_REASONING.md](THEORY_CREATIVE_BURST_REASONING.md) · [THEORY_HIGHER_COGNITION_GROUNDING.md](THEORY_HIGHER_COGNITION_GROUNDING.md) · [THEORY_CAUSAL_KINETEQ_BRIDGE.md](THEORY_CAUSAL_KINETEQ_BRIDGE.md)  
 **Related queue:** [NEXT_EXPERIMENTS_HIGHER_COGNITION.md](NEXT_EXPERIMENTS_HIGHER_COGNITION.md) (cognition + bridge E1–E10; this doc focuses on **reasoning-trace R / layer_mono / mid_constraint / IV quality**)
 
 **Stance:** Offline computational analogs. Prefer automatable meters first; LLM-as-judge only where noted.
+
+### Iterative-cycle progress (epochs 0–9)
+
+| RT | Status | Epoch evidence | Satellite |
+| --- | --- | --- | --- |
+| **RT1** | **Supported (partial close)** | e2–e3 kept `select_by=H`, k=7; G1 replicate | `rt1_multipath_bakeoff_latest` — iv_diag competitive with H |
+| **RT2** | **Mixed** | e4–e5 accepted `protect_on` → `protect_on_anchor+`; H↑ R↑ | `rt2_protect_burst_latest` — A−B Δanchor_R not ≥0.10 |
+| **RT3** | **Open / structural only** | e8–e9 hybrid polish; kept H-elite | `rt3_iv_probe_latest` — Z counts; mock_iv only |
+| **RT4** | **Supported in-loop** | e6 locked schedule=2, pull≈0.80; H=0.779, mono=0.800 | conflict grid inside trainer |
+| **RT5** | **Partial** | e7 layer variants did not beat post-RT4 elite | mono already 0.80 after RT2/RT4 |
+
+Loop headline: epoch_0 H=**0.753** → epoch_9 H=**0.779**, R **0.828→0.897**, mono **0.600→0.800**.
 
 ---
 

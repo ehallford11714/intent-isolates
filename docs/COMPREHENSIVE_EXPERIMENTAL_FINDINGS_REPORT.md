@@ -4,7 +4,7 @@
 **Compiled:** 2026-07-09 (UTC stamps below)  
 **Stance:** Offline computational analogs — not claims that span hops *are* human cognition or that layer IV *is* residual-stream causality.
 
-Companion artifacts: [COMPILED_EXPERIMENTATION_20260709.md](../experiments/results/COMPILED_EXPERIMENTATION_20260709.md) · [CHARTS.md](../experiments/results/CHARTS.md) · [CLAIM_EVIDENCE_TABLE.md](../experiments/results/CLAIM_EVIDENCE_TABLE.md)
+Companion artifacts: [COMPILED_EXPERIMENTATION_20260709.md](../experiments/results/COMPILED_EXPERIMENTATION_20260709.md) · [CHARTS.md](../experiments/results/CHARTS.md) · [CLAIM_EVIDENCE_TABLE.md](../experiments/results/CLAIM_EVIDENCE_TABLE.md) · **[ITERATIVE_REASONING_TRACE_TRAINING_REPORT.md](ITERATIVE_REASONING_TRACE_TRAINING_REPORT.md)** (10-epoch RT-guided loop) · [EPOCH_TRAJECTORY.md](../experiments/results/iterative_epochs/EPOCH_TRAJECTORY.md)
 
 ---
 
@@ -180,13 +180,15 @@ Full rows: [CLAIM_EVIDENCE_TABLE.md](../experiments/results/CLAIM_EVIDENCE_TABLE
 
 Primary queue: **[NEXT_EXPERIMENTS_REASONING_TRACE.md](NEXT_EXPERIMENTS_REASONING_TRACE.md)** (RT1–RT11). Companion cognition/bridge list: [NEXT_EXPERIMENTS_HIGHER_COGNITION.md](NEXT_EXPERIMENTS_HIGHER_COGNITION.md).
 
-| Rank | Exp | Why (evidence) |
-| --- | --- | --- |
-| 1 | **RT1** multipath value-fn | G1: select-by-H R=0.836 ≫ select-by-C 0.734; select-by-R R=0.852 but H↓ — map Pareto / IV-diag |
-| 2 | **RT2** protect_compact→burst | PromptDict mid_R=1.0 vs truncate 0.2; P6 truncate-sim rejected as artifact |
-| 3 | **RT3** burst Z → real IV F | B1 mock F tied at 4.20; B4 structural prior ready |
-| 4 | **RT4** adaptive conflict | schedule_2 H=0.763 ≥ v2 but C≈0.688; recover C |
-| 5 | **RT5** mono-gating | motif mono≈0.98 / C≈0.57 vs layer_cot mono 0.70 — fidelity without C death |
+**RT-guided iterative cycle completed** (`20260710T001218Z`): see [ITERATIVE_REASONING_TRACE_TRAINING_REPORT.md](ITERATIVE_REASONING_TRACE_TRAINING_REPORT.md). Epoch_0→9: H 0.753→0.779, R 0.828→0.897, mono 0.600→0.800. Elite: multipath k=7 H + protect + schedule=2 / pull≈0.80.
+
+| Rank | Exp | Status after iterative cycle | Remaining work |
+| --- | --- | --- | --- |
+| 1 | **RT1** multipath value-fn | **Supported** (G1 + iv_diag≈H) | Optional larger fixture sweep |
+| 2 | **RT2** protect_compact→burst | **Mixed** (helps loop; A−B rule partial) | Token-budget-matched PromptDict coupling + coverage gates |
+| 3 | **RT3** burst Z → real IV F | **Open** (structural only) | Non-mock first-stage F |
+| 4 | **RT4** adaptive conflict | **Supported in-loop** | Adaptive thrash trigger vs fixed schedule=2 |
+| 5 | **RT5** mono-gating | **Partial** (mono already high) | Soft gate at hops≥8 |
 
 Also prioritize longer-horizon incubation redo (**RT6**) before revisiting I1/I2 knobs.
 

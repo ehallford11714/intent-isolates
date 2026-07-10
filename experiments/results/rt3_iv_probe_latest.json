@@ -1,0 +1,81 @@
+{
+  "experiment": "p0_rt3_burst_iv_probe",
+  "theory_ids": [
+    "RT3",
+    "B1"
+  ],
+  "stamp": "20260710T000919Z",
+  "has_causal": true,
+  "summary_table": [
+    {
+      "condition": "multipath_C",
+      "avg_H": 0.8436,
+      "avg_R": 0.86,
+      "avg_n_z": 2.0
+    },
+    {
+      "condition": "multipath_H",
+      "avg_H": 0.8523,
+      "avg_R": 0.93,
+      "avg_n_z": 1.0
+    },
+    {
+      "condition": "random",
+      "avg_H": 0.7564,
+      "avg_R": 0.6975,
+      "avg_n_z": 2.0
+    }
+  ],
+  "iv_notes": [
+    {
+      "fixture": "causal_narrative",
+      "n_edges": 0,
+      "notes": [],
+      "mock_iv": true
+    }
+  ],
+  "verdict": [
+    "RT3 structural probe: Z-candidate counts from paths (statistical F soft-skipped unless causaliv present).",
+    "causal_suite_available=True",
+    "Most Z candidates: multipath_C (avg_n_z=2.00)"
+  ],
+  "rows": [
+    {
+      "fixture": "causal_narrative",
+      "condition": "multipath_H",
+      "C": 0.7867,
+      "R": 0.93,
+      "H": 0.8523,
+      "n_z_candidates": 1,
+      "z_ids": [
+        "text_3"
+      ],
+      "early_layer_frac": 0.1667
+    },
+    {
+      "fixture": "causal_narrative",
+      "condition": "multipath_C",
+      "C": 0.8278,
+      "R": 0.86,
+      "H": 0.8436,
+      "n_z_candidates": 2,
+      "z_ids": [
+        "text_1",
+        "text_3"
+      ],
+      "early_layer_frac": 0.3333
+    },
+    {
+      "fixture": "causal_narrative",
+      "condition": "random",
+      "C": 0.8262,
+      "R": 0.6975,
+      "H": 0.7564,
+      "n_z_candidates": 2,
+      "z_ids": [
+        "text_2",
+        "text_3"
+      ]
+    }
+  ]
+}

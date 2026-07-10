@@ -1,0 +1,396 @@
+{
+  "stamp": "20260710T001218Z",
+  "n_epochs": 10,
+  "r_floor": 0.78,
+  "epoch_rt_map": {
+    "0": {
+      "guided_by": "baseline",
+      "phase": "floor_v2_single",
+      "note": "Default creative_burst_v2 knobs, no multipath"
+    },
+    "1": {
+      "guided_by": "baseline",
+      "phase": "floor_multipath_H",
+      "note": "Enable multipath k=5 select_by=H (P5/G2 floor)"
+    },
+    "2": {
+      "guided_by": "RT1",
+      "phase": "value_fn_bakeoff",
+      "note": "Mutate select_by / k; elite by H with R floor"
+    },
+    "3": {
+      "guided_by": "RT1",
+      "phase": "value_fn_refine",
+      "note": "Keep elite selection rule; small k/select refinement"
+    },
+    "4": {
+      "guided_by": "RT2",
+      "phase": "protect_on",
+      "note": "Turn protect_compact filter on; mid_constraint + H"
+    },
+    "5": {
+      "guided_by": "RT2",
+      "phase": "protect_toggle",
+      "note": "Compare protect on vs off; keep better on H/R/mid"
+    },
+    "6": {
+      "guided_by": "RT4",
+      "phase": "conflict_schedule",
+      "note": "Grid anchor_schedule / anchor_pull (P7 conflict)"
+    },
+    "7": {
+      "guided_by": "RT5",
+      "phase": "layer_mono",
+      "note": "Raise layer_bias toward mono without motif C-collapse"
+    },
+    "8": {
+      "guided_by": "RT3",
+      "phase": "iv_diag_or_hybrid",
+      "note": "Prefer iv_diag select or hybrid RT1+RT2 elite knobs"
+    },
+    "9": {
+      "guided_by": "RT3",
+      "phase": "hybrid_polish",
+      "note": "Final hill-climb on novelty/anchor/layer around elite"
+    }
+  },
+  "epochs": [
+    {
+      "epoch": 0,
+      "guided_by": "baseline",
+      "phase": "floor_v2_single",
+      "avg_C": 0.7024,
+      "avg_R": 0.8275,
+      "avg_H": 0.7532,
+      "avg_anchor_R": 0.95,
+      "avg_layer_mono": 0.6,
+      "avg_mid_constraint_R": 1.0,
+      "policy": {
+        "novelty_weight": 1.1,
+        "anchor_pull": 0.7,
+        "layer_bias": 0.55,
+        "motif_weight": 0.45,
+        "anchor_schedule": 3,
+        "side_hop_prob": 0.18,
+        "multipath": false,
+        "k": 5,
+        "select_by": "H",
+        "protect_compact": false,
+        "soft_mono_gate": false
+      },
+      "action": "Schedule multipath_H (k=5) for epoch 1 floor (baseline\u2192P5)",
+      "accepted": "schedule_multipath"
+    },
+    {
+      "epoch": 1,
+      "guided_by": "baseline",
+      "phase": "floor_multipath_H",
+      "avg_C": 0.7116,
+      "avg_R": 0.84,
+      "avg_H": 0.7663,
+      "avg_anchor_R": 0.9333,
+      "avg_layer_mono": 0.6667,
+      "avg_mid_constraint_R": 1.0,
+      "policy": {
+        "novelty_weight": 1.1,
+        "anchor_pull": 0.7,
+        "layer_bias": 0.55,
+        "motif_weight": 0.45,
+        "anchor_schedule": 3,
+        "side_hop_prob": 0.18,
+        "multipath": true,
+        "k": 5,
+        "select_by": "H",
+        "protect_compact": false,
+        "soft_mono_gate": false
+      },
+      "action": "Baseline multipath floor: accept k7_H",
+      "accepted": "k7_H"
+    },
+    {
+      "epoch": 2,
+      "guided_by": "RT1",
+      "phase": "value_fn_bakeoff",
+      "avg_C": 0.7097,
+      "avg_R": 0.8458,
+      "avg_H": 0.7676,
+      "avg_anchor_R": 0.9333,
+      "avg_layer_mono": 0.6833,
+      "avg_mid_constraint_R": 1.0,
+      "policy": {
+        "novelty_weight": 1.1,
+        "anchor_pull": 0.7,
+        "layer_bias": 0.55,
+        "motif_weight": 0.45,
+        "anchor_schedule": 3,
+        "side_hop_prob": 0.18,
+        "multipath": true,
+        "k": 7,
+        "select_by": "H",
+        "protect_compact": false,
+        "soft_mono_gate": false
+      },
+      "action": "RT1 value-fn: accept keep.",
+      "accepted": "keep"
+    },
+    {
+      "epoch": 3,
+      "guided_by": "RT1",
+      "phase": "value_fn_refine",
+      "avg_C": 0.7097,
+      "avg_R": 0.8458,
+      "avg_H": 0.7676,
+      "avg_anchor_R": 0.9333,
+      "avg_layer_mono": 0.6833,
+      "avg_mid_constraint_R": 1.0,
+      "policy": {
+        "novelty_weight": 1.1,
+        "anchor_pull": 0.7,
+        "layer_bias": 0.55,
+        "motif_weight": 0.45,
+        "anchor_schedule": 3,
+        "side_hop_prob": 0.18,
+        "multipath": true,
+        "k": 7,
+        "select_by": "H",
+        "protect_compact": false,
+        "soft_mono_gate": false
+      },
+      "action": "RT1 value-fn: accept keep.",
+      "accepted": "keep"
+    },
+    {
+      "epoch": 4,
+      "guided_by": "RT2",
+      "phase": "protect_on",
+      "avg_C": 0.7097,
+      "avg_R": 0.8458,
+      "avg_H": 0.7676,
+      "avg_anchor_R": 0.9333,
+      "avg_layer_mono": 0.6833,
+      "avg_mid_constraint_R": 1.0,
+      "policy": {
+        "novelty_weight": 1.1,
+        "anchor_pull": 0.7,
+        "layer_bias": 0.55,
+        "motif_weight": 0.45,
+        "anchor_schedule": 3,
+        "side_hop_prob": 0.18,
+        "multipath": true,
+        "k": 7,
+        "select_by": "H",
+        "protect_compact": false,
+        "soft_mono_gate": false
+      },
+      "action": "RT2 protect coupling: accept protect_on",
+      "accepted": "protect_on"
+    },
+    {
+      "epoch": 5,
+      "guided_by": "RT2",
+      "phase": "protect_toggle",
+      "avg_C": 0.7092,
+      "avg_R": 0.8575,
+      "avg_H": 0.7723,
+      "avg_anchor_R": 0.9333,
+      "avg_layer_mono": 0.7167,
+      "avg_mid_constraint_R": 1.0,
+      "policy": {
+        "novelty_weight": 1.1,
+        "anchor_pull": 0.7,
+        "layer_bias": 0.55,
+        "motif_weight": 0.45,
+        "anchor_schedule": 3,
+        "side_hop_prob": 0.18,
+        "multipath": true,
+        "k": 7,
+        "select_by": "H",
+        "protect_compact": true,
+        "soft_mono_gate": false
+      },
+      "action": "RT2 protect coupling: accept protect_on_anchor+",
+      "accepted": "protect_on_anchor+"
+    },
+    {
+      "epoch": 6,
+      "guided_by": "RT4",
+      "phase": "conflict_schedule",
+      "avg_C": 0.6947,
+      "avg_R": 0.8975,
+      "avg_H": 0.7788,
+      "avg_anchor_R": 0.95,
+      "avg_layer_mono": 0.8,
+      "avg_mid_constraint_R": 1.0,
+      "policy": {
+        "novelty_weight": 1.1,
+        "anchor_pull": 0.7999999999999999,
+        "layer_bias": 0.55,
+        "motif_weight": 0.45,
+        "anchor_schedule": 2,
+        "side_hop_prob": 0.18,
+        "multipath": true,
+        "k": 7,
+        "select_by": "H",
+        "protect_compact": true,
+        "soft_mono_gate": false
+      },
+      "action": "RT4 conflict schedule grid: accept keep",
+      "accepted": "keep"
+    },
+    {
+      "epoch": 7,
+      "guided_by": "RT5",
+      "phase": "layer_mono",
+      "avg_C": 0.6947,
+      "avg_R": 0.8975,
+      "avg_H": 0.7788,
+      "avg_anchor_R": 0.95,
+      "avg_layer_mono": 0.8,
+      "avg_mid_constraint_R": 1.0,
+      "policy": {
+        "novelty_weight": 1.1,
+        "anchor_pull": 0.7999999999999999,
+        "layer_bias": 0.55,
+        "motif_weight": 0.45,
+        "anchor_schedule": 2,
+        "side_hop_prob": 0.18,
+        "multipath": true,
+        "k": 7,
+        "select_by": "H",
+        "protect_compact": true,
+        "soft_mono_gate": false
+      },
+      "action": "RT5 layer_mono intervention: accept keep",
+      "accepted": "keep"
+    },
+    {
+      "epoch": 8,
+      "guided_by": "RT3",
+      "phase": "iv_diag_or_hybrid",
+      "avg_C": 0.6947,
+      "avg_R": 0.8975,
+      "avg_H": 0.7788,
+      "avg_anchor_R": 0.95,
+      "avg_layer_mono": 0.8,
+      "avg_mid_constraint_R": 1.0,
+      "policy": {
+        "novelty_weight": 1.1,
+        "anchor_pull": 0.7999999999999999,
+        "layer_bias": 0.55,
+        "motif_weight": 0.45,
+        "anchor_schedule": 2,
+        "side_hop_prob": 0.18,
+        "multipath": true,
+        "k": 7,
+        "select_by": "H",
+        "protect_compact": true,
+        "soft_mono_gate": false
+      },
+      "action": "RT3/hybrid polish: accept layer-",
+      "accepted": "layer-"
+    },
+    {
+      "epoch": 9,
+      "guided_by": "RT3",
+      "phase": "hybrid_polish",
+      "avg_C": 0.6957,
+      "avg_R": 0.8975,
+      "avg_H": 0.7794,
+      "avg_anchor_R": 0.95,
+      "avg_layer_mono": 0.8,
+      "avg_mid_constraint_R": 1.0,
+      "policy": {
+        "novelty_weight": 1.1,
+        "anchor_pull": 0.7999999999999999,
+        "layer_bias": 0.47000000000000003,
+        "motif_weight": 0.45,
+        "anchor_schedule": 2,
+        "side_hop_prob": 0.18,
+        "multipath": true,
+        "k": 7,
+        "select_by": "H",
+        "protect_compact": true,
+        "soft_mono_gate": false
+      },
+      "action": "final epoch \u2014 no further update",
+      "accepted": null
+    }
+  ],
+  "best_epoch": 9,
+  "best_metrics": {
+    "avg_C": 0.6957,
+    "avg_R": 0.8975,
+    "avg_H": 0.7794
+  },
+  "best_policy": {
+    "novelty_weight": 1.1,
+    "anchor_pull": 0.7999999999999999,
+    "layer_bias": 0.47000000000000003,
+    "motif_weight": 0.45,
+    "anchor_schedule": 2,
+    "side_hop_prob": 0.18,
+    "multipath": true,
+    "k": 7,
+    "select_by": "H",
+    "protect_compact": true,
+    "soft_mono_gate": false
+  },
+  "initial": {
+    "epoch": 0,
+    "guided_by": "baseline",
+    "phase": "floor_v2_single",
+    "avg_C": 0.7024,
+    "avg_R": 0.8275,
+    "avg_H": 0.7532,
+    "avg_anchor_R": 0.95,
+    "avg_layer_mono": 0.6,
+    "avg_mid_constraint_R": 1.0,
+    "policy": {
+      "novelty_weight": 1.1,
+      "anchor_pull": 0.7,
+      "layer_bias": 0.55,
+      "motif_weight": 0.45,
+      "anchor_schedule": 3,
+      "side_hop_prob": 0.18,
+      "multipath": false,
+      "k": 5,
+      "select_by": "H",
+      "protect_compact": false,
+      "soft_mono_gate": false
+    },
+    "action": "Schedule multipath_H (k=5) for epoch 1 floor (baseline\u2192P5)",
+    "accepted": "schedule_multipath"
+  },
+  "final": {
+    "epoch": 9,
+    "guided_by": "RT3",
+    "phase": "hybrid_polish",
+    "avg_C": 0.6957,
+    "avg_R": 0.8975,
+    "avg_H": 0.7794,
+    "avg_anchor_R": 0.95,
+    "avg_layer_mono": 0.8,
+    "avg_mid_constraint_R": 1.0,
+    "policy": {
+      "novelty_weight": 1.1,
+      "anchor_pull": 0.7999999999999999,
+      "layer_bias": 0.47000000000000003,
+      "motif_weight": 0.45,
+      "anchor_schedule": 2,
+      "side_hop_prob": 0.18,
+      "multipath": true,
+      "k": 7,
+      "select_by": "H",
+      "protect_compact": true,
+      "soft_mono_gate": false
+    },
+    "action": "final epoch \u2014 no further update",
+    "accepted": null
+  },
+  "update_rule": {
+    "primary": "maximize mean H",
+    "constraint": "soft R floor 0.78 (quadratic-ish linear penalty)",
+    "method": "RT-phased evolutionary / coordinate search over discrete policy variants",
+    "not": "no neural / torch training"
+  }
+}

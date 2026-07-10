@@ -1,0 +1,914 @@
+{
+  "epoch": 1,
+  "stamp": "20260710T001218Z",
+  "guided_by": "baseline",
+  "phase": "floor_multipath_H",
+  "phase_note": "Enable multipath k=5 select_by=H (P5/G2 floor)",
+  "policy": {
+    "novelty_weight": 1.1,
+    "anchor_pull": 0.7,
+    "layer_bias": 0.55,
+    "motif_weight": 0.45,
+    "anchor_schedule": 3,
+    "side_hop_prob": 0.18,
+    "multipath": true,
+    "k": 5,
+    "select_by": "H",
+    "protect_compact": false,
+    "soft_mono_gate": false
+  },
+  "metrics": {
+    "avg_C": 0.7116,
+    "avg_R": 0.84,
+    "avg_H": 0.7663,
+    "avg_anchor_R": 0.9333,
+    "avg_layer_mono": 0.6667,
+    "avg_mid_constraint_R": 1.0,
+    "n": 12
+  },
+  "objective": 0.7663,
+  "r_floor": 0.78,
+  "reasoning_traces": [
+    {
+      "fixture": "product_metaphor",
+      "seed_offset": 0,
+      "C": 0.8465,
+      "R": 0.86,
+      "H": 0.8532,
+      "anchor_R": 1.0,
+      "layer_mono": 0.6,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_1",
+        "text_6",
+        "text_0",
+        "text_5",
+        "text_3",
+        "text_2"
+      ],
+      "typology_path": [
+        "constraint",
+        "outcome",
+        "goal",
+        "action",
+        "affective",
+        "instrumental"
+      ],
+      "candidates": [
+        {
+          "seed_index": 1,
+          "H": 0.8532,
+          "R": 0.86,
+          "C": 0.8465,
+          "select_score": 0.8532
+        },
+        {
+          "seed_index": 2,
+          "H": 0.8419,
+          "R": 0.86,
+          "C": 0.8245,
+          "select_score": 0.8419
+        },
+        {
+          "seed_index": 3,
+          "H": 0.8419,
+          "R": 0.86,
+          "C": 0.8245,
+          "select_score": 0.8419
+        },
+        {
+          "seed_index": 4,
+          "H": 0.8415,
+          "R": 0.86,
+          "C": 0.8238,
+          "select_score": 0.8415
+        },
+        {
+          "seed_index": 0,
+          "H": 0.8173,
+          "R": 0.79,
+          "C": 0.8465,
+          "select_score": 0.8173
+        }
+      ]
+    },
+    {
+      "fixture": "product_metaphor",
+      "seed_offset": 1,
+      "C": 0.8245,
+      "R": 0.86,
+      "H": 0.8419,
+      "anchor_R": 1.0,
+      "layer_mono": 0.6,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_2",
+        "text_6",
+        "text_0",
+        "text_1",
+        "text_5",
+        "text_3"
+      ],
+      "typology_path": [
+        "instrumental",
+        "outcome",
+        "goal",
+        "constraint",
+        "action",
+        "affective"
+      ],
+      "candidates": [
+        {
+          "seed_index": 2,
+          "H": 0.8419,
+          "R": 0.86,
+          "C": 0.8245,
+          "select_score": 0.8419
+        },
+        {
+          "seed_index": 3,
+          "H": 0.8419,
+          "R": 0.86,
+          "C": 0.8245,
+          "select_score": 0.8419
+        },
+        {
+          "seed_index": 4,
+          "H": 0.8415,
+          "R": 0.86,
+          "C": 0.8238,
+          "select_score": 0.8415
+        },
+        {
+          "seed_index": 0,
+          "H": 0.8173,
+          "R": 0.79,
+          "C": 0.8465,
+          "select_score": 0.8173
+        },
+        {
+          "seed_index": 1,
+          "H": 0.8173,
+          "R": 0.79,
+          "C": 0.8465,
+          "select_score": 0.8173
+        }
+      ]
+    },
+    {
+      "fixture": "product_metaphor",
+      "seed_offset": 2,
+      "C": 0.8465,
+      "R": 0.86,
+      "H": 0.8532,
+      "anchor_R": 1.0,
+      "layer_mono": 0.6,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_1",
+        "text_6",
+        "text_0",
+        "text_5",
+        "text_3",
+        "text_2"
+      ],
+      "typology_path": [
+        "constraint",
+        "outcome",
+        "goal",
+        "action",
+        "affective",
+        "instrumental"
+      ],
+      "candidates": [
+        {
+          "seed_index": 1,
+          "H": 0.8532,
+          "R": 0.86,
+          "C": 0.8465,
+          "select_score": 0.8532
+        },
+        {
+          "seed_index": 2,
+          "H": 0.8419,
+          "R": 0.86,
+          "C": 0.8245,
+          "select_score": 0.8419
+        },
+        {
+          "seed_index": 3,
+          "H": 0.8419,
+          "R": 0.86,
+          "C": 0.8245,
+          "select_score": 0.8419
+        },
+        {
+          "seed_index": 4,
+          "H": 0.8415,
+          "R": 0.86,
+          "C": 0.8238,
+          "select_score": 0.8415
+        },
+        {
+          "seed_index": 0,
+          "H": 0.8173,
+          "R": 0.79,
+          "C": 0.8465,
+          "select_score": 0.8173
+        }
+      ]
+    },
+    {
+      "fixture": "story_twist",
+      "seed_offset": 0,
+      "C": 0.7344,
+      "R": 0.86,
+      "H": 0.7922,
+      "anchor_R": 1.0,
+      "layer_mono": 0.6,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_1",
+        "text_7",
+        "text_0",
+        "text_6",
+        "text_3",
+        "text_5"
+      ],
+      "typology_path": [
+        "constraint",
+        "outcome",
+        "goal",
+        "constraint",
+        "lexical",
+        "instrumental"
+      ],
+      "candidates": [
+        {
+          "seed_index": 1,
+          "H": 0.7922,
+          "R": 0.86,
+          "C": 0.7344,
+          "select_score": 0.7922
+        },
+        {
+          "seed_index": 0,
+          "H": 0.7798,
+          "R": 0.86,
+          "C": 0.7133,
+          "select_score": 0.7798
+        },
+        {
+          "seed_index": 2,
+          "H": 0.7459,
+          "R": 0.6975,
+          "C": 0.8014,
+          "select_score": 0.7459
+        },
+        {
+          "seed_index": 3,
+          "H": 0.7441,
+          "R": 0.6975,
+          "C": 0.7974,
+          "select_score": 0.7441
+        },
+        {
+          "seed_index": 4,
+          "H": 0.7377,
+          "R": 0.6975,
+          "C": 0.7829,
+          "select_score": 0.7377
+        }
+      ]
+    },
+    {
+      "fixture": "story_twist",
+      "seed_offset": 1,
+      "C": 0.6913,
+      "R": 0.93,
+      "H": 0.7931,
+      "anchor_R": 1.0,
+      "layer_mono": 0.8,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_2",
+        "text_7",
+        "text_0",
+        "text_6",
+        "text_5",
+        "text_1"
+      ],
+      "typology_path": [
+        "unknown",
+        "outcome",
+        "goal",
+        "constraint",
+        "instrumental",
+        "constraint"
+      ],
+      "candidates": [
+        {
+          "seed_index": 2,
+          "H": 0.7931,
+          "R": 0.93,
+          "C": 0.6913,
+          "select_score": 0.7931
+        },
+        {
+          "seed_index": 0,
+          "H": 0.7922,
+          "R": 0.86,
+          "C": 0.7344,
+          "select_score": 0.7922
+        },
+        {
+          "seed_index": 1,
+          "H": 0.7798,
+          "R": 0.86,
+          "C": 0.7133,
+          "select_score": 0.7798
+        },
+        {
+          "seed_index": 3,
+          "H": 0.7622,
+          "R": 0.6975,
+          "C": 0.84,
+          "select_score": 0.7622
+        },
+        {
+          "seed_index": 4,
+          "H": 0.7377,
+          "R": 0.6975,
+          "C": 0.7829,
+          "select_score": 0.7377
+        }
+      ]
+    },
+    {
+      "fixture": "story_twist",
+      "seed_offset": 2,
+      "C": 0.6913,
+      "R": 0.93,
+      "H": 0.7931,
+      "anchor_R": 1.0,
+      "layer_mono": 0.8,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_2",
+        "text_7",
+        "text_0",
+        "text_6",
+        "text_5",
+        "text_1"
+      ],
+      "typology_path": [
+        "unknown",
+        "outcome",
+        "goal",
+        "constraint",
+        "instrumental",
+        "constraint"
+      ],
+      "candidates": [
+        {
+          "seed_index": 2,
+          "H": 0.7931,
+          "R": 0.93,
+          "C": 0.6913,
+          "select_score": 0.7931
+        },
+        {
+          "seed_index": 0,
+          "H": 0.7798,
+          "R": 0.86,
+          "C": 0.7133,
+          "select_score": 0.7798
+        },
+        {
+          "seed_index": 1,
+          "H": 0.7793,
+          "R": 0.86,
+          "C": 0.7124,
+          "select_score": 0.7793
+        },
+        {
+          "seed_index": 3,
+          "H": 0.7441,
+          "R": 0.6975,
+          "C": 0.7974,
+          "select_score": 0.7441
+        },
+        {
+          "seed_index": 4,
+          "H": 0.7377,
+          "R": 0.6975,
+          "C": 0.7829,
+          "select_score": 0.7377
+        }
+      ]
+    },
+    {
+      "fixture": "research_creative",
+      "seed_offset": 0,
+      "C": 0.6531,
+      "R": 0.73,
+      "H": 0.6894,
+      "anchor_R": 0.8,
+      "layer_mono": 0.6,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_1",
+        "text_0",
+        "text_6",
+        "text_2",
+        "text_4",
+        "text_3"
+      ],
+      "typology_path": [
+        "constraint",
+        "goal",
+        "action",
+        "goal",
+        "unknown",
+        "constraint"
+      ],
+      "candidates": [
+        {
+          "seed_index": 1,
+          "H": 0.6894,
+          "R": 0.73,
+          "C": 0.6531,
+          "select_score": 0.6894
+        },
+        {
+          "seed_index": 0,
+          "H": 0.6889,
+          "R": 0.73,
+          "C": 0.6522,
+          "select_score": 0.6889
+        },
+        {
+          "seed_index": 2,
+          "H": 0.6889,
+          "R": 0.73,
+          "C": 0.6522,
+          "select_score": 0.6889
+        },
+        {
+          "seed_index": 3,
+          "H": 0.6889,
+          "R": 0.73,
+          "C": 0.6522,
+          "select_score": 0.6889
+        },
+        {
+          "seed_index": 4,
+          "H": 0.6861,
+          "R": 0.67,
+          "C": 0.703,
+          "select_score": 0.6861
+        }
+      ]
+    },
+    {
+      "fixture": "research_creative",
+      "seed_offset": 1,
+      "C": 0.6522,
+      "R": 0.73,
+      "H": 0.6889,
+      "anchor_R": 0.8,
+      "layer_mono": 0.6,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_0",
+        "text_7",
+        "text_6",
+        "text_2",
+        "text_4",
+        "text_1"
+      ],
+      "typology_path": [
+        "goal",
+        "constraint",
+        "action",
+        "goal",
+        "unknown",
+        "constraint"
+      ],
+      "candidates": [
+        {
+          "seed_index": 0,
+          "H": 0.6889,
+          "R": 0.73,
+          "C": 0.6522,
+          "select_score": 0.6889
+        },
+        {
+          "seed_index": 2,
+          "H": 0.6889,
+          "R": 0.73,
+          "C": 0.6522,
+          "select_score": 0.6889
+        },
+        {
+          "seed_index": 3,
+          "H": 0.6889,
+          "R": 0.73,
+          "C": 0.6522,
+          "select_score": 0.6889
+        },
+        {
+          "seed_index": 4,
+          "H": 0.6861,
+          "R": 0.67,
+          "C": 0.703,
+          "select_score": 0.6861
+        },
+        {
+          "seed_index": 1,
+          "H": 0.656,
+          "R": 0.6,
+          "C": 0.7236,
+          "select_score": 0.656
+        }
+      ]
+    },
+    {
+      "fixture": "research_creative",
+      "seed_offset": 2,
+      "C": 0.6522,
+      "R": 0.73,
+      "H": 0.6889,
+      "anchor_R": 0.8,
+      "layer_mono": 0.6,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_0",
+        "text_7",
+        "text_6",
+        "text_2",
+        "text_4",
+        "text_1"
+      ],
+      "typology_path": [
+        "goal",
+        "constraint",
+        "action",
+        "goal",
+        "unknown",
+        "constraint"
+      ],
+      "candidates": [
+        {
+          "seed_index": 0,
+          "H": 0.6889,
+          "R": 0.73,
+          "C": 0.6522,
+          "select_score": 0.6889
+        },
+        {
+          "seed_index": 2,
+          "H": 0.6889,
+          "R": 0.73,
+          "C": 0.6522,
+          "select_score": 0.6889
+        },
+        {
+          "seed_index": 3,
+          "H": 0.6889,
+          "R": 0.73,
+          "C": 0.6522,
+          "select_score": 0.6889
+        },
+        {
+          "seed_index": 4,
+          "H": 0.6861,
+          "R": 0.67,
+          "C": 0.703,
+          "select_score": 0.6861
+        },
+        {
+          "seed_index": 1,
+          "H": 0.6119,
+          "R": 0.53,
+          "C": 0.7236,
+          "select_score": 0.6119
+        }
+      ]
+    },
+    {
+      "fixture": "brand_voice",
+      "seed_offset": 0,
+      "C": 0.6085,
+      "R": 0.93,
+      "H": 0.7356,
+      "anchor_R": 1.0,
+      "layer_mono": 0.8,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_2",
+        "text_8",
+        "text_6",
+        "text_3",
+        "text_7",
+        "text_1"
+      ],
+      "typology_path": [
+        "constraint",
+        "outcome",
+        "goal",
+        "constraint",
+        "instrumental",
+        "constraint"
+      ],
+      "candidates": [
+        {
+          "seed_index": 2,
+          "H": 0.7356,
+          "R": 0.93,
+          "C": 0.6085,
+          "select_score": 0.7356
+        },
+        {
+          "seed_index": 3,
+          "H": 0.7302,
+          "R": 0.73,
+          "C": 0.7304,
+          "select_score": 0.7302
+        },
+        {
+          "seed_index": 0,
+          "H": 0.7225,
+          "R": 0.93,
+          "C": 0.5907,
+          "select_score": 0.7225
+        },
+        {
+          "seed_index": 1,
+          "H": 0.7223,
+          "R": 0.93,
+          "C": 0.5905,
+          "select_score": 0.7223
+        },
+        {
+          "seed_index": 4,
+          "H": 0.7077,
+          "R": 0.73,
+          "C": 0.6867,
+          "select_score": 0.7077
+        }
+      ]
+    },
+    {
+      "fixture": "brand_voice",
+      "seed_offset": 1,
+      "C": 0.6085,
+      "R": 0.93,
+      "H": 0.7356,
+      "anchor_R": 1.0,
+      "layer_mono": 0.8,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_2",
+        "text_6",
+        "text_8",
+        "text_3",
+        "text_7",
+        "text_1"
+      ],
+      "typology_path": [
+        "constraint",
+        "goal",
+        "outcome",
+        "constraint",
+        "instrumental",
+        "constraint"
+      ],
+      "candidates": [
+        {
+          "seed_index": 2,
+          "H": 0.7356,
+          "R": 0.93,
+          "C": 0.6085,
+          "select_score": 0.7356
+        },
+        {
+          "seed_index": 3,
+          "H": 0.7302,
+          "R": 0.73,
+          "C": 0.7304,
+          "select_score": 0.7302
+        },
+        {
+          "seed_index": 0,
+          "H": 0.7225,
+          "R": 0.93,
+          "C": 0.5907,
+          "select_score": 0.7225
+        },
+        {
+          "seed_index": 1,
+          "H": 0.7098,
+          "R": 0.73,
+          "C": 0.6907,
+          "select_score": 0.7098
+        },
+        {
+          "seed_index": 4,
+          "H": 0.7077,
+          "R": 0.73,
+          "C": 0.6867,
+          "select_score": 0.7077
+        }
+      ]
+    },
+    {
+      "fixture": "brand_voice",
+      "seed_offset": 2,
+      "C": 0.7304,
+      "R": 0.73,
+      "H": 0.7302,
+      "anchor_R": 0.8,
+      "layer_mono": 0.6,
+      "mid_constraint_R": 1.0,
+      "path_span_ids": [
+        "text_3",
+        "text_8",
+        "text_6",
+        "text_2",
+        "text_5",
+        "text_0"
+      ],
+      "typology_path": [
+        "constraint",
+        "outcome",
+        "goal",
+        "constraint",
+        "lexical",
+        "instrumental"
+      ],
+      "candidates": [
+        {
+          "seed_index": 3,
+          "H": 0.7302,
+          "R": 0.73,
+          "C": 0.7304,
+          "select_score": 0.7302
+        },
+        {
+          "seed_index": 0,
+          "H": 0.7225,
+          "R": 0.93,
+          "C": 0.5907,
+          "select_score": 0.7225
+        },
+        {
+          "seed_index": 1,
+          "H": 0.7223,
+          "R": 0.93,
+          "C": 0.5905,
+          "select_score": 0.7223
+        },
+        {
+          "seed_index": 2,
+          "H": 0.7096,
+          "R": 0.73,
+          "C": 0.6904,
+          "select_score": 0.7096
+        },
+        {
+          "seed_index": 4,
+          "H": 0.7077,
+          "R": 0.73,
+          "C": 0.6867,
+          "select_score": 0.7077
+        }
+      ]
+    }
+  ],
+  "update": {
+    "guided_by": "baseline",
+    "phase": "floor_multipath_H",
+    "action": "Baseline multipath floor: accept k7_H",
+    "note": "Enable multipath k=5 select_by=H (P5/G2 floor)",
+    "candidates_tried": [
+      {
+        "label": "keep",
+        "policy": {
+          "novelty_weight": 1.1,
+          "anchor_pull": 0.7,
+          "layer_bias": 0.55,
+          "motif_weight": 0.45,
+          "anchor_schedule": 3,
+          "side_hop_prob": 0.18,
+          "multipath": true,
+          "k": 5,
+          "select_by": "H",
+          "protect_compact": false,
+          "soft_mono_gate": false
+        },
+        "summary": {
+          "avg_C": 0.7116,
+          "avg_R": 0.84,
+          "avg_H": 0.7663,
+          "avg_anchor_R": 0.9333,
+          "avg_layer_mono": 0.6667,
+          "avg_mid_constraint_R": 1.0,
+          "n": 12
+        },
+        "objective": 0.7663
+      },
+      {
+        "label": "k3_H",
+        "policy": {
+          "novelty_weight": 1.1,
+          "anchor_pull": 0.7,
+          "layer_bias": 0.55,
+          "motif_weight": 0.45,
+          "anchor_schedule": 3,
+          "side_hop_prob": 0.18,
+          "multipath": true,
+          "k": 3,
+          "select_by": "H",
+          "protect_compact": false,
+          "soft_mono_gate": false
+        },
+        "summary": {
+          "avg_C": 0.7,
+          "avg_R": 0.8567,
+          "avg_H": 0.7656,
+          "avg_anchor_R": 0.95,
+          "avg_layer_mono": 0.6833,
+          "avg_mid_constraint_R": 1.0,
+          "n": 12
+        },
+        "objective": 0.7656
+      },
+      {
+        "label": "k5_H",
+        "policy": {
+          "novelty_weight": 1.1,
+          "anchor_pull": 0.7,
+          "layer_bias": 0.55,
+          "motif_weight": 0.45,
+          "anchor_schedule": 3,
+          "side_hop_prob": 0.18,
+          "multipath": true,
+          "k": 5,
+          "select_by": "H",
+          "protect_compact": false,
+          "soft_mono_gate": false
+        },
+        "summary": {
+          "avg_C": 0.7116,
+          "avg_R": 0.84,
+          "avg_H": 0.7663,
+          "avg_anchor_R": 0.9333,
+          "avg_layer_mono": 0.6667,
+          "avg_mid_constraint_R": 1.0,
+          "n": 12
+        },
+        "objective": 0.7663
+      },
+      {
+        "label": "k7_H",
+        "policy": {
+          "novelty_weight": 1.1,
+          "anchor_pull": 0.7,
+          "layer_bias": 0.55,
+          "motif_weight": 0.45,
+          "anchor_schedule": 3,
+          "side_hop_prob": 0.18,
+          "multipath": true,
+          "k": 7,
+          "select_by": "H",
+          "protect_compact": false,
+          "soft_mono_gate": false
+        },
+        "summary": {
+          "avg_C": 0.7097,
+          "avg_R": 0.8458,
+          "avg_H": 0.7676,
+          "avg_anchor_R": 0.9333,
+          "avg_layer_mono": 0.6833,
+          "avg_mid_constraint_R": 1.0,
+          "n": 12
+        },
+        "objective": 0.7676
+      }
+    ],
+    "accepted": "k7_H"
+  },
+  "config": {
+    "n_hops": 5,
+    "seed": 17,
+    "n_seeds": 3,
+    "n_fixtures": 4,
+    "fixture_ids": [
+      "product_metaphor",
+      "story_twist",
+      "research_creative",
+      "brand_voice"
+    ]
+  }
+}

@@ -80,15 +80,16 @@ Select paths by **`tradeoff_harmonic`** (H), not C alone.
 ## 5. Next P1 experiments
 
 **Primary queue (evidence-tied):** [NEXT_EXPERIMENTS_REASONING_TRACE.md](NEXT_EXPERIMENTS_REASONING_TRACE.md) — RT1–RT11.  
-Companion cognition+bridge: [NEXT_EXPERIMENTS_HIGHER_COGNITION.md](NEXT_EXPERIMENTS_HIGHER_COGNITION.md) (E1–E10).
+Companion cognition+bridge: [NEXT_EXPERIMENTS_HIGHER_COGNITION.md](NEXT_EXPERIMENTS_HIGHER_COGNITION.md) (E1–E10).  
+**Iterative training report:** [ITERATIVE_REASONING_TRACE_TRAINING_REPORT.md](ITERATIVE_REASONING_TRACE_TRAINING_REPORT.md) (10 epochs, RT-guided).
 
 ### What’s next (top of queue)
 
-1. **RT1** — Multipath value-fn bakeoff (H vs R vs IV-diag); G1 ΔR=+0.102 warns against select-by-C.  
-2. **RT2** — Real `protect_compact` → burst (fix P6 truncate artifact; mid_R=1.0 settled).  
-3. **RT3** — Burst-proposed Z → weak-IV F (replace B1 mock tie).  
-4. **RT4** — Adaptive conflict schedule (P7 H↑ with C cost).  
-5. **RT5** — Soft mono-gating (motif mono vs C tradeoff).
+1. **RT2 refinement** — Token-budget PromptDict protect→burst + coverage gates (loop mixed).  
+2. **RT3** — Non-mock first-stage F for burst-proposed Z.  
+3. **RT4 adaptive** — Thrash-triggered schedule vs fixed schedule=2 elite from epoch 6.  
+4. **RT5** — Soft mono-gating at hops≥8 (epoch 7 saturated at mono=0.80).  
+5. **RT6** — Long-horizon incubation redo only after RT2/RT3 land.
 
 ---
 

@@ -109,6 +109,9 @@ class Policy:
     select_by: str = "H"  # H | R | C | iv_diag
     protect_compact: bool = False
     soft_mono_gate: bool = False  # RT5: prefer forward layer hops when scoring
+    # RT4b: mid-path adaptive schedule (None | loosen_on_calm | tighten_on_thrash)
+    adaptive_policy: str | None = None
+    thrash_threshold: float = 0.55
 
     def knobs(self) -> dict[str, Any]:
         return {
@@ -128,6 +131,8 @@ class Policy:
             "select_by": self.select_by,
             "protect_compact": self.protect_compact,
             "soft_mono_gate": self.soft_mono_gate,
+            "adaptive_policy": self.adaptive_policy,
+            "thrash_threshold": float(self.thrash_threshold),
         }
 
     @classmethod
@@ -144,6 +149,8 @@ class Policy:
             select_by=str(d.get("select_by", "H")),
             protect_compact=bool(d.get("protect_compact", False)),
             soft_mono_gate=bool(d.get("soft_mono_gate", False)),
+            adaptive_policy=d.get("adaptive_policy"),
+            thrash_threshold=float(d.get("thrash_threshold", 0.55)),
         )
 
 
@@ -214,6 +221,94 @@ def _score_select(report: Any, path_ids: Sequence[str], spans: Sequence[Any], se
     return float(mapping[key])
 
 
+def _thrash_score(typology_path: Sequence[str]) -> float:
+    if len(typology_path) < 2:
+        return 0.0
+    flips = sum(1 for a, b in zip(typology_path, typology_path[1:]) if a != b)
+    return flips / (len(typology_path) - 1)
+
+
+def _adaptive_path(
+    pool: list[Any],
+    *,
+    seed: int,
+    n_hops: int,
+    knobs: dict[str, Any],
+    policy_name: str,
+    thrash_threshold: float,
+    seed_index: int = 0,
+) -> Any:
+    """Continuous burst with mid-path schedule adaptation (RT4b)."""
+    import random as _random
+
+    from intentisolates.types import BurstHop, BurstPath
+
+    pull_hi = float(knobs.get("anchor_pull", 0.80))
+    pull_lo = min(pull_hi, 0.70)
+    if policy_name == "loosen_on_calm":
+        init_sched, init_pull = 2, pull_hi
+    else:
+        init_sched, init_pull = 3, pull_lo
+
+    hopper = CreativeBurstHopper.for_v2(
+        pool,
+        seed=seed,
+        **{**knobs, "anchor_schedule": init_sched, "anchor_pull": init_pull},
+    )
+    hopper._v2_anchor_explicit = True
+    start = hopper.ordered[seed_index % max(1, len(hopper.ordered))]
+    rng = _random.Random(seed + hash(start.id) % 10_000)
+    visited: list[str] = [start.id]
+    hops: list[Any] = []
+    current = start
+    triggered = False
+    anchors = {s.id for s in pool if getattr(s, "protect", False)}
+
+    for step in range(max(0, n_hops)):
+        if not triggered and len(visited) >= 3:
+            typs = [_typ(hopper.by_id[i].typology) for i in visited if i in hopper.by_id]
+            thrash = _thrash_score(typs)
+            visited_anchors = sum(1 for a in anchors if a in set(visited))
+            if policy_name == "loosen_on_calm":
+                if thrash < thrash_threshold and visited_anchors >= 1:
+                    hopper.anchor_schedule = 3
+                    hopper.anchor_pull = pull_lo
+                    triggered = True
+            else:
+                low_anchor = visited_anchors == 0
+                if thrash >= thrash_threshold or (low_anchor and thrash >= 0.5):
+                    hopper.anchor_schedule = 2
+                    hopper.anchor_pull = pull_hi
+                    triggered = True
+        nxt, score, reason = hopper._next_hop(
+            current, visited, mode="creative_burst_v2", rng=rng
+        )
+        if nxt is None:
+            break
+        hops.append(
+            BurstHop(
+                from_id=current.id,
+                to_id=nxt.id,
+                mode="creative_burst_v2",
+                score=round(score, 4),
+                reason=reason + (";adapt" if triggered else ""),
+            )
+        )
+        visited.append(nxt.id)
+        current = nxt
+
+    typ_path = [_typ(hopper.by_id[i].typology) for i in visited if i in hopper.by_id]
+    return BurstPath(
+        seed_id=start.id,
+        hops=hops,
+        span_ids=visited,
+        typology_path=typ_path,
+        mode="creative_burst_v2",
+        summary=f"adaptive_{policy_name}",
+        metadata={"triggered": triggered, "policy": policy_name},
+    )
+
+
 def _run_one(
     spans: list[Any],
     policy: Policy,
@@ -228,13 +323,33 @@ def _run_one(
         knobs = {**knobs, "layer_bias": min(1.2, knobs["layer_bias"] + 0.15)}
 
     traces: list[dict[str, Any]] = []
+    use_adapt = bool(policy.adaptive_policy)
+
     if policy.multipath:
         k = max(1, min(policy.k, len(pool)))
         candidates: list[dict[str, Any]] = []
         base = CreativeBurstHopper.for_v2(pool, seed=seed, **knobs)
         for i in range(k):
-            h = CreativeBurstHopper.for_v2(pool, motifs=base.motifs, seed=seed + i * 31, **knobs)
-            path = h.burst_path(seed=i % max(1, len(h.ordered)), n_hops=n_hops, mode="creative_burst_v2")
+            if use_adapt:
+                path = _adaptive_path(
+                    pool,
+                    seed=seed + i * 31,
+                    n_hops=n_hops,
+                    knobs=knobs,
+                    policy_name=str(policy.adaptive_policy),
+                    thrash_threshold=policy.thrash_threshold,
+                    seed_index=i,
+                )
+                h = CreativeBurstHopper.for_v2(
+                    pool, motifs=base.motifs, seed=seed + i * 31, **knobs
+                )
+            else:
+                h = CreativeBurstHopper.for_v2(
+                    pool, motifs=base.motifs, seed=seed + i * 31, **knobs
+                )
+                path = h.burst_path(
+                    seed=i % max(1, len(h.ordered)), n_hops=n_hops, mode="creative_burst_v2"
+                )
             report = meter.score_burst(path, pool, motif_neighbors=h._motif_neighbors)
             sel = _score_select(report, path.span_ids, pool, policy.select_by)
             candidates.append(
@@ -269,8 +384,20 @@ def _run_one(
             "pool_n": len(pool),
         }
 
-    h = CreativeBurstHopper.for_v2(pool, seed=seed, **knobs)
-    path = h.burst_path(seed=0, n_hops=n_hops, mode="creative_burst_v2")
+    if use_adapt:
+        path = _adaptive_path(
+            pool,
+            seed=seed,
+            n_hops=n_hops,
+            knobs=knobs,
+            policy_name=str(policy.adaptive_policy),
+            thrash_threshold=policy.thrash_threshold,
+            seed_index=0,
+        )
+        h = CreativeBurstHopper.for_v2(pool, seed=seed, **knobs)
+    else:
+        h = CreativeBurstHopper.for_v2(pool, seed=seed, **knobs)
+        path = h.burst_path(seed=0, n_hops=n_hops, mode="creative_burst_v2")
     report = meter.score_burst(path, pool, motif_neighbors=h._motif_neighbors)
     return {
         "C": round(report.creativity_score, 4),
@@ -504,18 +631,56 @@ def update_policy(
         }
 
     if epoch == 6:
-        # RT4: conflict schedule / anchor_pull grid
+        # RT4 / RT4b: conflict schedule grid + adaptive_loosen neighborhood
         variants = [("keep", copy.deepcopy(current))]
         for sched in (2, 3, 4):
             for pull in (0.70, 0.85, 1.0):
                 variants.append(
                     (
                         f"sched{sched}_pull{pull}",
-                        Policy(**{**current.to_dict(), "anchor_schedule": sched, "anchor_pull": pull}),
+                        Policy(
+                            **{
+                                **current.to_dict(),
+                                "anchor_schedule": sched,
+                                "anchor_pull": pull,
+                                "adaptive_policy": None,
+                            }
+                        ),
                     )
                 )
+        # RT4b: bake adaptive_loosen into trainer neighborhood
+        for thr in (0.40, 0.55, 0.70):
+            variants.append(
+                (
+                    f"adaptive_loosen_{thr}",
+                    Policy(
+                        **{
+                            **current.to_dict(),
+                            "anchor_schedule": 2,
+                            "anchor_pull": max(0.80, current.anchor_pull),
+                            "adaptive_policy": "loosen_on_calm",
+                            "thrash_threshold": thr,
+                            "multipath": True,
+                            "protect_compact": True,
+                        }
+                    ),
+                )
+            )
+        variants.append(
+            (
+                "adaptive_tighten_0.55",
+                Policy(
+                    **{
+                        **current.to_dict(),
+                        "adaptive_policy": "tighten_on_thrash",
+                        "thrash_threshold": 0.55,
+                        "multipath": True,
+                    }
+                ),
+            )
+        )
         best, label, tried = try_policies(variants)
-        action = f"RT4 conflict schedule grid: accept {label}"
+        action = f"RT4/RT4b conflict schedule + adaptive_loosen: accept {label}"
         return best, {
             "guided_by": guided_by,
             "phase": phase,

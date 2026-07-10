@@ -1,12 +1,23 @@
 # Next Experiments: Reasoning-Trace Quality
 
-**Status:** P0 E1–E3 **ran** (`p0_followup_20260710T002719Z`) · RT1–RT5 also progressed via 10-epoch loop (`20260710T001218Z`)  
+**Status:** P0 E1–E3 **ran** · RT2b/RT3b/RT4b/RT5/RT8/RT10 batch **ran** (`20260710T0047Z`) — see **[RT2B_RT10_EXPERIMENT_BATCH_REPORT.md](RT2B_RT10_EXPERIMENT_BATCH_REPORT.md)**  
 **Package:** `intentisolates` ≥ 0.4.1  
-**Evidence:** **[P0_FOLLOWUP_EXPERIMENT_RESULTS.md](P0_FOLLOWUP_EXPERIMENT_RESULTS.md)** · [p0_followup_latest.md](../experiments/results/p0_followup_latest.md) · [COMPILED_EXPERIMENTATION_20260709.md](../experiments/results/COMPILED_EXPERIMENTATION_20260709.md) · [CLAIM_EVIDENCE_TABLE.md](../experiments/results/CLAIM_EVIDENCE_TABLE.md) · [COMPREHENSIVE_EXPERIMENTAL_FINDINGS_REPORT.md](COMPREHENSIVE_EXPERIMENTAL_FINDINGS_REPORT.md) · [ITERATIVE_REASONING_TRACE_TRAINING_REPORT.md](ITERATIVE_REASONING_TRACE_TRAINING_REPORT.md) · [EPOCH_TRAJECTORY.md](../experiments/results/iterative_epochs/EPOCH_TRAJECTORY.md)  
+**Evidence:** **[RT2B_RT10_EXPERIMENT_BATCH_REPORT.md](RT2B_RT10_EXPERIMENT_BATCH_REPORT.md)** · **[P0_FOLLOWUP_EXPERIMENT_RESULTS.md](P0_FOLLOWUP_EXPERIMENT_RESULTS.md)** · [p0_followup_latest.md](../experiments/results/p0_followup_latest.md) · [COMPILED_EXPERIMENTATION_20260709.md](../experiments/results/COMPILED_EXPERIMENTATION_20260709.md) · [CLAIM_EVIDENCE_TABLE.md](../experiments/results/CLAIM_EVIDENCE_TABLE.md) · [COMPREHENSIVE_EXPERIMENTAL_FINDINGS_REPORT.md](COMPREHENSIVE_EXPERIMENTAL_FINDINGS_REPORT.md) · [ITERATIVE_REASONING_TRACE_TRAINING_REPORT.md](ITERATIVE_REASONING_TRACE_TRAINING_REPORT.md) · [EPOCH_TRAJECTORY.md](../experiments/results/iterative_epochs/EPOCH_TRAJECTORY.md)  
 **Theory:** [THEORY_CREATIVE_BURST_REASONING.md](THEORY_CREATIVE_BURST_REASONING.md) · [THEORY_HIGHER_COGNITION_GROUNDING.md](THEORY_HIGHER_COGNITION_GROUNDING.md) · [THEORY_CAUSAL_KINETEQ_BRIDGE.md](THEORY_CAUSAL_KINETEQ_BRIDGE.md)  
 **Related queue:** [NEXT_EXPERIMENTS_HIGHER_COGNITION.md](NEXT_EXPERIMENTS_HIGHER_COGNITION.md) (cognition + bridge E1–E10; this doc focuses on **reasoning-trace R / layer_mono / mid_constraint / IV quality**)
 
 **Stance:** Offline computational analogs. Prefer automatable meters first; LLM-as-judge only where noted.
+
+### RT2b–RT10 batch (2026-07-10) — post-RT234 redesign
+
+| Exp | Verdict | Headline |
+| --- | --- | --- |
+| **RT2b** | **Rejected** (H gate) | mid_R 0.938≫0.500; H 0.758<0.787 under **matched** pool — trunc H not pool artifact |
+| **RT3b** | **Rejected** | path-only IV 0/4 wins; boost was identification-necessary |
+| **RT4b** | **Mixed** | adapt H 0.777≈elite 0.781; C↑ small; trainer bake-in ok; keep fixed s2 default |
+| **RT5** | **Mixed** | soft/hard mono > layer_cot; H≈elite; strict success false; h8≈h10 |
+| **RT8** | **Mixed** | `every_4` soft winners: H≥elite, mono 0.825, C near elite |
+| **RT10** | **Supported** | gated rubric 0.980 vs random 0.627; illegal=0; kineteq absent |
 
 ### P0 slate E1–E3 (2026-07-10) — authoritative offline bakeoff
 
@@ -50,6 +61,9 @@ Loop headline: epoch_0 H=**0.753** → epoch_9 H=**0.779**, R **0.828→0.897**,
 | Conflict schedule helps H | `conflict_schedule_2` H=**0.763** ≥ v2 0.754 (P7) | sweep |
 | Incubation fail (I1/I2 + **E3**) | alt H≈0.69; structured h5/h8 **0.686/0.695** ≪ v2 — **archive** | rejected |
 | Protect mid_R + **E2** burst | mid_R **1.0** vs trunc **0.188**; protect→mpH R=**0.897** | compaction + p0 |
+| **RT2b** pool-matched | mid_R **0.938**≫**0.500**; H **0.758**<**0.787** (matched) — trunc H not artifact | rt2b_pool_matched |
+| **RT3b** path-only IV | 0/4 wins; F ties without boost | rt3b_path_only_iv |
+| **RT10** gated routing | rubric **0.980** vs random **0.627**; illegal=0 | rt10_bridge_routing |
 | Causal IV weak | B1/B2 mock F tied — inconclusive | claim table |
 
 **Production do-not-touch from falsifiers:** do not ship naive `incubation_alt` / hop=5 `two_phase` / **structured alt-2 incubation**; do not treat head/tail truncate as a fair WM control; keep `side_hop_prob≈0.18`.
@@ -62,12 +76,16 @@ Loop headline: epoch_0 H=**0.753** → epoch_9 H=**0.779**, R **0.828→0.897**,
 | --- | --- | --- | --- |
 | **P0** | RT1 / E1 | Multipath value-fn | **DONE** |
 | **P0** | RT2 / E2 | Protect→burst | **DONE** (trunc H artifact) |
+| **P0** | RT2b | Pool-matched protect H | **DONE / Rejected** (mid_R still wins) |
 | **P0** | RT6 / E3 | Structured incubation | **ARCHIVED** |
-| **P0** | RT3–RT4 | IV F + conflict adaptive | **NEXT** (RT4 in-loop partial) |
-| **P1** | RT5, RT7–RT8 | Planning / transfer / motif hybrid | queued |
-| **P2** | RT9–RT11 | Meter / Bridge / outcome | queued |
+| **P0** | RT3 / RT3b | IV F + path-only rigor | **DONE** (RT3 supported; RT3b rejected) |
+| **P0** | RT4 / RT4b | Conflict adaptive + trainer | **DONE** (RT4 supported; RT4b mixed) |
+| **P1** | RT5, RT8 | Planning / motif hybrid | **DONE / Mixed** |
+| **P1** | RT7 | Analogical transfer | queued |
+| **P2** | RT10 | Bridge routing stub | **DONE / Supported** |
+| **P2** | RT9, RT11 | Meter / outcome | queued |
 
-Run order remaining: **RT3 → RT4 (confirm out-of-loop) → RT5 → RT7 → RT8 → RT9 → RT10 → RT11**.
+Run order remaining: **RT9 → RT7 → RT11** (optional RT8 hops≥8 re-sweep).
 
 ---
 
@@ -90,39 +108,41 @@ Run order remaining: **RT3 → RT4 (confirm out-of-loop) → RT5 → RT7 → RT8
 - **Result:** mid_R protect=**1.000** vs trunc **0.188** (**supported**); protect→v2 R=**0.886** ≥ raw 0.799 (**supported**); protect→mpH R=**0.897** > trunc 0.851 but H 0.767 < trunc 0.799 (**mixed** on H) — trunc pool **2.875** vs protect **5.5** → **artifact_risk** (same class as P6). Prefer protect→mpH for R; do not rank by trunc H.
 - **Default:** document protect_compact before burst; do **not** change hop knobs from truncate H.
 
-### RT3 — Burst-proposed instruments → weak-IV F (replace mock tie)
+### RT2b — Pool-matched protect vs truncate — **DONE / Rejected (H)**
 
-- **Hypothesis:** Paths from multipath select-by-H (or RT1 `iv_diag`) propose early-layer Z candidates with higher first-stage F and lower weak-IV rate than random Z or select-by-C winners.
-- **Grounding:** B1 currently F(burst)=F(random)=4.2025 (weak tie); multipath R ≥ random (B4 strong, ΔR=+0.096). Structural prior is ready; statistical IV is not.
-- **Design:** Causal narrative fixtures (+ LayerCausalSuite). Z = early-layer / tool/instrument typologies on path; X mid; Y outcome. Compare: multipath-H Z, multipath-C Z, random Z, convergent Z. Soft `causaliv` when present; mock_iv only as CI smoke with **non-identical** assignment.
-- **Metrics:** first-stage F, weak-IV rate, |\(\beta_{IV}\)| SE; path C/R/H for correlation.
-- **Success:** Burst-H mean F > random by ≥10% relative **or** weak-IV rate ≤ random − 5 pp across ≥3 fixtures; reject if still tied under non-degenerate assignment.
-- **Effort:** M · **Offline:** mostly · **LLM judge:** no
-- **Tests:** B1, P11, P10
+- **Status:** **RAN** `p0_rt2b_pool_matched.py`. Pool/path_len **matched** (5.1 / 4.88). mid_R protect **0.938** ≫ trunc **0.500**; H protect **0.758** < trunc **0.787** — truncate H win is **not** a pool artifact. Protect R near raw (supported secondary).
+- **Default:** Keep protect for mid-constraints; do **not** claim H superiority vs truncate even under match. Prefer RT9 meter so H sees mid_R.
 
-### RT4 — Conflict-adaptive + schedule fine grid (without killing C)
+### RT3 — Burst-proposed instruments → weak-IV F (replace mock tie) — **DONE**
 
-- **Hypothesis:** Adaptive protect recruitment (high typology thrash / low recent anchor_need) matches or beats fixed `conflict_schedule_2` on H while recovering C lost by always-on schedule=2 (C=0.688 vs v2 0.728).
-- **Grounding:** P7 supported (H 0.763 ≥ v2 0.754) but C drop ~0.04; precision_high also raises R with C cost.
-- **Design:** Conditions: v2 schedule=3; fixed=2; adaptive threshold grid; hybrid schedule=3 with one conflict interrupt. Same 8 fixtures × 5 seeds.
-- **Metrics:** H, C, R, `anchor_R`, forced-visit count.
-- **Success:** Adaptive H ≥ schedule_2 − 0.005 and C ≥ v2 − 0.03 on ≥6/8 fixtures.
-- **Effort:** S–M · **Offline:** yes · **LLM judge:** no
-- **Tests:** P7 refinement; Botvinick analog
+- **Status:** **RAN** `p0_rt3_burst_iv_upgrade.py` → **Supported** (3/4 fixtures; causaliv). Follow-up **RT3b** path-only (no boost) → **Rejected** (0/4; F ties) — boost was identification-necessary. See batch report.
+- **Hypothesis:** Paths from multipath select-by-H propose early-layer Z with higher first-stage F / lower weak-IV than random.
+- **Result:** With transparent Z boost: supported. Path-only hard mask: rejected / method note.
+- **Default:** Prefer burst/high-R paths for IV **prep** with documented boost proxy; do not claim path-only F superiority.
+
+### RT3b — Path-only IV (no Z boost) — **DONE / Rejected**
+
+- **Status:** **RAN** `p0_rt3b_path_only_iv.py` (`rt3b_path_only_iv_latest`).
+- **Result:** 0/4 fixture wins; burst F ≈ random under hard mask. Documents that RT3 column boost was necessary for policy differentiation.
+
+### RT4 — Conflict-adaptive + schedule fine grid (without killing C) — **DONE**
+
+- **Status:** **RAN** `p0_rt4_adaptive_conflict.py` → **Supported** (`adaptive_loosen_0.55`, 7/8). **RT4b** trainer bake-in → **Mixed** (H within 0.005; C lift < +0.01; trainer keeps fixed s2).
+- **Default:** Fixed schedule=2 / pull≈0.80 fidelity default; optional `adaptive_loosen_on_calm` when C matters.
+
+### RT4b — Adaptive loosen in trainer — **DONE / Mixed**
+
+- **Status:** **RAN** `p0_rt4b_adaptive_trainer.py` + `Policy.adaptive_policy` in `iterative_reasoning_training.py`.
+- **Result:** fixture_ok 3/4; H 0.777 vs elite 0.781; C 0.709 vs 0.704; epoch-6 neighborhood includes adaptive_loosen (accepted `keep`).
 
 ---
 
 ## P1 — depth & schedules
 
-### RT5 — Planning-depth / layer_monotonicity intervention
+### RT5 — Planning-depth / layer_monotonicity intervention — **DONE / Mixed**
 
-- **Hypothesis:** Soft layer-order constraints (goal/constraint before action/outcome) raise `layer_mono` toward motif specialist levels without motif’s C collapse (motif mono≈0.98 / C≈0.57; layer_cot mono lit 0.700 / C 0.667).
-- **Grounding:** P3 strong (layer_cot mono ≥ divergent 8/8); PL1 H≥divergent; motif wins mono but L1b C≪v2.
-- **Design:** Hop budgets {5,8,10}. Conditions: divergent, layer_cot, v2, multipath-H, **mono_gated** (reject hops that violate Δℓ≥−1 more than once), **hard_plan** (must visit ℓ≤1 before ℓ≥3).
-- **Metrics:** `layer_mono`, plan-success (layer order check), H, C.
-- **Success:** mono_gated or hard_plan mono ≥ layer_cot + 0.05 and H ≥ v2 − 0.02; C ≥ motif_jump + 0.08.
-- **Effort:** M · **Offline:** yes · **LLM judge:** optional checklist later
-- **Tests:** P3 / Soar ToL analog; new **P14**
+- **Status:** **RAN** `p0_rt5_mono_gating.py` at hops {8,10}. Soft/hard mono > layer_cot (+0.04–0.06) and C > motif; H ≈ elite (−0.001 to −0.003); **strict success false**. h8≈h10 (pool exhaustion).
+- **Default:** Do **not** ship mono-gate as default; elite multipath-H remains best H at depth.
 
 ### RT6 — Incubation / intermittent diverge–converge (longer horizon) — **DONE / ARCHIVED**
 
@@ -141,15 +161,10 @@ Run order remaining: **RT3 → RT4 (confirm out-of-loop) → RT5 → RT7 → RT8
 - **Effort:** M · **Offline:** yes · **LLM judge:** no
 - **Tests:** P9 Gentner
 
-### RT8 — Motif–burst hybrid schedule (fidelity without C death)
+### RT8 — Motif–burst hybrid schedule (fidelity without C death) — **DONE / Mixed**
 
-- **Hypothesis:** Periodic motif pulls (every k hops) lift R/`layer_mono` vs v2 while keeping C within 0.05 of v2 — between motif specialist and burst.
-- **Grounding:** Motif R=0.900 C=0.566 vs v2 R=0.796 C=0.728; v2 already has motif_weight=0.45 — vary **schedule** not just weight.
-- **Design:** `motif_schedule ∈ {off, every_2, every_3, every_4}` × weight ∈ {0.45, 0.7}; vs pure motif_jump / v2 / convergent.
-- **Metrics:** C, R, H, `layer_mono`, `anchor_R`.
-- **Success:** Some hybrid with H ≥ v2 and `layer_mono` ≥ v2 + 0.05 and C ≥ v2 − 0.05.
-- **Effort:** S · **Offline:** yes · **LLM judge:** no
-- **Tests:** L1 hybrid; P1 refinement
+- **Status:** **RAN** `p0_rt8_motif_burst_hybrid.py`. Soft winners: `hybrid_every4_mw{0.45,0.7}` H **0.781** ≥ elite **0.779**, mono **0.825**, C **0.688** ≥ elite−0.05. Strict mono≥elite+0.05 with H≥elite: soft path only.
+- **Default (optional):** `every_4` motif schedule when mono lift desired without motif_jump C death.
 
 ---
 
@@ -165,15 +180,10 @@ Run order remaining: **RT3 → RT4 (confirm out-of-loop) → RT5 → RT7 → RT8
 - **Effort:** M · **Offline:** yes · **LLM judge:** optional later for “coherence”
 - **Tests:** Metacognition §9; meter-as-monitor
 
-### RT10 — Bridge / Kineteq orchestration routing stub
+### RT10 — Bridge / Kineteq orchestration routing stub — **DONE / Supported**
 
-- **Hypothesis:** Meter-gated route from high-H / high-R paths chooses more coherent next tools (`iv_validate` only if R≥τ; else remine/search) than random or select-by-C.
-- **Grounding:** B5 untested; B4 structural prior strong; kineteq live MCP absent — dry-run / rubric only.
-- **Design:** Offline enum rubric over winner paths from lit/sweep; optional CausalBridge dry_run if present; record `kineteq_backend=absent|pivot_fallback`.
-- **Metrics:** rubric score, illegal-route rate (IV when R low).
-- **Success:** Gated rubric ≥ random + 0.2; illegal-route rate = 0.
-- **Effort:** M (stub) · **Offline:** yes · **LLM judge:** no
-- **Tests:** B5 / P12
+- **Status:** **RAN** `p0_rt10_bridge_routing_stub.py`. Gated rubric **0.980** vs random **0.627** (Δ+0.353); illegal-route **0.0**; `kineteq_backend=absent`.
+- **Default:** Ship meter-gated routes `validate_iv` / `compact_protect` / `burst_again` (no live Kineteq required for stub).
 
 ### RT11 — Outcome-linked eval (LLM-as-judge / checklist) — deferred gate
 

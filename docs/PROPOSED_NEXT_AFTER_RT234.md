@@ -1,7 +1,18 @@
 # Proposed Next Experiments (after RT2/RT3/RT4 redesign runs)
 
-**Stamp:** 20260710T003308Z (RT4) · RT2 `20260710T003116Z` · RT3 `20260710T003136Z`  
+**Stamp:** 20260710T003308Z (RT4) · batch follow-up **20260710T0047Z** — see [RT2B_RT10_EXPERIMENT_BATCH_REPORT.md](RT2B_RT10_EXPERIMENT_BATCH_REPORT.md)  
 **Stance:** Offline, seeded, reproducible. Ranked from **these** satellite numbers, not prior loop alone.
+
+### Batch follow-up verdicts (RT2b / RT3b / RT4b / RT5 / RT8 / RT10)
+
+| ID | Verdict | Evidence |
+| --- | --- | --- |
+| **RT2b** | **Rejected** (H) | mid_R 0.938≫0.500; H 0.758<0.787; pool matched — trunc H not artifact |
+| **RT3b** | **Rejected** | path-only 0/4; boost necessary for Z differentiation |
+| **RT4b** | **Mixed** | H 0.777≈0.781; C 0.709 vs 0.704; trainer bake-in; keep fixed s2 |
+| **RT5** | **Mixed** | mono > layer_cot; H≈elite; strict fail; h8≈h10 |
+| **RT8** | **Mixed** | every_4 soft win: H≥elite, mono 0.825, C near elite |
+| **RT10** | **Supported** | gated 0.980 vs random 0.627; illegal=0 |
 
 ---
 
@@ -22,11 +33,13 @@ Artifacts: `experiments/results/rt2_coverage_gated_latest.*`, `rt3_iv_upgrade_la
 | Change | Recommend? | Why |
 | --- | --- | --- |
 | Keep multipath k=7, `select_by=H`, protect on | **Yes** (unchanged) | Elite + RT2 R/mid_R; RT4 elite still H-best fixed policy |
-| Prefer `protect_compact` before burst when mid-constraints matter | **Yes** | RT2 mid_R + R gates; do **not** claim H superiority vs truncate |
-| Fixed `schedule=2` / pull≈0.80 as fidelity default | **Yes, with caveat** | Still best fixed H/R; C tax remains |
-| Ship `adaptive_loosen_on_calm` as optional default | **Yes (optional)** | RT4 supported: recovers C vs elite with H within 0.005 and R kept — use when C matters |
-| Prefer burst/high-R paths for IV Z proposal | **Yes (prep stage)** | RT3 majority F/weak wins with real causaliv |
-| Replace truncate as WM control | **Yes (docs)** | Truncate can win H via larger pool; gate on mid_R + coverage |
+| Prefer `protect_compact` before burst when mid-constraints matter | **Yes** | RT2/RT2b mid_R; do **not** claim H/R superiority vs truncate (RT2b rejected H) |
+| Fixed `schedule=2` / pull≈0.80 as fidelity default | **Yes** | RT4b trainer still prefers fixed s2 on objective |
+| Ship `adaptive_loosen_on_calm` as optional default | **Yes (optional)** | RT4 supported; RT4b mixed but H within 0.005 |
+| Prefer burst/high-R paths for IV Z proposal | **Yes (prep)** with boost proxy | RT3 supported; **RT3b** shows path-only insufficient |
+| Ship meter-gated bridge routes | **Yes** | RT10 supported |
+| Optional motif `every_4` schedule | **Yes (optional, soft)** | RT8 mixed |
+| Replace truncate as WM control for H | **Yes (docs)** | Even pool-matched, trunc can win H — gate on mid_R |
 
 **Do not** change production select_by away from H; **do not** make tighten-on-thrash the default (always triggers, R tax).
 

@@ -126,6 +126,20 @@ Full rows: [CLAIM_EVIDENCE_TABLE.md](../experiments/results/CLAIM_EVIDENCE_TABLE
 
 ---
 
+## 6b. P0 follow-up (2026-07-10) — E1 / E2 / E3
+
+Full tables: [P0_FOLLOWUP_EXPERIMENT_RESULTS.md](P0_FOLLOWUP_EXPERIMENT_RESULTS.md) · stamp `20260710T002719Z` · charts `p0_e1_*.png`, `p0_e2_*.png`, `p0_e3_*.png`.
+
+| Exp | Hypothesis | Verdict | Key numbers |
+| --- | --- | --- | --- |
+| **E1** multipath value-fn | H-select wins H; R-select wins R; C harms R | **Supported** (Pareto); iv_diag mixed | k7_H **H=0.776**; k5_R **R=0.850**; G1 ΔR k5 **+0.085** (8/8); iv_diag k5 fail / k7 pass |
+| **E2** protect→burst | protect mid_R + R ≥ trunc; near raw | **Supported** mid_R+R; trunc H **artifact** | mid_R **1.0** vs **0.188**; protect→mpH **R=0.897**; trunc pool 2.9 vs 5.5 |
+| **E3** structured incubation | alt-2 ≥ v2 on H at hops 5–8 | **Rejected / archive** | H **0.686** / **0.695** ≪ v2 **0.754** / **0.790** (0/8) |
+
+**Default deltas (moderate+ only):** keep `select_by=tradeoff_harmonic`; document protect_compact→burst; optional `iv_diag` at k≥7; **do not** ship incubation schedules.
+
+---
+
 ## 7. Insights (synthesized)
 
 1. **Harmonic H is the right production objective** — peak at multipath select-by-H, not max-C.
@@ -135,8 +149,8 @@ Full rows: [CLAIM_EVIDENCE_TABLE.md](../experiments/results/CLAIM_EVIDENCE_TABLE
 5. **GWT/ToT k-sweep shows small but consistent H gains** k3→k5→k7 (G2/G3).
 6. **Select-by-C is actively harmful to R** vs select-by-H (G1 ΔR≈+0.10).
 7. **Conflict schedule (anchor every 2)** weakly helps H — optional tighter schedule for compliance traces.
-8. **Incubation / naive two-phase schedules underperformed** offline at hop=5 — need longer budgets or better handoff.
-9. **Isolate-aware compaction is settled** for mid-constraint recall; burst-after-compact needs a better WM sim than head/tail truncate.
+8. **Incubation / naive two-phase / structured alt-2 underperformed** at hops 5 **and** 8 (P0 E3) — **archive** intermittent schedules; dual-process works as fixed modes only.
+9. **Isolate-aware compaction + protect→burst is settled** for mid_R and R (P0 E2); truncate H remains a pool-shrink artifact — never use as WM control.
 10. **Causal bridge evidence is still weak** (mock IV / zero overlap proxy) — do not claim identification quality from meter alone.
 11. **Side-hops raise C but tax R** — keep `side_hop_prob≈0.18` (v2) rather than insight-high 0.40.
 12. **Cross-theory agreement:** dual-process convergent, high precision, and multipath-H all pull toward higher R; divergent / low precision / select-by-C pull toward C — meter H is the mediation point for Bridge broadcast.
@@ -148,10 +162,13 @@ Full rows: [CLAIM_EVIDENCE_TABLE.md](../experiments/results/CLAIM_EVIDENCE_TABLE
 | Change | Done? |
 | --- | --- |
 | Keep `CreativeBurstHopper.for_v2` defaults | **Yes** (evidence-aligned; no flip) |
-| Prefer multipath select-by-`tradeoff_harmonic` when k≥3 | **Documented** (already API default) |
-| Empirical status tables in THEORY_* | **Updated** (this compile) |
-| Charts + compiled MD + comprehensive report | **This deliverable** |
-| P6 WM protocol redesign | Deferred (rejected sim is not production evidence) |
+| Prefer multipath select-by-`tradeoff_harmonic` when k≥3 | **Documented** (already API default); P0 E1 reconfirmed |
+| Optional `iv_diag` select_by when k≥7 | **Documented** (API added; not default) |
+| Protect_compact before burst | **Documented** (P0 E2); no hop-knob change |
+| Empirical status tables in THEORY_* | **Updated** (P0 2026-07-10) |
+| Charts + compiled MD + comprehensive report | **This deliverable** + P0 charts |
+| Incubation schedule knobs | **Do not ship** (I1/I2/E3 archived) |
+| P6 WM protocol redesign | Closed as artifact; use protect mid_R protocol |
 | CausalBridge `isolates_burst_iv` workflow | Still proposal-only |
 
 ---

@@ -209,11 +209,11 @@ CreativityMeter as metacognitive evaluator; select-by-\(H\) = confidence/control
 | **P10** | High-\(R\) paths align better with IV causation | LayerCausal | **Weak / inconclusive** (mock overlap) → **RT3** |
 | **P11** | Burst-proposed instruments beat random Z | Explore Z | **Weak** (mock_iv F tied) → **RT3** |
 | **P12** | Orchestration broadcast of high-\(H\) path | GWT + Fabric | **Untested** → **RT10** |
-| **P13** | Multipath value-fn: H-optimal vs R-optimal vs C-harmful; IV-diag for causal-prep | GWT / metacontrol | **Partial** (G1+H/R columns); IV-diag → **RT1** |
+| **P13** | Multipath value-fn: H-optimal vs R-optimal vs C-harmful; IV-diag for causal-prep | GWT / metacontrol | **Supported** (P0 E1); iv_diag mixed (k5 fail / k7 pass) |
 | **P14** | Soft mono-gating → motif-like mono without motif \(C\) death | Soar / CoT | **Open** → **RT5** |
-| **P15** | Protect-compact → burst preserves mid-constraints iff protect filter | WM + compaction | Compact mid_R **supported**; coupling → **RT2** |
+| **P15** | Protect-compact → burst preserves mid-constraints iff protect filter | WM + compaction | **Supported** (P0 E2 mid_R=1.0, protect→mpH R=0.897); trunc H artifact |
 | **P16** | Motif–burst hybrid schedule Pareto between motif & v2 | Structure-mapping + dual-process | **Open** → **RT8** |
-| **P17** | Longer-horizon intermittent diverge/converge can beat hop=5 incubations | Dual-process / incubation | hop=5 **rejected** (I1/I2); longer → **RT6** |
+| **P17** | Longer-horizon intermittent diverge/converge can beat hop=5 incubations | Dual-process / incubation | **Rejected / archived** (P0 E3 hops 5 & 8; 0/8) |
 
 Empirical inventory: [CLAIM_EVIDENCE_TABLE.md](../experiments/results/CLAIM_EVIDENCE_TABLE.md) · [COMPREHENSIVE_EXPERIMENTAL_FINDINGS_REPORT.md](COMPREHENSIVE_EXPERIMENTAL_FINDINGS_REPORT.md).
 
@@ -221,11 +221,11 @@ Falsifiers unchanged for P1–P5; for P10–P17 see [NEXT_EXPERIMENTS_REASONING_
 
 ---
 
-## 11b. Empirical status (2026-07-09)
+## 11b. Empirical status (2026-07-09 + P0 2026-07-10)
 
 | Supported (integrate) | Rejected / do-not-ship | Weak / open |
 | --- | --- | --- |
-| P1–P5, P7, PP1/PP2, G1–G3, L1/L2, PL1, S1–S3, B4 (structural) | P6 (artifact), I1, I2, P8b (R tax) | B1/B2 mock IV; P9–P12, P13–P17 |
+| P1–P5, P7, PP1/PP2, G1–G3, L1/L2, PL1, S1–S3, B4, **P13** (H/R/C), **P15** (mid_R+R) | P6 (artifact), I1, I2, **P17**/E3 incubation, P8b (R tax) | B1/B2 mock IV; P9–P12, P14, P16; iv_diag only @k≥7 |
 
 **Production stance:** keep `for_v2` + multipath select-by-\(H\); treat motif_jump as fidelity specialist; do not ship hop=5 incubation/two-phase or truncate-as-WM-control.
 

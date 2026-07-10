@@ -2,7 +2,7 @@
 
 Regenerate: `python experiments/plot_results.py`
 
-Sources: `lit_burst_latest.json`, `span_burst_latest.json`, `theory_corpus_sweep_latest.json`, PromptDictCompress `reasoning_compaction_latest.json`.
+Sources: `lit_burst_latest.json`, `span_burst_latest.json`, `theory_corpus_sweep_latest.json`, `p0_followup_latest.json`, PromptDictCompress `reasoning_compaction_latest.json`.
 
 ## Lit-burst C/R/H
 
@@ -46,8 +46,21 @@ Sources: `lit_burst_latest.json`, `span_burst_latest.json`, `theory_corpus_sweep
 
 `claim_evidence_verdicts.png`
 
-## Iterative epochs (20260710T001218Z)
+## P0 E1 multipath value-fn
 
-- ![epoch CRH](charts/epoch_crh_trajectory.png)
-- ![epoch H/mono/mid](charts/epoch_h_mono_mid.png)
-- Trajectory: [EPOCH_TRAJECTORY.md](iterative_epochs/EPOCH_TRAJECTORY.md)
+![P0 E1 multipath value-fn](charts/p0_e1_multipath_value_fn.png)
+
+`p0_e1_multipath_value_fn.png`
+
+## P0 E2 protect→burst
+
+![P0 E2 protect→burst](charts/p0_e2_protect_burst.png)
+
+`p0_e2_protect_burst.png`
+
+## P0 E3 structured incubation
+
+![P0 E3 structured incubation](charts/p0_e3_structured_incubation.png)
+
+`p0_e3_structured_incubation.png`
+

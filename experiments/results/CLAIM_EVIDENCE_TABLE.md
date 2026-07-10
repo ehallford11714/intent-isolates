@@ -34,3 +34,18 @@
 | B4 | mp_H R >= random R | mean_a=0.8375 mean_b=0.6963 Δ=0.1412 wins=7/8 | **supported** | strong |
 | B1 | burst path mean first_stage_F >= random (mock IV) | F(burst)=4.2025 F(random)=4.2025 | **supported** | weak |
 | B2 | high-R (convergent) causation_overlap >= divergent | cau_ov(conv)=0.0000 cau_ov(div)=0.0000 | **supported** | weak |
+
+---
+
+## P0 follow-up append (2026-07-10, `p0_followup_20260710T002719Z`)
+
+| ID | Prediction | Metrics | Verdict | Strength |
+| --- | --- | --- | --- | --- |
+| P13a | select-by-H ≥ R/C on H (k=3,5,7) | k7 H=0.776 best; 8/8 each k | **supported** | strong |
+| P13b | select-by-R ≥ H/C on R | k5 R=0.850 > H 0.829; ΔH≈−0.011 | **supported** | strong |
+| P13c / G1 | select-by-H ≥ C on R | k5 ΔR=+0.085; k7 +0.111; 8/8 | **supported** | strong |
+| P13d | iv_diag H≥H−0.01 and R≥H-select | k5 fail (H=0.760); k7 pass (H=0.772,R=0.862) | **mixed** | moderate |
+| P15a | protect mid_R ≥0.95 ≫ truncate | mid_R 1.000 vs 0.188 | **supported** | strong |
+| P15b | protect→mpH R ≥ truncate R | R 0.897 ≥ 0.851; H mixed (trunc artifact) | **mixed** | moderate |
+| P15c | protect→v2 R ≥ raw−0.05 | R 0.886 ≥ 0.799 | **supported** | strong |
+| P17 / E3 | structured incub H ≥ v2 (hops 5,8) | H 0.686/0.695 ≪ 0.754/0.790; 0/8 | **rejected** | strong |

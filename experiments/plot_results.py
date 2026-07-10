@@ -225,6 +225,83 @@ def chart_theory_crh(sweep: dict[str, Any]) -> Path | None:
     return _save(fig, "theory_sweep_C_R_H_top12.png")
 
 
+def chart_p0_e1(p0: dict[str, Any]) -> Path | None:
+    rows = (p0.get("E1") or {}).get("summary_table") or []
+    if not rows:
+        return None
+    # Focus k=5 and k=7 value functions
+    focus = [r for r in rows if r.get("k") in (5, 7)]
+    if not focus:
+        focus = rows
+    labels = [r["condition"] for r in focus]
+    C = [r["avg_C"] for r in focus]
+    R = [r["avg_R"] for r in focus]
+    H = [r["avg_H"] for r in focus]
+    x = range(len(labels))
+    w = 0.27
+    fig, ax = plt.subplots(figsize=(13, 5.2))
+    ax.bar([i - w for i in x], C, width=w, label="C", color="#4C78A8")
+    ax.bar(list(x), R, width=w, label="R", color="#F58518")
+    ax.bar([i + w for i in x], H, width=w, label="H", color="#54A24B")
+    ax.set_xticks(list(x))
+    ax.set_xticklabels(labels, rotation=35, ha="right")
+    ax.set_ylim(0, 1.05)
+    ax.set_ylabel("Score")
+    ax.set_title("P0 E1: Multipath value-function bakeoff (C / R / H)")
+    ax.legend(frameon=False)
+    return _save(fig, "p0_e1_multipath_value_fn.png")
+
+
+def chart_p0_e2(p0: dict[str, Any]) -> Path | None:
+    rows = (p0.get("E2") or {}).get("summary_table") or []
+    if not rows:
+        return None
+    labels = [r["condition"] for r in rows]
+    R = [r["avg_R"] for r in rows]
+    H = [r["avg_H"] for r in rows]
+    mid = [r["avg_mid_constraint_R"] for r in rows]
+    x = range(len(labels))
+    w = 0.27
+    fig, ax = plt.subplots(figsize=(10, 5))
+    ax.bar([i - w for i in x], R, width=w, label="R", color="#F58518")
+    ax.bar(list(x), H, width=w, label="H", color="#54A24B")
+    ax.bar([i + w for i in x], mid, width=w, label="mid_R", color="#E45756")
+    ax.set_xticks(list(x))
+    ax.set_xticklabels(labels, rotation=20, ha="right")
+    ax.set_ylim(0, 1.05)
+    ax.set_ylabel("Score")
+    ax.set_title("P0 E2: Protect-compact → burst (R / H / mid_constraint_R)")
+    ax.legend(frameon=False)
+    return _save(fig, "p0_e2_protect_burst.png")
+
+
+def chart_p0_e3(p0: dict[str, Any]) -> Path | None:
+    rows = (p0.get("E3") or {}).get("summary_table") or []
+    if not rows:
+        return None
+    # One grouped chart for hops=8 primary (longer horizon) + hops=5 if present
+    hop8 = [r for r in rows if r.get("n_hops") == 8]
+    use = hop8 if hop8 else rows
+    labels = [r["condition"] for r in use]
+    C = [r["avg_C"] for r in use]
+    R = [r["avg_R"] for r in use]
+    H = [r["avg_H"] for r in use]
+    x = range(len(labels))
+    w = 0.27
+    fig, ax = plt.subplots(figsize=(11, 5))
+    ax.bar([i - w for i in x], C, width=w, label="C", color="#4C78A8")
+    ax.bar(list(x), R, width=w, label="R", color="#F58518")
+    ax.bar([i + w for i in x], H, width=w, label="H", color="#54A24B")
+    ax.set_xticks(list(x))
+    ax.set_xticklabels(labels, rotation=25, ha="right")
+    ax.set_ylim(0, 1.05)
+    hops = use[0].get("n_hops", "?")
+    ax.set_ylabel("Score")
+    ax.set_title(f"P0 E3: Structured incubation vs controls (hops={hops})")
+    ax.legend(frameon=False)
+    return _save(fig, "p0_e3_structured_incubation.png")
+
+
 def chart_claims(sweep: dict[str, Any]) -> Path | None:
     counts = sweep.get("evidence_counts") or {}
     if not counts:
@@ -254,6 +331,7 @@ def main() -> int:
     span = _load(_RESULTS / "span_burst_latest.json")
     sweep = _load(_RESULTS / "theory_corpus_sweep_latest.json")
     compact = _load(_COMPACT / "reasoning_compaction_latest.json")
+    p0 = _load(_RESULTS / "p0_followup_latest.json")
 
     if lit:
         for fn, title in (
@@ -284,6 +362,15 @@ def main() -> int:
             p = chart_v1_v2_multipath(sweep)
             if p:
                 written.append(("v1 vs v2 vs multipath (sweep)", p))
+    if p0:
+        for fn, title in (
+            (chart_p0_e1, "P0 E1 multipath value-fn"),
+            (chart_p0_e2, "P0 E2 protect→burst"),
+            (chart_p0_e3, "P0 E3 structured incubation"),
+        ):
+            p = fn(p0)
+            if p:
+                written.append((title, p))
 
     # CHARTS.md index
     lines = [
@@ -292,7 +379,8 @@ def main() -> int:
         "Regenerate: `python experiments/plot_results.py`",
         "",
         f"Sources: `lit_burst_latest.json`, `span_burst_latest.json`, "
-        f"`theory_corpus_sweep_latest.json`, PromptDictCompress `reasoning_compaction_latest.json`.",
+        f"`theory_corpus_sweep_latest.json`, `p0_followup_latest.json`, "
+        f"PromptDictCompress `reasoning_compaction_latest.json`.",
         "",
     ]
     if not written:

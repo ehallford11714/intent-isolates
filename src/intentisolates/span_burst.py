@@ -684,6 +684,24 @@ def burst_path_from_text(
     return spans, path
 
 
+def _early_layer_frac(spans: Sequence[SpanIsolate], span_ids: Sequence[str]) -> float:
+    """Fraction of path spans at layer ≤ 1 (IV / early-instrument proxy)."""
+    by = {s.id: s for s in spans}
+    if not span_ids:
+        return 0.0
+    early = 0
+    for sid in span_ids:
+        s = by.get(sid)
+        if s is None:
+            continue
+        ly = s.layer if isinstance(s.layer, int) else 2
+        if isinstance(ly, str):
+            ly = int(ly[1:]) if len(ly) > 1 and ly[1:].isdigit() else 2
+        if int(ly) <= 1:
+            early += 1
+    return early / len(span_ids)
+
+
 def multi_path_burst(
     spans: Sequence[SpanIsolate],
     *,
@@ -696,10 +714,21 @@ def multi_path_burst(
 ) -> tuple[BurstPath, list[dict[str, Any]]]:
     """ToT/GoT-style: run ``k`` burst paths and pick the best by CreativityMeter.
 
-    ``select_by`` one of: ``tradeoff_harmonic``, ``tradeoff_product``,
-    ``creativity_score``, ``reasoning_trace_score``, ``anchor_visit_rate``.
+    ``select_by`` one of: ``tradeoff_harmonic`` (alias ``H``), ``tradeoff_product``,
+    ``creativity_score`` (alias ``C``), ``reasoning_trace_score`` (alias ``R``),
+    ``anchor_visit_rate``, ``iv_diag`` (0.5·anchor_R + 0.3·layer_mono + 0.2·early_layer_frac).
     """
     from intentisolates.creativity import CreativityMeter
+
+    aliases = {
+        "H": "tradeoff_harmonic",
+        "h": "tradeoff_harmonic",
+        "C": "creativity_score",
+        "c": "creativity_score",
+        "R": "reasoning_trace_score",
+        "r": "reasoning_trace_score",
+    }
+    select_by = aliases.get(select_by, select_by)
 
     kwargs = dict(hopper_kwargs or {})
     if mode == "creative_burst_v2" and not kwargs:
@@ -735,12 +764,16 @@ def multi_path_burst(
             )
         path = h.burst_path(seed=i % max(1, len(h.ordered)), n_hops=n_hops, mode=mode)
         report = meter.score_burst(path, spans, motif_neighbors=h._motif_neighbors)
+        mono = layer_path_monotonicity(spans, path.span_ids)
+        early = _early_layer_frac(spans, path.span_ids)
+        iv_diag = 0.5 * report.anchor_visit_rate + 0.3 * mono + 0.2 * early
         score_map = {
             "tradeoff_harmonic": report.tradeoff_harmonic,
             "tradeoff_product": report.tradeoff_product,
             "creativity_score": report.creativity_score,
             "reasoning_trace_score": report.reasoning_trace_score,
             "anchor_visit_rate": report.anchor_visit_rate,
+            "iv_diag": iv_diag,
         }
         if select_by not in score_map:
             raise ValueError(f"Unknown select_by={select_by!r}")
@@ -750,6 +783,9 @@ def multi_path_burst(
                 "report": report,
                 "select_score": score_map[select_by],
                 "seed_index": i,
+                "layer_mono": mono,
+                "early_layer_frac": early,
+                "iv_diag": iv_diag,
             }
         )
 
